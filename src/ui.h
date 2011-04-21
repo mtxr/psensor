@@ -28,7 +28,7 @@
 
 #include <gtk/gtk.h>
 
-#ifdef HAVE_APPINDICATOR
+#if defined(HAVE_APPINDICATOR) || defined(HAVE_APPINDICATOR_029)
 #include <libappindicator/app-indicator.h>
 #endif
 
@@ -56,7 +56,7 @@ struct ui_psensor {
 	struct timeval *notification_last_time;
 #endif
 
-#ifdef HAVE_APPINDICATOR
+#if defined(HAVE_APPINDICATOR) || defined(HAVE_APPINDICATOR_029)
 	AppIndicator *indicator;
 #endif
 };

@@ -52,7 +52,7 @@
 #include "rsensor.h"
 #endif
 
-#ifdef HAVE_APPINDICATOR
+#if defined(HAVE_APPINDICATOR) || defined(HAVE_APPINDICATOR_029)
 #include "ui_appindicator.h"
 #endif
 
@@ -183,7 +183,7 @@ gboolean ui_refresh_thread(gpointer data)
 
 	ui_sensorlist_update(ui->ui_sensorlist);
 
-#ifdef HAVE_APPINDICATOR
+#if defined(HAVE_APPINDICATOR) || defined(HAVE_APPINDICATOR_029)
 	ui_appindicator_update(ui);
 #endif
 
@@ -511,7 +511,7 @@ int main(int argc, char **argv)
 
 	g_timeout_add(1000 * ui.graph_update_interval, ui_refresh_thread, &ui);
 
-#ifdef HAVE_APPINDICATOR
+#if defined(HAVE_APPINDICATOR) || defined(HAVE_APPINDICATOR_029)
 	ui_appindicator_init(&ui);
 #endif
 

@@ -1,6 +1,9 @@
 * v0.6.1.8
 
 ** psensor: added turkish language
+** psensor: fixed freeze when click on preferences appindicator with
+   natty.
+** fixed typo (${X11_LIBS}) in configure.ac
 
 * v0.6.1.7
 

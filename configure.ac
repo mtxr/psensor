@@ -74,12 +74,22 @@ AM_CONDITIONAL(LIBNOTIFY, test -n "$LIBNOTIFY_LIBS")
 AC_SUBST(LIBNOTIFY_CFLAGS)
 AC_SUBST(LIBNOTIFY_LIBS)
 
+
 # Checks AppIndicator 
-APPINDICATOR_LIBS=
-PKG_CHECK_MODULES(APPINDICATOR, 
-  appindicator-0.1, 
-  [AC_DEFINE([HAVE_APPINDICATOR],[1],[Use AppIndicator])], 
-  [AC_MSG_WARN("AppIndicator disabled")])
+ APPINDICATOR_LIBS=
+ PKG_CHECK_MODULES(APPINDICATOR, 
+     appindicator-0.1 = 0.2.9 , 
+     [AC_DEFINE([HAVE_APPINDICATOR],[1],[Use AppIndicator 0.2.9])
+      AC_DEFINE([HAVE_APPINDICATOR_029],[1],[Use AppIndicator 0.2.9])
+     ],
+     [AC_MSG_WARN(AppIndicator 0.2.9 not present")])
+
+if test "$APPINDICATOR_LIBS" == ""; then
+   PKG_CHECK_MODULES(APPINDICATOR, 
+     appindicator-0.1 > 0.2.9, 
+     [AC_DEFINE([HAVE_APPINDICATOR],[1],[Use AppIndicator > 0.2.9])], 
+     [AC_MSG_WARN("AppIndicator > 0.2.9 not present")])
+fi
 AM_CONDITIONAL(APPINDICATOR, test -n "$APPINDICATOR_LIBS")
 AC_SUBST(APPINDICATOR_CFLAGS)
 AC_SUBST(APPINDICATOR_LIBS)
@@ -119,7 +129,7 @@ AC_CHECK_HEADERS(NVCtrl/NVCtrl.h NVCtrl/NVCtrlLib.h,
                  [ 
 		  #include <X11/Xlib.h>
                  ])
-if test -n "$X11_LIBS}"; then
+if test -n "${X11_LIBS}"; then
 LIBS="${LIBS} -lX11 -lXext"
 
 if test "${HAVE_NVIDIA}" = "true"; then
