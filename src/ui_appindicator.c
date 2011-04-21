@@ -45,13 +45,13 @@ static void cb_appindicator_quit(GtkWidget *widget, gpointer data)
 static void cb_appindicator_preferences(GtkWidget *widget, gpointer data)
 {
 #ifdef HAVE_APPINDICATOR_029
-        gdk_threads_enter();
+	gdk_threads_enter();
 #endif
 
-        ui_pref_dialog_run((struct ui_psensor *)data);
+	ui_pref_dialog_run((struct ui_psensor *)data);
 
 #ifdef HAVE_APPINDICATOR_029
-        gdk_threads_leave();
+	gdk_threads_leave();
 #endif
 }
 
