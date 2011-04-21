@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor 0.6.0.10\n"
 "Report-Msgid-Bugs-To: wpitchoune@gmail.com\n"
-"POT-Creation-Date: 2011-04-17 23:27+0200\n"
+"POT-Creation-Date: 2011-04-21 14:56+0200\n"
 "PO-Revision-Date: 2011-02-07 22:21+0100\n"
 "Last-Translator: 大宝 <linux.dabao@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -78,7 +78,7 @@ msgstr ""
 msgid "Edit Sensor Preferences"
 msgstr "监视设备选项"
 
-#: src/ui_sensorlist.c:258 src/ui_appindicator.c:63
+#: src/ui_sensorlist.c:258 src/ui_appindicator.c:69
 msgid "Preferences"
 msgstr "选项"
 
@@ -114,11 +114,11 @@ msgstr "激活"
 msgid "N/A"
 msgstr ""
 
-#: src/ui_appindicator.c:58
+#: src/ui_appindicator.c:64
 msgid "Show"
 msgstr "显示主窗口"
 
-#: src/ui_appindicator.c:72
+#: src/ui_appindicator.c:78
 msgid "Quit"
 msgstr "退出"
 
