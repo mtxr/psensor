@@ -25,44 +25,56 @@ msgid ""
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
+"Copyright (C) %s wpitchoune@gmail.com\n"
+"License GPLv2: GNU GPL version 3 ou ultérieure<http://www.gnu.org/licenses/"
+"old-licenses/gpl-2.0.html>\n"
+"Ceci est un logiciel libre, vous êtes libre de le modifier et de le \n"
+"redistribuer.\n"
+"Ce logiciel n'est accompagné d'ABSOLUMENT AUCUNE GARANTIE, dans les limites\n"
+"autorisees par la loi applicable.\n"
 
 #: src/main.c:80 src/server/server.c:84
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
-msgstr ""
+msgstr "Utilisation: %s [OPTION]...\n"
 
 #: src/main.c:82
 msgid ""
 "psensor is a GTK application for monitoring hardware sensors, including "
 "temperatures and fan speeds."
 msgstr ""
+"psensor est une application GTK pour surveiller les sondes matérielles "
+"thermiques et les ventilateurs."
 
 #: src/main.c:87 src/server/server.c:91
 msgid ""
 "  -h, --help          display this help and exit\n"
 "  -v, --version       display version information and exit"
 msgstr ""
+"  -h, --help          afficher cette aider et quitter\n"
+"  -v, --version       afficher les informations de version et quitter"
 
 #: src/main.c:93
 msgid ""
 "  -u, --url=URL       the URL of the psensor-server, example: http://"
 "hostname:3131"
 msgstr ""
+"  -u, --url=URL       l'URL de psensor-server, example: http://hostname:3131"
 
 #: src/main.c:99 src/server/server.c:103
 #, c-format
 msgid "Report bugs to: %s\n"
-msgstr ""
+msgstr "Signaler les bugs à: %s\n"
 
 #: src/main.c:101 src/server/server.c:105
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr ""
+msgstr "%s page d'acceuil: <%s>\n"
 
 #: src/main.c:437 src/server/server.c:269
 #, c-format
 msgid "Try `%s --help' for more information.\n"
-msgstr ""
+msgstr "Essayez `%s --help' pour plus d'informations.\n"
 
 #: src/main.c:458
 #, fuzzy, c-format
@@ -73,18 +85,20 @@ msgstr "ERREUR: Echec de l'initialisation de 'lm-sensors'\n"
 #, c-format
 msgid "ERROR: Not compiled with remote sensor support.\n"
 msgstr ""
+"ERREUR: Psensor n'a pas ete compilé avec le support de surveillance à "
+"distance.\n"
 
 #: src/ui_sensorlist.c:186
 msgid "Edit Sensor Preferences"
-msgstr ""
+msgstr "Editer La Configuration Des Sondes"
 
 #: src/ui_sensorlist.c:258 src/ui_appindicator.c:69
 msgid "Preferences"
-msgstr ""
+msgstr "Configuration"
 
 #: src/ui_sensorlist.c:291
 msgid "Select foreground color"
-msgstr ""
+msgstr "Selectionner la couleur d'avant-plan"
 
 #: src/ui_sensorlist.c:374 src/ui_pref.c:249
 msgid "Sensor"
@@ -96,11 +110,11 @@ msgstr "Actuelle"
 
 #: src/ui_sensorlist.c:386
 msgid "Min"
-msgstr ""
+msgstr "Min"
 
 #: src/ui_sensorlist.c:392
 msgid "Max"
-msgstr ""
+msgstr "Max"
 
 #: src/ui_sensorlist.c:399
 msgid "Color"
@@ -112,7 +126,7 @@ msgstr "Activée"
 
 #: src/ui_sensorlist.c:441 src/ui_sensorlist.c:442 src/ui_sensorlist.c:443
 msgid "N/A"
-msgstr ""
+msgstr "N/A"
 
 #: src/ui_appindicator.c:64
 msgid "Show"
@@ -125,11 +139,11 @@ msgstr "Quitter"
 #: src/ui_notify.c:36
 #, c-format
 msgid "ERROR: failed gettimeofday\n"
-msgstr ""
+msgstr "ERREUR: échec gettimeofday\n"
 
 #: src/ui_notify.c:65 src/ui_notify.c:69
 msgid "Temperature alert"
-msgstr ""
+msgstr "Alerte thermique"
 
 #: src/ui_pref.c:200
 msgid "Graph Colors"
@@ -137,7 +151,7 @@ msgstr "Couleurs du graphe"
 
 #: src/ui_pref.c:204
 msgid "Foreground:"
-msgstr ""
+msgstr "Avant-plan:"
 
 #: src/ui_pref.c:209
 msgid "Background:"
@@ -145,35 +159,35 @@ msgstr "Fond:"
 
 #: src/ui_pref.c:212
 msgid "Background opacity:"
-msgstr "Opacite du fond:"
+msgstr "Opacité du fond:"
 
 #: src/ui_pref.c:220
 msgid "<i>Min</i>"
-msgstr ""
+msgstr "<i>Min</i>"
 
 #: src/ui_pref.c:224
 msgid "<i>Max</i>"
-msgstr ""
+msgstr "<i>Max</i>"
 
 #: src/ui_pref.c:234 src/ui_sensorpref.c:80
 msgid "Graph"
-msgstr ""
+msgstr "Graphe"
 
 #: src/ui_pref.c:236
 msgid "Graph update interval:"
-msgstr ""
+msgstr "Interval de mise à jour du graphe:"
 
 #: src/ui_pref.c:241
 msgid "Graph monitoring duration:"
-msgstr ""
+msgstr "Durée de surveillance du graphe:"
 
 #: src/ui_pref.c:251
 msgid "Measure update interval:"
-msgstr ""
+msgstr "Interval de mise à jour des mesures:"
 
 #: src/ui_pref.c:258
 msgid "Interface"
-msgstr ""
+msgstr "Interface"
 
 #: src/ui_pref.c:260
 msgid "Position of sensors table:"
@@ -197,27 +211,27 @@ msgstr "Bas"
 
 #: src/ui_pref.c:284
 msgid "Hide window decoration"
-msgstr ""
+msgstr "Cacher les décorations de la fenêtre"
 
 #: src/ui_pref.c:289
 msgid "Keep window below"
-msgstr ""
+msgstr "Garder la fenêtre en arrière-plan"
 
 #: src/ui_pref.c:307
 msgid "Edit Preferences"
-msgstr ""
+msgstr "Editer la configuration"
 
 #: src/ui_sensorpref.c:67
 msgid "Sensor Information"
-msgstr ""
+msgstr "Information sonde"
 
 #: src/ui_sensorpref.c:69
 msgid "Id:"
-msgstr ""
+msgstr "Id:"
 
 #: src/ui_sensorpref.c:73
 msgid "Type:"
-msgstr ""
+msgstr "Type:"
 
 #: src/ui_sensorpref.c:77
 msgid "Name:"
@@ -242,67 +256,71 @@ msgstr "Activer les notifications du bureau"
 
 #: src/ui_sensorpref.c:98
 msgid "Temperature limit:"
-msgstr ""
+msgstr "Limite de température:"
 
 #: src/rsensor.c:131
 #, c-format
 msgid "ERROR: Fail to connect to: %s\n"
-msgstr ""
+msgstr "ERREUR: Echer de la connectio à: %s\n"
 
 #: src/rsensor.c:166
 #, c-format
 msgid "ERROR: Invalid content: %s\n"
-msgstr ""
+msgstr "ERREUR: Contenu invalide: %s\n"
 
 #: src/rsensor.c:204
 #, c-format
 msgid "ERROR: Invalid JSON: %s\n"
-msgstr ""
+msgstr "ERREUR: Invalide JSON: %s\n"
 
 #: src/plib/plib_luatpl.c:121
 #, c-format
 msgid "LUATPL Error: failed to load Lua script: %s.\n"
-msgstr ""
+msgstr "LUATPL Erreur: échec du chargement du script LUA: %s.\n"
 
 #: src/plib/plib_luatpl.c:127
 #, c-format
 msgid "LUATPL Error: failed to call init function: %s.\n"
-msgstr ""
+msgstr "LUATPL Erreur: échec du lancement de la fonction init: %s.\n"
 
 #: src/plib/plib_luatpl.c:133
 #, c-format
 msgid "LUATPL Error:failed to execute Lua script (%s): %s.\n"
-msgstr ""
+msgstr "LUATP Erreur: échec de l'exécution du script Lua (%s): %s.\n"
 
 #: src/plib/plib_luatpl.c:140
 #, c-format
 msgid "LUATPL Error:lua script (%s) returned a wrong type.\n"
-msgstr ""
+msgstr "LUATPL Errur: le script Lua (%s) a retourné le mauvais type.\n"
 
 #: src/plib/plib_luatpl.c:147
 #, c-format
 msgid "LUATPL Error:failed to open lua state.\n"
-msgstr ""
+msgstr "LUATPL Errur: écher de creation du Lua state.\n"
 
 #: src/plib/plib_luatpl.c:154
 #, c-format
 msgid "LUATPL Error: code: %d.\n"
-msgstr ""
+msgstr "LUATPL Erreur: code: %d.\n"
 
 #: src/server/server.c:86
 msgid ""
 "psensor-server is an HTTP server for monitoring hardware sensors remotely."
 msgstr ""
+"psensor-server est un serveur HTTP pour surveiller à distance les sondes "
+"matérielles."
 
 #: src/server/server.c:97
 msgid ""
 "  -p,--port=PORT webserver port\n"
 "  -w,--wdir=DIR  directory containing webserver pages"
 msgstr ""
+"  -p,--port=PORT port du serveur Web\n"
+"  -w,--wdir=DIR  répertoire contenant les pages du serveur Web"
 
 #: src/server/server.c:198
 msgid "ERROR: Lua support not enabled\n"
-msgstr "ERREUR: Le support de Lua n'est pas active\n"
+msgstr "ERREUR: Le support de Lua n'est pas activé\n"
 
 #: src/server/server.c:275
 #, c-format
@@ -332,62 +350,63 @@ msgstr "WWW repertoire: %s\n"
 #: src/server/server.c:295
 #, c-format
 msgid "URL: http://localhost:%d\n"
-msgstr ""
+msgstr "URL: http://localhost:%d\n"
 
 #: src/lib/hdd.c:59
 #, c-format
 msgid "ERROR: hdd_fetch, failed to open socket\n"
-msgstr ""
+msgstr "ERREUR: hdd_fetch, écher d'ouverture de la socket\n"
 
 #: src/lib/hdd.c:73
 #, c-format
 msgid "ERROR: hdd_fetch, failed to open connection\n"
-msgstr ""
+msgstr "ERREUR: hdd_fetch, écher de l'ouverture de la connection\n"
 
 #: src/lib/hdd.c:182
 #, c-format
 msgid "ERROR: wrong hdd string: %s"
-msgstr ""
+msgstr "ERREUR: mauvaise chaine hdd: %s"
 
 #: src/lib/hdd.c:252
 #, c-format
 msgid "ERROR: wrong hdd string: %s\n"
-msgstr ""
+msgstr "ERREUR: mauvaise chaine hdd: %s\n"
 
 #: src/lib/nvidia.c:53
 #, c-format
 msgid "ERROR: failed to retrieve nvidia temperature\n"
-msgstr ""
+msgstr "ERREUR: échec de la récupération des températures nvidia\n"
 
 #: src/lib/nvidia.c:85
 #, c-format
 msgid "ERROR: nvidia initialization failure\n"
-msgstr ""
+msgstr "ERREUR: échec de l'initialisation nvidia\n"
 
 #: src/lib/nvidia.c:99
 #, c-format
 msgid "ERROR: nvidia initialization failure: %d\n"
-msgstr ""
+msgstr "ERREUR: échec de l'initialisation nvidia: %d\n"
 
 #: src/lib/nvidia.c:132
 #, c-format
 msgid "ERROR: no nvidia chips or initialization failure\n"
-msgstr ""
+msgstr "ERREUR: aucunes puces nvidia ou échec de l'initialisation\n"
 
 #: src/lib/lmsensor.c:43
 #, c-format
 msgid "ERROR: Can't get value of subfeature %s: %s\n"
 msgstr ""
+"ERREUR: Impossible de récuperer la valeur de la sous-fonctionnalité %s: %s\n"
 
 #: src/lib/lmsensor.c:127
 #, c-format
 msgid "ERROR: create_sensor, wrong feature type\n"
-msgstr ""
+msgstr "ERREUR: create_sensor, mauvais type de fonctionnalité\n"
 
 #: src/lib/lmsensor.c:171
 #, c-format
 msgid "ERROR: lm-sensors initialization failure: %s\n"
-msgstr ""
+msgstr "ERREUR: échec de l'initialisation de lm-sensors: %s\n"
 
 #~ msgid "Psensor - Temperature Monitor"
 #~ msgstr "Psensor - Surveillance Des Temperatures"
