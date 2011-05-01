@@ -1,3 +1,7 @@
+* v0.6.1.9
+
+** avoid fetching hddtemp daemon when no hdd in the sensors list
+
 * v0.6.1.8
 
 ** psensor: added turkish language
