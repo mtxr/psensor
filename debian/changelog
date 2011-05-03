@@ -1,3 +1,11 @@
+psensor (0.6.1.9-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control:
+      - Fixed Lintian warning: newer-standards-version
+
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Tue, 03 May 2011 11:26:03 +0200
+
 psensor (0.6.1.8-1) unstable; urgency=low
 
   * New upstream release
