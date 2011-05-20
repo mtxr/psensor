@@ -1,3 +1,10 @@
+psensor (0.6.1.9-2) unstable; urgency=low
+
+  * debian/psensor-server.install:
+      - Fixed missing www files.
+
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Fri, 20 May 2011 02:52:34 -0400
+
 psensor (0.6.1.9-1) unstable; urgency=low
 
   * New upstream release
