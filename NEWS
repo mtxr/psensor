@@ -1,3 +1,7 @@
+* v0.6.1.10
+
+** psensor: support of appindicator < 0.2.9
+
 * v0.6.1.9
 
 ** avoid fetching hddtemp daemon when no hdd in the sensors list
