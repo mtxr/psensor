@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,12 +32,12 @@ int ui_change_color(const char *title, struct color *col)
 	color.green = col->green;
 	color.blue = col->blue;
 
-	colordlg = GTK_COLOR_SELECTION_DIALOG
-		(gtk_color_selection_dialog_new(title));
+	colordlg = (GtkColorSelectionDialog *)
+	    gtk_color_selection_dialog_new(title);
 
-	colorsel = GTK_COLOR_SELECTION
-		(gtk_color_selection_dialog_get_color_selection(colordlg));
+	colorsel = GTK_COLOR_SELECTION(colordlg->colorsel);
 
+	gtk_color_selection_set_previous_color(colorsel, &color);
 	gtk_color_selection_set_current_color(colorsel, &color);
 
 	res = gtk_dialog_run(GTK_DIALOG(colordlg));
@@ -51,4 +51,5 @@ int ui_change_color(const char *title, struct color *col)
 	gtk_widget_destroy(GTK_WIDGET(colordlg));
 
 	return res == GTK_RESPONSE_OK;
+
 }

@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,15 +21,14 @@
 #define _PSENSOR_MEASURE_H_
 
 #include <sys/time.h>
-#include <float.h>
-
-#define UNKNOWN_VALUE DBL_MIN
 
 struct measure {
 	double value;
+
 	struct timeval time;
 };
 
+void measure_set_value(struct measure *m, double value);
 void measure_copy(struct measure *src, struct measure *dst);
 
 struct measure *measures_create(int size);

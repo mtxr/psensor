@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,27 +18,27 @@
 */
 
 #include <stdlib.h>
-#include <stdio.h>
+
 #include "measure.h"
 
 struct measure *measures_create(int size)
 {
-	int i;
-	struct measure *result;
-
-	result = malloc(size * sizeof(struct measure));
-
-	for (i = 0; i < size; i++) {
-		result[i].value = UNKNOWN_VALUE;
-		timerclear(&result[i].time);
-	}
-
-	return result;
+	return calloc(size, sizeof(struct measure));
 }
 
 void measures_free(struct measure *measures)
 {
 	free(measures);
+}
+
+void measure_set_value(struct measure *m, double value)
+{
+	if (gettimeofday(&(m->time), NULL) == 0) {
+		m->value = value;
+	} else {
+		m->value = 0;
+		timerclear(&m->time);
+	}
 }
 
 void measure_copy(struct measure *src, struct measure *dst)

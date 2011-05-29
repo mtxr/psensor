@@ -1,6 +1,4 @@
-SUBDIRS = plib lib unity glade
-
-AM_LDFLAGS = -Wl,--as-needed 
+SUBDIRS = plib lib 
 
 if JSON
 SUBDIRS += libpsensor_json
@@ -14,14 +12,13 @@ endif
 endif
 endif
 
-AM_CPPFLAGS = -Wall -pedantic -Werror -DDEFAULT_WWW_DIR=\""$(pkgdatadir)/www"\"\
+AM_CPPFLAGS = -pedantic -Werror -DDEFAULT_WWW_DIR=\""$(pkgdatadir)/www"\"\
 	-I$(top_srcdir)/src/lib \
-	-I$(top_srcdir)/src/unity \
 	$(GTK_CFLAGS)\
 	$(GCONF_CFLAGS)\
 	$(SENSORS_CFLAGS)
 
-DEFS = -DPACKAGE_DATA_DIR=\"$(pkgdatadir)\" -DLOCALEDIR=\"$(localedir)\" @DEFS@
+DEFS = -DLOCALEDIR=\"$(localedir)\" @DEFS@
 
 LIBS = \
 	plib/libplib.a \
@@ -31,17 +28,23 @@ LIBS = \
 	$(SENSORS_LIBS)
 
 bin_PROGRAMS = psensor
-psensor_SOURCES = \
-	compat.h \
-	cfg.h cfg.c \
-	graph.h graph.c \
-	main.c \
-	ui.h ui.c \
-	ui_color.h ui_color.c \
-	ui_graph.h ui_graph.c \
-	ui_pref.h ui_pref.c \
-	ui_sensorlist.h ui_sensorlist.c \
-	ui_sensorpref.h ui_sensorpref.c
+psensor_SOURCES = main.c\
+	graph.c\
+	ui_sensorlist.h\
+	graph.h\
+	ui_appindicator.h\
+	ui_sensorpref.c\
+	compat.h\
+	ui_color.c\
+	ui_pref.c\
+	ui_sensorpref.h\
+	cfg.c\
+	ui_color.h\
+	ui_pref.h\
+	cfg.h\
+	rsensor.h\
+	ui.h ui.c\
+	ui_sensorlist.c
 
 if LIBNOTIFY
 psensor_SOURCES += ui_notify.h ui_notify.c
@@ -49,8 +52,9 @@ LIBS += $(LIBNOTIFY_LIBS)
 AM_CPPFLAGS += $(LIBNOTIFY_CFLAGS)
 endif
 
-if APPINDICATOR 
-psensor_SOURCES += ui_appindicator.h ui_appindicator.c 
+
+if APPINDICATOR
+psensor_SOURCES += ui_appindicator.c
 LIBS +=	$(APPINDICATOR_LIBS)
 AM_CPPFLAGS += $(APPINDICATOR_CFLAGS)
 endif
@@ -60,20 +64,17 @@ AM_CPPFLAGS += $(NVIDIA_CFLAGS)
 LIBS +=  $(NVIDIA_LIBS)
 endif
 
-if UNITY
-AM_CPPFLAGS += $(UNITY_CFLAGS)
-LIBS += unity/libpsensor_unity.a $(UNITY_LIBS) 
-endif
-
 if CURL
 if JSON
-psensor_SOURCES += rsensor.h rsensor.c plib/url.c plib/url.h
+psensor_SOURCES += rsensor.c plib/url.c plib/url.h
 LIBS += $(CURL_LIBS) $(JSON_LIBS)
 AM_CPPFLAGS += $(CURL_CFLAGS) $(JSON_CFLAGS)
 endif
 endif
 
+
 dist_man_MANS = psensor.1
+
 EXTRA_DIST = description.txt
 
 psensor.1: main.c $(top_srcdir)/configure.ac

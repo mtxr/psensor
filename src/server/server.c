@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -26,7 +26,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/select.h>
 #include <sys/socket.h>
@@ -53,16 +52,15 @@ static const char *program_name;
 
 #define DEFAULT_PORT 3131
 
-#define PAGE_NOT_FOUND (_("<html><body><p>\
-Page not found - Go to <a href='/'>Main page</a>\
-</p></body>"))
+#define PAGE_NOT_FOUND \
+"<html><body><p>Page not found - Go to <a href='/index.lua'>Main page</a>\
+</p></body>"
 
 static struct option long_options[] = {
 	{"version", no_argument, 0, 'v'},
 	{"help", no_argument, 0, 'h'},
 	{"port", required_argument, 0, 'p'},
 	{"wdir", required_argument, 0, 'w'},
-	{"debug", no_argument, 0, 'd'},
 	{0, 0, 0, 0}
 };
 
@@ -70,14 +68,10 @@ static struct server_data server_data;
 
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
-static int debug;
-
-static int server_stop_requested;
-
 void print_version()
 {
 	printf("psensor-server %s\n", VERSION);
-	printf(_("Copyright (C) %s jeanfi@gmail.com\n\
+	printf(_("Copyright (C) %s wpitchoune@gmail.com\n\
 License GPLv2: GNU GPL version 2 or later \
 <http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>\n\
 This is free software: you are free to change and redistribute it.\n\
@@ -101,7 +95,6 @@ void print_help()
 	puts("");
 
 	puts(_("\
-  -d,--debug     run in debug mode\n\
   -p,--port=PORT webserver port\n\
   -w,--wdir=DIR  directory containing webserver pages"));
 
@@ -146,148 +139,13 @@ char *get_path(const char *url, const char *www_dir)
 	return res;
 }
 
-static int
-file_reader(void *cls, uint64_t pos, char *buf, int max)
-{
-	FILE *file = cls;
-
-	fseek(file, pos, SEEK_SET);
-	return fread(buf, 1, max, file);
-}
-
-struct MHD_Response *
-create_response_api(const char *nurl,
-		    const char *method,
-		    unsigned int *rp_code)
-{
-	char *page = NULL;
-
-	if (!strcmp(nurl, URL_BASE_API_1_0_SENSORS))  {
-
-		page = sensors_to_json_string(server_data.sensors);
-
-	} else if (!strncmp(nurl, URL_BASE_API_1_0_SENSORS,
-			    strlen(URL_BASE_API_1_0_SENSORS))
-		   && nurl[strlen(URL_BASE_API_1_0_SENSORS)] == '/') {
-
-		const char *sid = nurl + strlen(URL_BASE_API_1_0_SENSORS) + 1;
-
-		struct psensor *s
-			= psensor_list_get_by_id(server_data.sensors, sid);
-
-		if (s)
-			page = sensor_to_json_string(s);
-
-	} else if (debug && !strcmp(nurl, URL_API_1_0_SERVER_STOP)) {
-
-		server_stop_requested = 1;
-		page = strdup(_("<html><body><p>"
-				"Server stop requested</p></body></html>"));
-	}
-
-	if (page) {
-		*rp_code = MHD_HTTP_OK;
-
-		return MHD_create_response_from_data
-			(strlen(page), page, MHD_YES, MHD_NO);
-	}
-
-	return NULL;
-}
-
-struct MHD_Response *
-create_response_lua(const char *nurl,
-		    const char *method,
-		    unsigned int *rp_code,
-		    const char *fpath)
-{
-#ifdef HAVE_LUA
-	char *page = lua_to_html_page(&server_data, fpath);
-
-	if (page) {
-		*rp_code = MHD_HTTP_OK;
-
-		return MHD_create_response_from_data
-			(strlen(page), page, MHD_YES, MHD_NO);
-	}
-#endif
-
-	return NULL;
-}
-
-struct MHD_Response *
-create_response_file(const char *nurl,
-		     const char *method,
-		     unsigned int *rp_code,
-		     const char *fpath)
-{
-	if (is_file(fpath)) {
-		FILE *file = fopen(fpath, "rb");
-
-		if (file) {
-			struct stat buf;
-
-			stat(fpath, &buf);
-			*rp_code = MHD_HTTP_OK;
-
-			if (!buf.st_size) {
-				fclose(file);
-				return MHD_create_response_from_data
-					(0, NULL, MHD_NO, MHD_NO);
-			}
-
-			return MHD_create_response_from_callback
-				(buf.st_size,
-				 32 * 1024,
-				 &file_reader,
-				 file,
-				 (MHD_ContentReaderFreeCallback)&fclose);
-
-		}
-	}
-
-	return NULL;
-}
-
-struct MHD_Response *
-create_response(const char *nurl, const char *method, unsigned int *rp_code)
-{
-	struct MHD_Response *resp = NULL;
-
-	if (!strncmp(nurl, URL_BASE_API_1_0, strlen(URL_BASE_API_1_0))) {
-		resp = create_response_api(nurl, method, rp_code);
-	} else {
-		char *fpath = get_path(nurl, server_data.www_dir);
-
-		if (is_path_lua(fpath))
-			resp = create_response_lua
-				(nurl, method, rp_code, fpath);
-		else
-			resp = create_response_file
-				(nurl, method, rp_code, fpath);
-
-		free(fpath);
-	}
-
-	if (resp) {
-		return resp;
-	} else {
-		char *page = strdup(PAGE_NOT_FOUND);
-		*rp_code = MHD_HTTP_NOT_FOUND;
-
-		return MHD_create_response_from_data
-			(strlen(page), page, MHD_YES, MHD_NO);
-	}
-}
-
-static int
-cbk_http_request(void *cls,
-		 struct MHD_Connection *connection,
-		 const char *url,
-		 const char *method,
-		 const char *version,
-		 const char *upload_data,
-		 size_t *upload_data_size, void **ptr)
+static int cbk_http_request(void *cls,
+			    struct MHD_Connection *connection,
+			    const char *url,
+			    const char *method,
+			    const char *version,
+			    const char *upload_data,
+			    size_t *upload_data_size, void **ptr)
 {
 	static int dummy;
 	struct MHD_Response *response;
@@ -297,7 +155,7 @@ cbk_http_request(void *cls,
 	char *page = NULL;
 
 	if (strcmp(method, "GET"))
-		return MHD_NO;
+		return MHD_NO;	/* unexpected method */
 
 	if (&dummy != *ptr) {
 		/* The first time only the headers are valid, do not
@@ -307,18 +165,56 @@ cbk_http_request(void *cls,
 	}
 
 	if (*upload_data_size)
-		return MHD_NO;
+		return MHD_NO;	/* upload data in a GET!? */
 
 	*ptr = NULL;		/* clear context pointer */
-
-	if (debug)
-		printf(_("HTTP Request: %s\n"), url);
 
 	nurl = url_normalize(url);
 
 	pthread_mutex_lock(&mutex);
-	response = create_response(nurl, method, &resp_code);
+
+	if (!strcmp(nurl, URL_BASE_API_1_0_SENSORS)) {
+		page = sensors_to_json_string(server_data.sensors);
+
+	} else if (!strncmp(nurl, URL_BASE_API_1_0_SENSORS,
+			    strlen(URL_BASE_API_1_0_SENSORS))
+		   && nurl[strlen(URL_BASE_API_1_0_SENSORS)] == '/') {
+
+		char *sid = nurl + strlen(URL_BASE_API_1_0_SENSORS) + 1;
+		struct psensor *s
+			= psensor_list_get_by_id(server_data.sensors, sid);
+
+		if (s)
+			page = sensor_to_json_string(s);
+
+	} else {
+		char *fpath = get_path(nurl, server_data.www_dir);
+		int n = strlen(nurl);
+
+		if (is_path_lua(fpath)) {
+#if HAVE_LUA
+			page = lua_to_html_page(&server_data, fpath);
+#else
+			page = strdup(_("ERROR: Lua support not enabled\n"));
+#endif
+		} else {
+			page = file_get_content(fpath);
+		}
+
+		free(fpath);
+	}
+
+	if (page) {
+		resp_code = MHD_HTTP_OK;
+	} else {
+		page = strdup(PAGE_NOT_FOUND);
+		resp_code = MHD_HTTP_NOT_FOUND;
+	}
+
 	pthread_mutex_unlock(&mutex);
+
+	response = MHD_create_response_from_data(strlen(page),
+						 (void *)page, MHD_YES, MHD_NO);
 
 	ret = MHD_queue_response(connection, resp_code, response);
 	MHD_destroy_response(response);
@@ -347,7 +243,7 @@ int main(int argc, char *argv[])
 	server_data.www_dir = DEFAULT_WWW_DIR;
 
 	while ((optc = getopt_long(argc, argv,
-				   "vhp:w:d", long_options, NULL)) != -1) {
+				   "vhp:w:", long_options, NULL)) != -1) {
 		switch (optc) {
 		case 'w':
 			if (optarg)
@@ -363,9 +259,6 @@ int main(int argc, char *argv[])
 		case 'v':
 			print_version();
 			exit(EXIT_SUCCESS);
-		case 'd':
-			debug = 1;
-			break;
 		default:
 			cmdok = 0;
 			break;
@@ -401,11 +294,11 @@ int main(int argc, char *argv[])
 	printf(_("WWW directory: %s\n"), server_data.www_dir);
 	printf(_("URL: http://localhost:%d\n"), port);
 
-	while (!server_stop_requested) {
+	while (1) {
 		pthread_mutex_lock(&mutex);
 
 #ifdef HAVE_GTOP
-		sysinfo_update(&server_data.psysinfo);
+		sysinfo_update(&server_data.cpu_rate);
 #endif
 		psensor_list_update_measures(server_data.sensors);
 
@@ -415,14 +308,5 @@ int main(int argc, char *argv[])
 
 	MHD_stop_daemon(d);
 
-	/* sanity cleanup for valgrind */
-	psensor_list_free(server_data.sensors);
-	free(server_data.www_dir);
-	sensors_cleanup();
-
-#ifdef HAVE_GTOP
-	sysinfo_cleanup();
-#endif
-
-	return EXIT_SUCCESS;
+	return 0;
 }

@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -30,75 +30,14 @@ int init_lua(lua_State *L, void *data)
 	struct psensor **s_cur;
 	struct psensor **sensors = server_data->sensors;
 	int i;
-	static float load_scale = 1 << SI_LOAD_SHIFT;
-
-	lua_newtable(L);
 
 #ifdef HAVE_GTOP
+	lua_newtable(L);
 	lua_pushstring(L, "load");
-	lua_pushnumber(L, server_data->psysinfo.cpu_rate);
+	lua_pushnumber(L, server_data->cpu_rate);
 	lua_settable(L, -3);
+	lua_setglobal(L, "cpu");
 #endif
-
-	lua_pushstring(L, "uptime");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.uptime);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "load_1mn");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.loads[0] / load_scale);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "load_5mn");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.loads[1] / load_scale);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "load_15mn");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.loads[2] / load_scale);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "freeram");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.freeram);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "sharedram");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.sharedram);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "bufferram");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.bufferram);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "totalswap");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.totalswap);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "freeswap");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.freeswap);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "procs");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.procs);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "totalhigh");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.totalhigh);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "freehigh");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.freehigh);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "totalram");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.totalram);
-	lua_settable(L, -3);
-
-	lua_pushstring(L, "mem_unit");
-	lua_pushnumber(L, server_data->psysinfo.sysinfo.mem_unit);
-	lua_settable(L, -3);
-
-
-	lua_setglobal(L, "sysinfo");
-
 
 	lua_newtable(L);
 
@@ -132,9 +71,6 @@ int init_lua(lua_State *L, void *data)
 	}
 
 	lua_setglobal(L, "sensors");
-
-	lua_pushstring(L, VERSION);
-	lua_setglobal(L, "psensor_version");
 
 	return 1;
 }

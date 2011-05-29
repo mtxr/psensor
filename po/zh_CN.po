@@ -1,171 +1,249 @@
 # Chinese translations for psensor package.
 # Copyright (C) 2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the psensor package.
-# Jean-Philippe Orsini <jeanfi@gmail.com>, 2011.
+# wpitchoune <wpitchoune@gmail.com>, 2011.
 # Chinese translation from 大宝 <linux.dabao@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: psensor 0.6.0.10\n"
-"Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2011-05-26 11:54+0200\n"
+"Report-Msgid-Bugs-To: wpitchoune@gmail.com\n"
+"POT-Creation-Date: 2011-05-09 09:32+0200\n"
 "PO-Revision-Date: 2011-02-07 22:21+0100\n"
 "Last-Translator: 大宝 <linux.dabao@gmail.com>\n"
 "Language-Team: Chinese (simplified)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/main.c:72 src/server/server.c:80
+#: src/main.c:69 src/server/server.c:74
 #, c-format
 msgid ""
-"Copyright (C) %s jeanfi@gmail.com\n"
+"Copyright (C) %s wpitchoune@gmail.com\n"
 "License GPLv2: GNU GPL version 2 or later <http://www.gnu.org/licenses/old-"
 "licenses/gpl-2.0.html>\n"
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
 
-#: src/main.c:82 src/server/server.c:90
+#: src/main.c:79 src/server/server.c:84
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr ""
 
-#: src/main.c:84
+#: src/main.c:81
 msgid ""
 "psensor is a GTK application for monitoring hardware sensors, including "
 "temperatures and fan speeds."
 msgstr ""
 
-#: src/main.c:88
-msgid "Options:"
-msgstr ""
-
-#: src/main.c:89 src/server/server.c:97
+#: src/main.c:86 src/server/server.c:91
 msgid ""
 "  -h, --help          display this help and exit\n"
 "  -v, --version       display version information and exit"
 msgstr ""
 
-#: src/main.c:95
+#: src/main.c:92
 msgid ""
 "  -u, --url=URL       the URL of the psensor-server, example: http://"
 "hostname:3131"
 msgstr ""
 
-#: src/main.c:101 src/server/server.c:110
+#: src/main.c:98 src/server/server.c:103
 #, c-format
 msgid "Report bugs to: %s\n"
 msgstr ""
 
-#: src/main.c:103 src/server/server.c:112
+#: src/main.c:100 src/server/server.c:105
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr ""
 
-#: src/main.c:323 src/server/server.c:376
+#: src/main.c:436 src/server/server.c:269
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr ""
 
-#: src/main.c:346
+#: src/main.c:457
 #, c-format
 msgid "ERROR: lmsensor init failure: %s\n"
 msgstr ""
 
-#: src/main.c:357
+#: src/main.c:468
 #, c-format
 msgid "ERROR: Not compiled with remote sensor support.\n"
 msgstr ""
 
-#: src/ui.c:79
-#, fuzzy
-msgid "_Preferences"
-msgstr "选项"
+#: src/ui_sensorlist.c:186
+msgid "Edit Sensor Preferences"
+msgstr "监视设备选项"
 
-#: src/ui.c:80 src/ui_sensorlist.c:201
+#: src/ui_sensorlist.c:258 src/ui_appindicator.c:69
 msgid "Preferences"
 msgstr "选项"
 
-#: src/ui.c:84
-#, fuzzy
-msgid "_Sensor Preferences"
-msgstr "监视设备选项"
-
-#: src/ui.c:85
-#, fuzzy
-msgid "Sensor Preferences"
-msgstr "监视设备选项"
-
-#: src/ui.c:89
-#, fuzzy
-msgid "_Quit"
-msgstr "退出"
-
-#: src/ui.c:89
-msgid "Quit"
-msgstr "退出"
-
-#: src/ui.c:110 src/ui_appindicator.c:161
-#, c-format
-msgid "building menus failed: %s"
-msgstr ""
-
-#: src/ui.c:148
-msgid "Psensor - Temperature Monitor"
-msgstr ""
-
-#: src/ui.c:166
-#, c-format
-msgid "ERROR: Failed to load psensor icon.\n"
-msgstr ""
-
-#: src/ui_sensorlist.c:232
+#: src/ui_sensorlist.c:291
 msgid "Select foreground color"
 msgstr ""
 
-#: src/ui_sensorlist.c:309 src/glade/psensor-pref.glade:185
+#: src/ui_sensorlist.c:374 src/ui_pref.c:249
 msgid "Sensor"
 msgstr "监视设备"
 
-#: src/ui_sensorlist.c:315
+#: src/ui_sensorlist.c:380
 msgid "Current"
 msgstr "当前"
 
-#: src/ui_sensorlist.c:321
+#: src/ui_sensorlist.c:386
 msgid "Min"
 msgstr "最小值"
 
-#: src/ui_sensorlist.c:327
+#: src/ui_sensorlist.c:392
 msgid "Max"
 msgstr "最大值"
 
-#: src/ui_sensorlist.c:334
+#: src/ui_sensorlist.c:399
 msgid "Color"
 msgstr "颜色"
 
-#: src/ui_sensorlist.c:346
+#: src/ui_sensorlist.c:412
 msgid "Enabled"
 msgstr "激活"
 
-#: src/ui_sensorlist.c:375 src/ui_sensorlist.c:376 src/ui_sensorlist.c:377
-#: src/glade/sensor-edit.glade:87 src/glade/sensor-edit.glade:153
+#: src/ui_sensorlist.c:441 src/ui_sensorlist.c:442 src/ui_sensorlist.c:443
 msgid "N/A"
 msgstr ""
+
+#: src/ui_appindicator.c:64
+msgid "Show"
+msgstr "显示主窗口"
+
+#: src/ui_appindicator.c:78
+msgid "Quit"
+msgstr "退出"
 
 #: src/ui_notify.c:36
 #, c-format
 msgid "ERROR: failed gettimeofday\n"
 msgstr ""
 
-#: src/ui_notify.c:72 src/ui_notify.c:76
+#: src/ui_notify.c:65 src/ui_notify.c:69
 msgid "Temperature alert"
 msgstr ""
 
-#: src/ui_sensorpref.c:398
+#: src/ui_pref.c:200
+msgid "Graph Colors"
+msgstr "图表颜色"
+
+#: src/ui_pref.c:204
+msgid "Foreground:"
+msgstr "坐标栏:"
+
+#: src/ui_pref.c:209
+msgid "Background:"
+msgstr "背景:"
+
+#: src/ui_pref.c:212
+msgid "Background opacity:"
+msgstr "背景亮度:"
+
+#: src/ui_pref.c:220
+msgid "<i>Min</i>"
+msgstr "<i>最小值</i>"
+
+#: src/ui_pref.c:224
+msgid "<i>Max</i>"
+msgstr "<i>最大值</i>"
+
+#: src/ui_pref.c:234 src/ui_sensorpref.c:80
+msgid "Graph"
+msgstr "图表"
+
+#: src/ui_pref.c:236
+msgid "Graph update interval:"
+msgstr ""
+
+#: src/ui_pref.c:241
+msgid "Graph monitoring duration:"
+msgstr ""
+
+#: src/ui_pref.c:251
+msgid "Measure update interval:"
+msgstr ""
+
+#: src/ui_pref.c:258
+msgid "Interface"
+msgstr "界面"
+
+#: src/ui_pref.c:260
+msgid "Position of sensors table:"
+msgstr "监视设备列表位置:"
+
+#: src/ui_pref.c:263
+msgid "Right"
+msgstr "右侧"
+
+#: src/ui_pref.c:265
+msgid "Left"
+msgstr "左侧"
+
+#: src/ui_pref.c:267
+msgid "Top"
+msgstr "顶部"
+
+#: src/ui_pref.c:269
+msgid "Bottom"
+msgstr "底部"
+
+#: src/ui_pref.c:284
+msgid "Hide window decoration"
+msgstr "隐藏窗口标题栏"
+
+#: src/ui_pref.c:289
+msgid "Keep window below"
+msgstr "保持在最底层"
+
+#: src/ui_pref.c:307
 #, fuzzy
-msgid "Sensor Name"
-msgstr "监视设备"
+msgid "Edit Preferences"
+msgstr "监视设备选项"
+
+#: src/ui_sensorpref.c:67
+msgid "Sensor Information"
+msgstr "设备信息"
+
+#: src/ui_sensorpref.c:69
+msgid "Id:"
+msgstr "标识:"
+
+#: src/ui_sensorpref.c:73
+msgid "Type:"
+msgstr "类型:"
+
+#: src/ui_sensorpref.c:77
+msgid "Name:"
+msgstr "名称:"
+
+#: src/ui_sensorpref.c:83
+msgid "Draw sensor curve"
+msgstr "绘制监视曲线"
+
+#: src/ui_sensorpref.c:86
+#, fuzzy
+msgid "Color:"
+msgstr "颜色:"
+
+#: src/ui_sensorpref.c:89
+msgid "Alarm"
+msgstr "警告信息"
+
+#: src/ui_sensorpref.c:93
+msgid "Activate desktop notifications"
+msgstr "激活桌面气泡提示"
+
+#: src/ui_sensorpref.c:98
+msgid "Temperature limit:"
+msgstr "温度警戒线:"
 
 #: src/rsensor.c:131
 #, c-format
@@ -212,58 +290,47 @@ msgstr ""
 msgid "LUATPL Error: code: %d.\n"
 msgstr ""
 
-#: src/server/server.c:56
-msgid ""
-"<html><body><p>Page not found - Go to <a href='/'>Main page</a></p></body>"
-msgstr ""
-
-#: src/server/server.c:92
+#: src/server/server.c:86
 msgid ""
 "psensor-server is an HTTP server for monitoring hardware sensors remotely."
 msgstr ""
 
-#: src/server/server.c:103
+#: src/server/server.c:97
 msgid ""
-"  -d,--debug     run in debug mode\n"
 "  -p,--port=PORT webserver port\n"
 "  -w,--wdir=DIR  directory containing webserver pages"
 msgstr ""
 
-#: src/server/server.c:184
-msgid "<html><body><p>Server stop requested</p></body></html>"
+#: src/server/server.c:198
+msgid "ERROR: Lua support not enabled\n"
 msgstr ""
 
-#: src/server/server.c:315
-#, c-format
-msgid "HTTP Request: %s\n"
-msgstr ""
-
-#: src/server/server.c:382
+#: src/server/server.c:275
 #, c-format
 msgid "ERROR: failed to init lm-sensors\n"
 msgstr ""
 
-#: src/server/server.c:389
+#: src/server/server.c:282
 #, c-format
 msgid "ERROR: no sensors detected\n"
 msgstr ""
 
-#: src/server/server.c:396
+#: src/server/server.c:289
 #, c-format
 msgid "ERROR: Fail to create web server\n"
 msgstr ""
 
-#: src/server/server.c:400
+#: src/server/server.c:293
 #, c-format
 msgid "Web server started on port: %d\n"
 msgstr ""
 
-#: src/server/server.c:401
+#: src/server/server.c:294
 #, c-format
 msgid "WWW directory: %s\n"
 msgstr ""
 
-#: src/server/server.c:402
+#: src/server/server.c:295
 #, c-format
 msgid "URL: http://localhost:%d\n"
 msgstr ""
@@ -313,158 +380,12 @@ msgstr ""
 msgid "ERROR: Can't get value of subfeature %s: %s\n"
 msgstr ""
 
-#: src/lib/lmsensor.c:122
+#: src/lib/lmsensor.c:127
 #, c-format
 msgid "ERROR: create_sensor, wrong feature type\n"
 msgstr ""
 
-#: src/lib/lmsensor.c:166
+#: src/lib/lmsensor.c:171
 #, c-format
 msgid "ERROR: lm-sensors initialization failure: %s\n"
 msgstr ""
-
-#: src/lib/psensor.c:448
-msgid "C"
-msgstr ""
-
-#: src/lib/psensor.c:451
-msgid "RPM"
-msgstr ""
-
-#: src/glade/psensor-pref.glade:7
-#, fuzzy
-msgid "Edit Preferences"
-msgstr "监视设备选项"
-
-#: src/glade/psensor-pref.glade:25
-msgid "Graph Colors"
-msgstr "图表颜色"
-
-#: src/glade/psensor-pref.glade:40
-msgid "Foreground:"
-msgstr "坐标栏:"
-
-#: src/glade/psensor-pref.glade:53
-msgid "Background:"
-msgstr "背景:"
-
-#: src/glade/psensor-pref.glade:66
-msgid "Background opacity:"
-msgstr "背景亮度:"
-
-#: src/glade/psensor-pref.glade:114 src/glade/sensor-edit.glade:184
-msgid "Graph"
-msgstr "图表"
-
-#: src/glade/psensor-pref.glade:131
-msgid "Update interval:"
-msgstr ""
-
-#: src/glade/psensor-pref.glade:144
-msgid "Monitoring duration:"
-msgstr ""
-
-#: src/glade/psensor-pref.glade:156 src/glade/psensor-pref.glade:214
-msgid "second(s)"
-msgstr ""
-
-#: src/glade/psensor-pref.glade:170
-msgid "minute(s)"
-msgstr ""
-
-#: src/glade/psensor-pref.glade:202
-msgid "Measure update interval:"
-msgstr ""
-
-#: src/glade/psensor-pref.glade:229
-msgid "Interface"
-msgstr "界面"
-
-#: src/glade/psensor-pref.glade:246
-msgid "Position of sensors table:"
-msgstr "监视设备列表位置:"
-
-#: src/glade/psensor-pref.glade:257
-msgid "Hide window decoration"
-msgstr "隐藏窗口标题栏"
-
-#: src/glade/psensor-pref.glade:274
-msgid "Keep window below"
-msgstr "保持在最底层"
-
-#: src/glade/psensor-pref.glade:365
-msgid "<i>Min</i>"
-msgstr "<i>最小值</i>"
-
-#: src/glade/psensor-pref.glade:388
-msgid "<i>Max</i>"
-msgstr "<i>最大值</i>"
-
-#: src/glade/psensor-pref.glade:407
-#, fuzzy
-msgid "Enable menu"
-msgstr "激活"
-
-#: src/glade/psensor-pref.glade:423
-msgid "Enable Unity Launcher counter"
-msgstr ""
-
-#: src/glade/sensor-edit.glade:8
-msgid "Edit Sensor Preferences"
-msgstr "监视设备选项"
-
-#: src/glade/sensor-edit.glade:104
-msgid "Name:"
-msgstr "名称:"
-
-#: src/glade/sensor-edit.glade:139
-msgid "Type:"
-msgstr "类型:"
-
-#: src/glade/sensor-edit.glade:169
-msgid "Id:"
-msgstr "标识:"
-
-#: src/glade/sensor-edit.glade:202
-#, fuzzy
-msgid "Color:"
-msgstr "颜色:"
-
-#: src/glade/sensor-edit.glade:216
-msgid "Alarm"
-msgstr "警告信息"
-
-#: src/glade/sensor-edit.glade:231
-msgid "Activate desktop notifications"
-msgstr "激活桌面气泡提示"
-
-#: src/glade/sensor-edit.glade:251
-msgid "Temperature limit:"
-msgstr "温度警戒线:"
-
-#: src/glade/sensor-edit.glade:266
-msgid "Sensor Information"
-msgstr "设备信息"
-
-#: src/glade/sensor-edit.glade:279
-msgid "Draw sensor curve"
-msgstr "绘制监视曲线"
-
-#: src/glade/sensor-edit.glade:327
-msgid "°C"
-msgstr ""
-
-#~ msgid "Right"
-#~ msgstr "右侧"
-
-#~ msgid "Left"
-#~ msgstr "左侧"
-
-#~ msgid "Top"
-#~ msgstr "顶部"
-
-#~ msgid "Bottom"
-#~ msgstr "底部"
-
-#~ msgid "Show"
-#~ msgstr "显示主窗口"

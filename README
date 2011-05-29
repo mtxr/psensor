@@ -85,7 +85,6 @@ Psensor compilation requires:
  * library libappindicator (optional)
  * library libXNVCtrl (optional)
  * library json0 and curl (optional, required for remote monitoring)
- * library unity (>=v3.4.2, optional)
 
 Psensor-server compilation requires:
  * make/gcc	
@@ -118,5 +117,5 @@ instructions
 
 Contact
 -------
-Bugs and comments can be sent to jeanfi@gmail.com
+Bugs and comments can be sent to wpitchoune@gmail.com
 Home page: http://wpitchoune.net/psensor

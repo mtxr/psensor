@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -21,15 +21,13 @@
 #define _PSENSOR_SERVER_H_
 
 #include "psensor.h"
-#include "sysinfo.h"
 
 #define URL_BASE_API_1_0 "/api/1.0"
 #define URL_BASE_API_1_0_SENSORS "/api/1.0/sensors"
-#define URL_API_1_0_SERVER_STOP "/api/1.0/server/stop"
 
 struct server_data {
 	struct psensor **sensors;
-	struct psysinfo psysinfo;
+	float cpu_rate;
 	char *www_dir;
 };
 

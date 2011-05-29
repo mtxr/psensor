@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,15 +20,6 @@
 #ifndef _PSENSOR_SYSINFO_H_
 #define _PSENSOR_SYSINFO_H_
 
-#include <sys/sysinfo.h>
-
-struct psysinfo {
-	float cpu_rate;
-
-	struct sysinfo sysinfo;
-};
-
-void sysinfo_update(struct psysinfo *sysinfo);
-void sysinfo_cleanup();
+void sysinfo_update(float *cpu_rate);
 
 #endif

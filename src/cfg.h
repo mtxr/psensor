@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,10 +49,6 @@ struct config {
 
 	int sensor_values_max_length;
 	int sensor_update_interval;
-
-	int menu_bar_disabled;
-
-	int unity_launcher_count_disabled;
 };
 
 /*

@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -118,17 +118,11 @@ int psensor_list_contains_type(struct psensor **sensors, unsigned int type);
 int is_temp_type(unsigned int type);
 int is_fan_type(unsigned int type);
 
-double get_min_temp(struct psensor **sensors);
-double get_max_temp(struct psensor **sensors);
+int get_min_temp(struct psensor **sensors);
+int get_max_temp(struct psensor **sensors);
 
-double get_min_rpm(struct psensor **sensors);
-double get_max_rpm(struct psensor **sensors);
-
-/*
-  Get the maximal current value of all sensors of a given type.
-*/
-double
-psensor_get_max_current_value(struct psensor **sensors, unsigned int type);
+int get_min_rpm(struct psensor **sensors);
+int get_max_rpm(struct psensor **sensors);
 
 /*
   Converts the value of a sensor to a string.
@@ -155,8 +149,6 @@ struct measure *psensor_get_current_measure(struct psensor *sensor);
   Returns a string representation of a psensor type.
 */
 const char *psensor_type_to_str(unsigned int type);
-
-const char *psensor_type_to_unit_str(unsigned int type);
 
 void psensor_list_update_measures(struct psensor **sensors);
 

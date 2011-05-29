@@ -152,8 +152,6 @@ SENSORS_LIBS = @SENSORS_LIBS@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-UNITY_CFLAGS = @UNITY_CFLAGS@
-UNITY_LIBS = @UNITY_LIBS@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
 X11_CFLAGS = @X11_CFLAGS@
@@ -215,7 +213,7 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 defaultwwwdir = $(pkgdatadir)/www
-defaultwww_DATA = monitor.lua style.css favicon.ico index.lua
+defaultwww_DATA = index.lua style.css
 EXTRA_DIST = $(defaultwww_DATA)
 all: all-am
 

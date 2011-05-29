@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -137,7 +137,6 @@ char *file_get_content(const char *fpath)
 	char *page;
 
 	size = file_get_size(fpath);
-
 	if (size == -1) {
 		page = NULL;
 

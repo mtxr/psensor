@@ -17,9 +17,6 @@ It is also possible to connect to the psensor\-server with a browser, a
 simple Web page is displaying the sensors information and the CPU
 usage.
 
-If run in debug mode, psensor\-server can be stopped by sending an HTTP
-request with the URL 'http://hostname:port/api/1.0/server/stop'.
-
 [WARNING]
 
 psensor\-server does not provide any way to restrict the connection to

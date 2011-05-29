@@ -13,11 +13,3 @@ table {
 tr.title {
     background-color: #eee;
 }
-
-th {
-    text-align: center;
-}
-
-td {
-    text-align: right;
-}

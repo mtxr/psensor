@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ lmsensor_get_value(const sensors_chip_name *name,
 		fprintf(stderr,
 			_("ERROR: Can't get value of subfeature %s: %s\n"),
 			sub->name, sensors_strerror(err));
-		val = UNKNOWN_VALUE;
+		val = 0.0;
 	}
 	return val;
 }
@@ -56,10 +56,15 @@ double lmsensor_get_temp_input(struct psensor *sensor)
 
 	sf = sensors_get_subfeature(chip,
 				    feature, SENSORS_SUBFEATURE_TEMP_INPUT);
-	if (sf)
-		return lmsensor_get_value(chip, sf);
-	else
-		return UNKNOWN_VALUE;
+	if (sf) {
+		double val = lmsensor_get_value(chip, sf);
+		if (val < 0.0)
+			return 0.0;
+		else
+			return val;
+	} else {
+		return 0.0;
+	}
 }
 
 double lmsensor_get_fan_input(struct psensor *sensor)
@@ -74,7 +79,7 @@ double lmsensor_get_fan_input(struct psensor *sensor)
 	if (sf)
 		return lmsensor_get_value(chip, sf);
 	else
-		return UNKNOWN_VALUE;
+		return 0;
 }
 
 void lmsensor_psensor_list_update(struct psensor **sensors)
@@ -143,13 +148,13 @@ lmsensor_psensor_create(const sensors_chip_name *chip,
 		    1);
 	sprintf(id, "lmsensor %s %s", name, label);
 
-	psensor = psensor_create(id, label, type, values_max_length);
+	psensor = psensor_create(id, strdup(label), type, values_max_length);
 
 	psensor->iname = chip;
 	psensor->feature = feature;
 
 	if (feature->type == SENSORS_FEATURE_TEMP
-	    && (lmsensor_get_temp_input(psensor) == UNKNOWN_VALUE)) {
+	    && (lmsensor_get_temp_input(psensor) <= 0.0)) {
 		free(psensor);
 		return NULL;
 	}

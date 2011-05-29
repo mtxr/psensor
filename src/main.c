@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,8 @@
 */
 
 #include <locale.h>
+#include <libintl.h>
+#define _(str) gettext(str)
 
 #include <getopt.h>
 #include <stdio.h>
@@ -40,11 +42,6 @@
 #include "ui_color.h"
 #include "lmsensor.h"
 #include "ui_pref.h"
-#include "ui_graph.h"
-
-#ifdef HAVE_UNITY
-#include "ui_unity.h"
-#endif
 
 #ifdef HAVE_NVIDIA
 #include "nvidia.h"
@@ -69,7 +66,7 @@ static const char *program_name;
 void print_version()
 {
 	printf("psensor %s\n", VERSION);
-	printf(_("Copyright (C) %s jeanfi@gmail.com\n\
+	printf(_("Copyright (C) %s wpitchoune@gmail.com\n\
 License GPLv2: GNU GPL version 2 or later \
 <http://www.gnu.org/licenses/old-licenses/gpl-2.0.html>\n\
 This is free software: you are free to change and redistribute it.\n\
@@ -85,7 +82,7 @@ void print_help()
 	       "including temperatures and fan speeds."));
 
 	puts("");
-	puts(_("Options:"));
+	puts("Options:");
 	puts(_("\
   -h, --help          display this help and exit\n\
   -v, --version       display version information and exit"));
@@ -102,6 +99,25 @@ the URL of the psensor-server, example: http://hostname:3131"));
 	puts("");
 	printf(_("%s home page: <%s>\n"), PACKAGE_NAME, PACKAGE_URL);
 }
+
+static void
+cb_preferences(gpointer data, guint callback_action, GtkWidget *item)
+{
+	ui_pref_dialog_run((struct ui_psensor *)data);
+}
+
+static GtkItemFactoryEntry menu_items[] = {
+	{"/Preferences",
+	 NULL, cb_preferences, 0, "<Item>"},
+
+	{"/sep1",
+	 NULL, NULL, 0, "<Separator>"},
+
+	{"/Quit",
+	 "", ui_psensor_exit, 0, "<StockItem>", GTK_STOCK_QUIT},
+};
+
+static gint nmenu_items = sizeof(menu_items) / sizeof(menu_items[0]);
 
 /*
   Updates the size of the sensor values if different than the
@@ -130,7 +146,7 @@ void update_psensor_measures(struct ui_psensor *ui)
 	struct config *cfg = ui->config;
 
 	while (1) {
-		g_mutex_lock(ui->sensors_mutex);
+		gdk_threads_enter();
 
 		if (!sensors)
 			return;
@@ -145,7 +161,7 @@ void update_psensor_measures(struct ui_psensor *ui)
 		nvidia_psensor_list_update(sensors);
 #endif
 
-		g_mutex_unlock(ui->sensors_mutex);
+		gdk_threads_leave();
 
 		sleep(cfg->sensor_update_interval);
 	}
@@ -160,19 +176,14 @@ gboolean ui_refresh_thread(gpointer data)
 	ret = TRUE;
 	cfg = ui->config;
 
-	g_mutex_lock(ui->sensors_mutex);
+	gdk_threads_enter();
 
 	graph_update(ui->sensors, ui->w_graph, ui->config);
 
-	ui_sensorlist_update(ui);
+	ui_sensorlist_update(ui->ui_sensorlist);
 
 #if defined(HAVE_APPINDICATOR) || defined(HAVE_APPINDICATOR_029)
 	ui_appindicator_update(ui);
-#endif
-
-#ifdef HAVE_UNITY
-	ui_unity_launcher_entry_update(ui->sensors,
-				       !cfg->unity_launcher_count_disabled);
 #endif
 
 	if (ui->graph_update_interval != cfg->graph_update_interval) {
@@ -180,13 +191,24 @@ gboolean ui_refresh_thread(gpointer data)
 		ret = FALSE;
 	}
 
-	g_mutex_unlock(ui->sensors_mutex);
+	gdk_threads_leave();
 
 	if (ret == FALSE)
 		g_timeout_add(1000 * ui->graph_update_interval,
 			      ui_refresh_thread, ui);
 
 	return ret;
+}
+
+gboolean
+on_expose_event(GtkWidget *widget, GdkEventExpose *event, gpointer data)
+{
+	struct ui_psensor *ui_psensor = (struct ui_psensor *)data;
+
+	graph_update(ui_psensor->sensors,
+		     ui_psensor->w_graph, ui_psensor->config);
+
+	return FALSE;
 }
 
 void cb_alarm_raised(struct psensor *sensor, void *data)
@@ -232,8 +254,7 @@ void associate_colors(struct psensor **sensors)
 	}
 }
 
-void
-associate_cb_alarm_raised(struct psensor **sensors, struct ui_psensor *ui)
+void associate_cb_alarm_raised(struct psensor **sensors, struct ui_psensor *ui)
 {
 	struct psensor **sensor_cur = sensors;
 	while (*sensor_cur) {
@@ -274,6 +295,98 @@ void associate_preferences(struct psensor **sensors)
 	}
 }
 
+GtkWidget *ui_get_popupmenu(gpointer data)
+{
+	GtkItemFactory *item_factory;
+	GtkWidget *menu;
+
+	item_factory = gtk_item_factory_new(GTK_TYPE_MENU, "<main>", NULL);
+	gtk_item_factory_create_items(item_factory,
+				      nmenu_items, menu_items, data);
+	menu = gtk_item_factory_get_widget(item_factory, "<main>");
+
+	return menu;
+}
+
+int on_graph_clicked(GtkWidget *widget, GdkEventButton *event, gpointer data)
+{
+	GtkWidget *menu;
+
+	if (event->type != GDK_BUTTON_PRESS)
+		return FALSE;
+
+	menu = ui_get_popupmenu(data);
+
+	gtk_menu_popup(GTK_MENU(menu), NULL, NULL, NULL, NULL,
+		       event->button, event->time);
+
+	return TRUE;
+}
+
+
+GtkWidget *create_graph_widget(struct ui_psensor * ui)
+{
+	GtkWidget *w_graph;
+
+	w_graph = gtk_drawing_area_new();
+
+	g_signal_connect(G_OBJECT(w_graph),
+			 "expose-event", G_CALLBACK(on_expose_event), ui);
+
+	gtk_widget_add_events(w_graph, GDK_BUTTON_PRESS_MASK);
+	gtk_signal_connect(GTK_OBJECT(w_graph),
+			   "button_press_event",
+			   (GCallback) on_graph_clicked, ui);
+
+	return w_graph;
+}
+
+void ui_main_box_create(struct ui_psensor *ui)
+{
+	struct config *cfg;
+	GtkWidget *w_sensorlist;
+
+	cfg = ui->config;
+
+	if (ui->main_box) {
+		ui_sensorlist_create_widget(ui->ui_sensorlist);
+
+		gtk_container_remove(GTK_CONTAINER(ui->main_window),
+				     ui->main_box);
+
+		ui->w_graph = create_graph_widget(ui);
+		ui->w_sensorlist = ui->ui_sensorlist->widget;
+	}
+
+	if (cfg->sensorlist_position == SENSORLIST_POSITION_RIGHT
+	    || cfg->sensorlist_position == SENSORLIST_POSITION_LEFT)
+		ui->main_box = gtk_hpaned_new();
+	else
+		ui->main_box = gtk_vpaned_new();
+
+	w_sensorlist = gtk_scrolled_window_new(NULL, NULL);
+	gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(w_sensorlist),
+				       GTK_POLICY_NEVER, GTK_POLICY_AUTOMATIC);
+	gtk_container_add(GTK_CONTAINER(w_sensorlist),
+			  ui->ui_sensorlist->widget);
+
+	gtk_container_add(GTK_CONTAINER(ui->main_window), ui->main_box);
+
+	if (cfg->sensorlist_position == SENSORLIST_POSITION_RIGHT
+	    || cfg->sensorlist_position == SENSORLIST_POSITION_BOTTOM) {
+		gtk_paned_pack1(GTK_PANED(ui->main_box),
+				GTK_WIDGET(ui->w_graph), TRUE, TRUE);
+		gtk_paned_pack2(GTK_PANED(ui->main_box),
+				w_sensorlist, FALSE, TRUE);
+	} else {
+		gtk_paned_pack1(GTK_PANED(ui->main_box),
+				w_sensorlist, FALSE, TRUE);
+		gtk_paned_pack2(GTK_PANED(ui->main_box),
+				GTK_WIDGET(ui->w_graph), TRUE, TRUE);
+	}
+
+	gtk_widget_show_all(ui->main_box);
+}
 
 static struct option long_options[] = {
 	{"version", no_argument, 0, 'v'},
@@ -327,15 +440,13 @@ int main(int argc, char **argv)
 
 	g_thread_init(NULL);
 	gdk_threads_init();
-	/* gdk_threads_enter(); */
+	gdk_threads_enter();
 
 	gtk_init(&argc, &argv);
 
 #ifdef HAVE_LIBNOTIFY
 	ui.notification_last_time = NULL;
 #endif
-
-	ui.sensors_mutex = g_mutex_new();
 
 	config_init();
 
@@ -376,16 +487,18 @@ int main(int argc, char **argv)
 	associate_cb_alarm_raised(ui.sensors, &ui);
 
 	/* main window */
-	ui_window_create(&ui);
-	ui.sensor_box = NULL;
+	ui.main_window = ui_window_create(&ui);
+	ui.main_box = NULL;
 
 	/* drawing box */
-	ui.w_graph = ui_graph_create(&ui);
+	ui.w_graph = create_graph_widget(&ui);
 
 	/* sensor list */
-	ui_sensorlist_create(&ui);
+	ui.ui_sensorlist = ui_sensorlist_create(ui.sensors);
 
-	ui_window_update(&ui);
+	ui_main_box_create(&ui);
+
+	gtk_widget_show_all(ui.main_window);
 
 	thread = g_thread_create((GThreadFunc) update_psensor_measures,
 				 &ui, TRUE, &error);
@@ -407,6 +520,8 @@ int main(int argc, char **argv)
 	sensors_cleanup();
 
 	psensor_list_free(ui.sensors);
+
+	gdk_threads_leave();
 
 	return 0;
 }

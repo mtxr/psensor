@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,7 +19,6 @@
 
 #include <stdlib.h>
 #include <glibtop/cpu.h>
-#include <sys/sysinfo.h>
 
 #include "sysinfo.h"
 
@@ -28,12 +27,11 @@ static float last_used;
 static float last_total;
 
 
-void sysinfo_update(struct psysinfo *info)
+void sysinfo_update(float *cpu_rate)
 {
 	unsigned long int used = 0;
 	unsigned long int dt;
 
-	/* cpu */
 	if (!cpu)
 		cpu = malloc(sizeof(glibtop_cpu));
 
@@ -44,17 +42,8 @@ void sysinfo_update(struct psysinfo *info)
 	dt = cpu->total - last_total;
 
 	if (dt)
-		info->cpu_rate = (used - last_used) / dt;
+		*cpu_rate = (used - last_used) / dt;
 
 	last_used = used;
 	last_total = cpu->total;
-
-	/* memory */
-	sysinfo(&info->sysinfo);
-}
-
-void sysinfo_cleanup()
-{
-	if (cpu)
-		free(cpu);
 }

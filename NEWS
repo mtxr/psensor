@@ -1,80 +1,8 @@
-* v0.6.2.9
+* v0.6.1.10
 
-** psensor: fixed UI freeze on Ubuntu Lucid when 'sensor preferences'.
-   is selected with application indicator.
-** added missing src/description.txt file into source archive.
-** psensor: appindicator displays unit of sensor values.
-
-* v0.6.2.8
-
-** psensor: escaped - in manpage.
-** psensor-server: escaped - in manpage.
-** psensor: added support of libnotify 0.7.
-** psensor: added turkish support.
-** psensor: fixed multi-languages support used by glade.
-** switched from wpitchoune@gmail.com to jeanfi@gmail.com (my usual
-   email).
-** merged french translation from v0.6.1.8.
-** added missing french translation.
-** added different sizes of psensor.png .
-** psensor: added menu.
-** psensor: added enable/disable unity launcher counter.
-** psensor: unity launcher counter displays the higher temperature.
-** avoid fetching hddtemp daemon when no hdd in the sensors list.
+** psensor: support of appindicator < 0.2.9
 ** psensor: closing the window hides psensor instead of quitting when
    application indicator support is enabled. 
-** psensor: dialog window for editing all sensors preferences.
-** psensor: added support of GTK3.0 (GTK2.0 still supported).
-** psensor: fixed crash when glade files cannot be read.
-** psensor: display sensors information in the application indicator.
-
-* v0.6.2.7
-
-** psensor: src/glade/psensor-pref.glade, added button separator.
-** psensor: src/glade/sensor-edit.glade, fixed horiz/vert padding.
-** psensor: src/lib/measure.c, initialize time.
-** psensor: fixed freeze when click on preferences appindicator with
-   natty.
-
-* v0.6.2.6
-
-** psensor: fixed min temp/fan of the graph
-** psensor: very minor optimization (graph.c)
-
-* v0.6.2.5
-
-** psensor: dialog box for editing psensor preferences is using Glade
-** psensor: dialog box for editing sensor preferences is using Glade
-** psensor: added support of negative temperatures (lm-sensors)
-
-* v0.6.2.4
-
-** psensor, graph: fixed padding bugs 
-** psensor, graph: drawing code refactored
-** psensor: the value of the first detected sensor is displayed in the
-   unity launcher entry of psensor (requires unity >=3.4.2).
-
-* v0.6.2.3
-
-** psensor-server: new global variable 'psensor_version' for lua template
-** psensor-server: /index.html replaced by /index.lua
-** avoid useless lib linkage by using --as-needed
-
-* v0.6.2.2
-
-** psensor-server: web server support binary files
-** psensor-server: added favicon.ico
-** psensor-server: moved index.lua to monitor.lua
-** psensor-server: added index.html (welcome page)
-
-* v0.6.2.1
-
-** added uptime/memory information (psensor-server web)
-** added debug mode for psensor-server (--debug)
-** when used in debug mode, psensor-server can be stopped remotely
-   using http://hostname:port/api/1.0/server/stop
-** fixed memory leak (label of lmsensor)
-** some code cleanup/refactoring
 
 * v0.6.1.9
 

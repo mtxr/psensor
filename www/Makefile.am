@@ -1,4 +1,4 @@
 defaultwwwdir = $(pkgdatadir)/www
-defaultwww_DATA = monitor.lua style.css favicon.ico index.lua
+defaultwww_DATA = index.lua style.css
 
 EXTRA_DIST=$(defaultwww_DATA)

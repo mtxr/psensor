@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -22,7 +22,21 @@
 
 #include "ui.h"
 
+void ui_pref_add_section_title(GtkWidget *table, const char *title, guint row);
+
+GtkWidget *ui_pref_add_color_button(GtkWidget *table,
+				    const char *text,
+				    struct color *color, guint row);
+
+void ui_pref_add_label(GtkWidget *table,
+		       const char *text, guint col, guint row);
+
+GtkWidget *ui_pref_add_check_button(GtkWidget *table,
+				    const char *text, int enabled, guint row);
+
 void ui_pref_dialog_run(struct ui_psensor *);
+void ui_pref_set_color_button(GtkWidget *btn, struct color *color);
+GtkWidget *ui_pref_create_color_button(GdkColor * color);
 GdkColor *color_to_gdkcolor(struct color *color);
 
 #endif

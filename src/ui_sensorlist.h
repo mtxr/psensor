@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,20 +25,18 @@
 #include "psensor.h"
 
 struct ui_sensorlist {
-	/* The GtkTreeView widget containing the list of sensors */
-	GtkTreeView *treeview;
-
-	/* Scrolled widget containing the GtkTreeView */
 	GtkWidget *widget;
 
 	struct psensor **sensors;
 };
 
-void ui_sensorlist_create(struct ui_psensor *);
+struct ui_sensorlist *ui_sensorlist_create(struct psensor **);
 
 /* Update values current/min/max */
-void ui_sensorlist_update(struct ui_psensor *ui);
+void ui_sensorlist_update(struct ui_sensorlist *list);
 
-void ui_sensorlist_update_sensors_preferences(struct ui_psensor *);
+void ui_sensorlist_update_sensors_preferences(struct ui_sensorlist *);
+
+void ui_sensorlist_create_widget(struct ui_sensorlist *ui);
 
 #endif

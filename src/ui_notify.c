@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -62,13 +62,6 @@ void ui_notify(struct psensor *sensor, struct ui_psensor *ui)
 		name = strdup(sensor->name);
 
 #ifdef NOTIFY_VERSION_MAJOR
-		/*
-		   since libnotify 0.7 notify_notification_new has
-		   only 3 parameters.
-
-		   libnotify < 0.7 does not define
-		   NOTIFY_VERSION_MAJOR
-		*/
 		notif = notify_notification_new(_("Temperature alert"),
 						name,
 						NULL);
@@ -78,7 +71,6 @@ void ui_notify(struct psensor *sensor, struct ui_psensor *ui)
 						NULL,
 						GTK_WIDGET(ui->main_window));
 #endif
-
 
 		notify_notification_show(notif, NULL);
 

@@ -1,5 +1,5 @@
 /*
-    Copyright (C) 2010-2011 jeanfi@gmail.com
+    Copyright (C) 2010-2011 wpitchoune@gmail.com
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -20,8 +20,32 @@
 #ifndef _PSENSOR_UI_SENSORPREF_H_
 #define _PSENSOR_UI_SENSORPREF_H_
 
-#include "ui.h"
+#include "color.h"
+#include "psensor.h"
+#include "ui_sensorlist.h"
 
-void ui_sensorpref_dialog_run(struct psensor *sensor, struct ui_psensor *ui);
+#include <gtk/gtk.h>
+
+struct ui_sensorpref {
+	/* Main container */
+	GtkWidget *widget;
+
+	GtkWidget *w_name;
+	GtkWidget *w_enabled;
+	GtkWidget *w_alarm_limit;
+	GtkWidget *w_alarm_enabled;
+	GtkWidget *w_color;
+
+	/* Needed to change color/enabled in the list of sensors */
+	struct ui_sensorlist *ui_sensorlist;
+};
+
+/*
+  Create a gtk widget to edit preferences about a given sensor.
+
+  The widget does not modify sensor struct.
+*/
+struct ui_sensorpref *ui_sensorpref_create(struct ui_sensorlist *,
+					   struct psensor *sensor);
 
 #endif

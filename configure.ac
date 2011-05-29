@@ -2,7 +2,7 @@
 # Process this file with autoconf to produce a configure script.
 
 AC_PREREQ([2.64])
-AC_INIT([psensor], [0.6.2.9],[jeanfi@gmail.com],[psensor],[http://wpitchoune.net/psensor])
+AC_INIT([psensor], [0.6.1.10],[wpitchoune@gmail.com],[psensor],[http://wpitchoune.net/psensor])
 
 AM_INIT_AUTOMAKE([-Wall -Werror gnu])
 
@@ -74,9 +74,10 @@ AM_CONDITIONAL(LIBNOTIFY, test -n "$LIBNOTIFY_LIBS")
 AC_SUBST(LIBNOTIFY_CFLAGS)
 AC_SUBST(LIBNOTIFY_LIBS)
 
+
 # Checks AppIndicator 
-APPINDICATOR_LIBS=
-PKG_CHECK_MODULES(APPINDICATOR, 
+ APPINDICATOR_LIBS=
+ PKG_CHECK_MODULES(APPINDICATOR, 
      appindicator-0.1 <= 0.2.9 , 
      [AC_DEFINE([HAVE_APPINDICATOR],[1],[Use AppIndicator 0.2.9])
       AC_DEFINE([HAVE_APPINDICATOR_029],[1],[Use AppIndicator 0.2.9])
@@ -142,18 +143,9 @@ AM_CONDITIONAL(NVIDIA, test -n "$NVIDIA_LIBS")
 AC_SUBST(NVIDIA_CFLAGS)
 AC_SUBST(NVIDIA_LIBS)
 
-# Checks Unity
-PKG_CHECK_MODULES(UNITY, 
-	          unity >= 3.4.2,
-		  [AC_DEFINE([HAVE_UNITY],[1],[Use Unity])], 
-		  [AC_MSG_WARN(Unity not present)])
-AC_SUBST(UNITY_CFLAGS)
-AC_SUBST(UNITY_LIBS)
-AM_CONDITIONAL(UNITY, test -n "$UNITY_LIBS")
-
 ############### psensor-server
 
-# Checks Lua 5.1 
+# Checks Lua 5.1 (required)
 LUA_LIBS=
 PKG_CHECK_MODULES(LUA, 
   lua, 
@@ -203,20 +195,12 @@ AC_SUBST(GTOP_LIBS)
 AC_CONFIG_FILES([
  Makefile
  src/Makefile
- src/glade/Makefile
  src/plib/Makefile
  src/lib/Makefile
- src/unity/Makefile
  src/libpsensor_json/Makefile
  src/server/Makefile
  pixmaps/scalable/Makefile
- pixmaps/14x14/Makefile
- pixmaps/16x16/Makefile
- pixmaps/22x22/Makefile
- pixmaps/24x24/Makefile
- pixmaps/32x32/Makefile
  pixmaps/48x48/Makefile
- pixmaps/64x64/Makefile
  www/Makefile
  po/Makefile.in
  tests/Makefile

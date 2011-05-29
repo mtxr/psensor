@@ -15,8 +15,8 @@ LIBS = \
 	../plib/libplib.a \
 	../lib/libpsensor.a \
 	../libpsensor_json/libpsensor_json.a \
-	$(SENSORS_LIBS) \
-	$(JSON_LIBS) \
+	$(SENSORS_LIBS)\
+	$(JSON_LIBS)\
 	$(LIBMICROHTTPD_LIBS)
 
 if LUA
@@ -28,9 +28,8 @@ endif
 
 if GTOP
 AM_CPPFLAGS += $(GTOP_CFLAGS)
-LIBS += $(GTOP_LIBS) 
+LIBS += $(GTOP_LIBS)
 psensor_server_SOURCES += sysinfo.h sysinfo.c
-AM_LDFLAGS = -Wl,--as-needed
 endif
 
 

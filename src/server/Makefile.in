@@ -41,7 +41,7 @@ bin_PROGRAMS = psensor-server$(EXEEXT)
 
 @LUA_TRUE@am__append_3 = server_lua.h server_lua.c
 @GTOP_TRUE@am__append_4 = $(GTOP_CFLAGS)
-@GTOP_TRUE@am__append_5 = $(GTOP_LIBS) 
+@GTOP_TRUE@am__append_5 = $(GTOP_LIBS)
 @GTOP_TRUE@am__append_6 = sysinfo.h sysinfo.c
 subdir = src/server
 DIST_COMMON = $(dist_man_MANS) $(srcdir)/Makefile.am \
@@ -186,8 +186,6 @@ SENSORS_LIBS = @SENSORS_LIBS@
 SET_MAKE = @SET_MAKE@
 SHELL = @SHELL@
 STRIP = @STRIP@
-UNITY_CFLAGS = @UNITY_CFLAGS@
-UNITY_LIBS = @UNITY_LIBS@
 USE_NLS = @USE_NLS@
 VERSION = @VERSION@
 X11_CFLAGS = @X11_CFLAGS@
@@ -255,7 +253,6 @@ AM_CPPFLAGS = -pedantic -Werror \
 	-I$(top_srcdir)/src/lib -I$(top_srcdir)/src/libpsensor_json \
 	$(SENSORS_CFLAGS) $(JSON_CFLAGS) $(LIBMICROHTTPD_CFLAGS) \
 	$(am__append_1) $(am__append_4)
-@GTOP_TRUE@AM_LDFLAGS = -Wl,--as-needed
 dist_man_MANS = psensor-server.1
 EXTRA_DIST = description.txt
 all: all-am
