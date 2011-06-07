@@ -1,9 +1,12 @@
+* v0.6.1.11
+
+** psensor: added chinese simplified translation from royclarck
+
 * v0.6.1.10
 
 ** psensor: support of appindicator < 0.2.9
 ** psensor: closing the window hides psensor instead of quitting when
    application indicator support is enabled. 
-** psensor: added chinese simplified translation from royclarck
 
 * v0.6.1.9
 
