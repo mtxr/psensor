@@ -8,7 +8,7 @@ SUBDIRS += server
 endif
 endif
 
-AM_CPPFLAGS = -Wall -pedantic -Werror -DDEFAULT_WWW_DIR=\""$(pkgdatadir)/www"\"\
+AM_CPPFLAGS = -Wno-deprecated-declarations -Wall -Werror -DDEFAULT_WWW_DIR=\""$(pkgdatadir)/www"\"\
 	-I$(top_srcdir)/src/lib \
 	-I$(top_srcdir)/src/unity \
 	$(GTK_CFLAGS)\

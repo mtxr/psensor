@@ -1,7 +1,5 @@
 noinst_LIBRARIES = libpsensor.a
 
-libpsensor_a_CFLAGS = -Wall -Werror
-
 libpsensor_a_SOURCES = \
 	amd.h \
 	cpu.h \
@@ -15,18 +13,15 @@ libpsensor_a_SOURCES = \
 	p_io.h p_io.c \
 	url.c url.h
 
+AM_CPPFLAGS = -Wall -Werror
+
 if NVIDIA
 libpsensor_a_SOURCES += nvidia.c
 endif
-
-AM_CPPFLAGS=
-
 if LIBATIADL
 LIBS += $(LIBATIADL_LIBS)
 AM_CPPFLAGS += $(LIBATIADL_CFLAGS)
 libpsensor_a_SOURCES += amd.c
-else
-libpsensor_a_CFLAGS += -pedantic
 endif
 
 if GTOP
