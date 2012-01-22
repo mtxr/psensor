@@ -449,7 +449,6 @@ int main(int argc, char **argv)
 #endif
 
 	gdk_threads_init();
-	/* gdk_threads_enter(); */
 
 	gtk_init(NULL, NULL);
 
