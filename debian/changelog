@@ -1,3 +1,10 @@
+psensor (0.6.2.17-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/copyright: changed date to 2010-2012
+
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Sat, 25 Feb 2012 16:37:55 +0100
+
 psensor (0.6.2.15-1ubuntu1) oneiric; urgency=low
 
   * nightly build
