@@ -1,20 +1,26 @@
 psensor (0.6.2.17-1) unstable; urgency=low
 
   * New upstream release
-  * debian/copyright: changed date to 2010-2012
+  * debian/control
+      - Switched to Standards-Version 3.9.3.
+  * debian/copyright
+      - Changed end date to 2012.
 
- -- Jean-Philippe Orsini <jeanfi@gmail.com>  Sat, 25 Feb 2012 16:37:55 +0100
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Mon, 26 Mar 2012 05:14:19 -0400
 
-psensor (0.6.2.15-1ubuntu1) oneiric; urgency=low
+psensor (0.6.2.16-1) unstable; urgency=low
 
-  * nightly build
+  * New upstream release
+      - removed -pedantic compilation option. (Closes LP: #905893)
+  * debian/control, debian/psensor.install, debian/psensor-server.install:
+      - applied wrap-and-sort. (Closes: #652531)
 
- -- Jean-Philippe Orsini <jeanfi@gmail.com>  Thu, 01 Dec 2011 01:57:00 +0100
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Thu, 22 Dec 2011 21:11:44 -0500
 
 psensor (0.6.2.15-1) unstable; urgency=low
 
   * New upstream release
-      - fct sysinfo is optional. (Closes: #650533)
+      - fct sysinfo is replaced by gtop2 calls. (Closes: #650533)
   * debian/control
       - set priority to 'extra' instead of 'optional' due to dependence
  	on json-c lib which is using a priority 'extra'.
