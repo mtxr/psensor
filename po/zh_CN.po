@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor 0.6.0.10\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2011-12-01 22:06+0100\n"
+"POT-Creation-Date: 2012-03-26 10:30+0200\n"
 "PO-Revision-Date: 2011-06-06 08:57+0000\n"
 "Last-Translator: royclark <Unknown>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -71,16 +71,16 @@ msgstr ""
 msgid "%s home page: <%s>\n"
 msgstr ""
 
-#: src/main.c:412
+#: src/main.c:425
 msgid "Enables debug mode."
 msgstr ""
 
-#: src/main.c:421 src/server/server.c:352
+#: src/main.c:434 src/server/server.c:352
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr ""
 
-#: src/main.c:448
+#: src/main.c:469
 #, c-format
 msgid "ERROR: Not compiled with remote sensor support.\n"
 msgstr ""
@@ -92,7 +92,7 @@ msgstr "psensor 是一个 GTK 程序，用来监视硬件传感器，包括温�
 
 #: src/ui.c:83
 msgid ""
-"Copyright(c) 2010-2011\n"
+"Copyright(c) 2010-2012\n"
 "jeanfi@gmail.com"
 msgstr ""
 
@@ -280,22 +280,22 @@ msgstr ""
 msgid "URL: http://localhost:%d"
 msgstr ""
 
-#: src/lib/amd.c:159
+#: src/lib/amd.c:151
 #, c-format
 msgid "ERROR: ADL library not found!\n"
 msgstr ""
 
-#: src/lib/amd.c:184
+#: src/lib/amd.c:176
 #, c-format
 msgid "ERROR: ADL's API is missing!\n"
 msgstr ""
 
-#: src/lib/amd.c:193
+#: src/lib/amd.c:185
 #, c-format
 msgid "ERROR: ADL Initialization Error!\n"
 msgstr ""
 
-#: src/lib/amd.c:201
+#: src/lib/amd.c:193
 #, c-format
 msgid "ERROR: Cannot get the number of adapters!\n"
 msgstr ""
