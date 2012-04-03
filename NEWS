@@ -1,6 +1,7 @@
 * v0.6.2.17
 
-** psensor: fixed sensor type displayed in sensor preferences dialog.
+** psensor: fixed sensor type displayed in sensor preferences
+   dialog. (Closes LP: #968912)
 ** psensor: fixed compilation error on 64bits with ATI/AMD GPU support.
 ** psensor: not calling g_thread_init when compiled with glib >= 2.31.
 ** changed copyright dates to 2012.
