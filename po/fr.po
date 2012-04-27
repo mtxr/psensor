@@ -470,7 +470,6 @@ msgid "<i>Max</i>"
 msgstr "<i>Max</i>"
 
 #: src/glade/psensor-pref.glade:483
-#, fuzzy
 msgid "Enable menu"
 msgstr ""
 
