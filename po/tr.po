@@ -494,12 +494,3 @@ msgstr ""
 #: src/glade/sensor-edit.glade:327
 msgid "°C"
 msgstr ""
-
-#~ msgid "Right"
-#~ msgstr "Sağ"
-
-#~ msgid "Left"
-#~ msgstr "Sol"
-
-#~ msgid "Top"
-#~ msgstr "Üstte"
