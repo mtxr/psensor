@@ -207,7 +207,7 @@ char *psensor_value_to_string(unsigned int type, double value)
 	char *unit;
 
 	if (is_temp_type(type))
-		unit = "C";
+		unit = "°C";
 	else if (type & SENSOR_TYPE_CPU_USAGE)
 		unit = "%";
 	else
@@ -427,7 +427,7 @@ const char *psensor_type_to_str(unsigned int type)
 const char *psensor_type_to_unit_str(unsigned int type)
 {
 	if (type & SENSOR_TYPE_TEMP)
-		return _("C");
+		return "\302\260C";
 
 	if (type & SENSOR_TYPE_FAN)
 		return _("RPM");
