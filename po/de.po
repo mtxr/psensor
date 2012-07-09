@@ -1,16 +1,17 @@
-# Slovenian translation for psensor
+# German translation for psensor
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the psensor package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
 "POT-Creation-Date: 2012-07-07 00:37+0200\n"
-"PO-Revision-Date: 2012-04-14 21:02+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
-"Language: sl\n"
+"PO-Revision-Date: 2012-05-29 15:46+0000\n"
+"Last-Translator: Dennis Baudys <Unknown>\n"
+"Language-Team: German <de@li.org>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,190 +27,209 @@ msgid ""
 "This is free software: you are free to change and  redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
+"Copyright © %s jeanfi@gmail.com\n"
+"Lizenz GPLv2: GNU GPL Version 2 oder neuer <http://www.gnu.org/licenses/old-"
+"licenses/gpl-2.0.html>\n"
+"Dies ist freie Software: Sie können Sie beliebig ändern und "
+"weiterverbreiten.\n"
+"Sie wird OHNE JEGLICHE GEWÄHRLEISTUNG zur Verfügung gestellt.\n"
 
 #: src/main.c:88 src/server/server.c:86
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
-msgstr ""
+msgstr "Aufruf: %s [OPTION] …\n"
 
 #: src/main.c:90
 msgid ""
 "psensor is a GTK application for monitoring hardware sensors, including "
 "temperatures and fan speeds."
 msgstr ""
+"Psensor ist eine GTK-Anwendung zur Überwachung von Hardware-Sensoren, "
+"inklusive Temperaturen und Lüfterdrehzahlen."
 
 #: src/main.c:94
 msgid "Options:"
-msgstr ""
+msgstr "Optionen:"
 
 #: src/main.c:95
 msgid ""
 "  -h, --help          display this help and exit\n"
 "  -v, --version       display version information and exit"
 msgstr ""
+"  -h, --help          Diese Hilfe anzeigen und beenden\n"
+"  -v, --version       Versionsinformationen anzeigen und beenden"
 
 #: src/main.c:100
 msgid ""
 "  -u, --url=URL       the URL of the psensor-server, example: http://"
 "hostname:3131"
 msgstr ""
+"  -u, --url=URL       Adresse des psensor-Servers, z.B.: http://hostname:3131"
 
 #: src/main.c:105
 msgid "  -d, --debug=LEVEL   set the debug level, integer between 0 and 3"
 msgstr ""
+"  -d, --debug=STUFE   Fehlerdiagnosestufe festlegen, Ganzzahl zwischen 0 und "
+"3"
 
 #: src/main.c:110 src/server/server.c:104
 #, c-format
 msgid "Report bugs to: %s\n"
-msgstr ""
+msgstr "Programmfehler melden an: %s\n"
 
 #: src/main.c:112 src/server/server.c:106
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr ""
+msgstr "%s-Website: <%s>\n"
 
 #: src/main.c:425
 msgid "Enables debug mode."
-msgstr ""
+msgstr "Fehlerdiagnosemodus wird aktiviert."
 
 #: src/main.c:434 src/server/server.c:352
 #, c-format
 msgid "Try `%s --help' for more information.\n"
-msgstr ""
+msgstr "Rufen Sie »%s --help« auf, um weitere Informationen zu erhalten.\n"
 
 #: src/main.c:469
 #, c-format
 msgid "ERROR: Not compiled with remote sensor support.\n"
 msgstr ""
+"FEHLER: Das Programm wurde ohne Unterstützung zur Fernüberwachung von "
+"Sensoren kompiliert.\n"
 
 #: src/ui.c:80
 msgid "Psensor is a GTK+ application for monitoring hardware sensors"
-msgstr ""
+msgstr "Psensor ist eine GTK-Anwendung zur Überwachung von Hardware-Sensoren"
 
 #: src/ui.c:83
 msgid ""
 "Copyright(c) 2010-2012\n"
 "jeanfi@gmail.com"
 msgstr ""
+"Copyright © 2010-2012\n"
+"jeanfi@gmail.com"
 
 #: src/ui.c:86
 msgid "About Psensor"
-msgstr ""
+msgstr "Info zu Psensor"
 
 #: src/ui.c:89
 msgid "Psensor Homepage"
-msgstr ""
+msgstr "Psensor-Website"
 
 #: src/ui.c:144
 msgid "_Preferences"
-msgstr ""
+msgstr "_Einstellungen"
 
 #: src/ui.c:145 src/ui_sensorlist.c:200
 msgid "Preferences"
-msgstr ""
+msgstr "Einstellungen"
 
 #: src/ui.c:149
 msgid "_Sensor Preferences"
-msgstr ""
+msgstr "_Sensor-Einstellungen"
 
 #: src/ui.c:150
 msgid "Sensor Preferences"
-msgstr ""
+msgstr "Sensor-Einstellungen"
 
 #: src/ui.c:154
 msgid "_Quit"
-msgstr ""
+msgstr "_Beenden"
 
 #: src/ui.c:154
 msgid "Quit"
-msgstr ""
+msgstr "Beenden"
 
 #: src/ui.c:160
 msgid "_About"
-msgstr ""
+msgstr "_Info"
 
 #: src/ui.c:161
 msgid "About"
-msgstr ""
+msgstr "Info"
 
 #: src/ui.c:183 src/ui_appindicator.c:176
 #, c-format
 msgid "building menus failed: %s"
-msgstr ""
+msgstr "Erstellen der Menüs ist gescheitert: %s"
 
 #: src/ui.c:231
 msgid "Psensor - Temperature Monitor"
-msgstr ""
+msgstr "Psensor – Temperaturüberwachung"
 
 #: src/ui.c:248
 #, c-format
 msgid "ERROR: Failed to load psensor icon.\n"
-msgstr ""
+msgstr "FEHLER: Psensor-Symbol konnte nicht geladen werden.\n"
 
 #: src/ui_sensorlist.c:231
 msgid "Select foreground color"
-msgstr ""
+msgstr "Wählen Sie eine Vordergrundfarbe"
 
 #: src/ui_sensorlist.c:308 src/glade/psensor-pref.glade:241
 msgid "Sensor"
-msgstr ""
+msgstr "Sensor"
 
 #: src/ui_sensorlist.c:314
 msgid "Value"
-msgstr ""
+msgstr "Wert"
 
 #: src/ui_sensorlist.c:320
 msgid "Min"
-msgstr ""
+msgstr "Min."
 
 #: src/ui_sensorlist.c:326
 msgid "Max"
-msgstr ""
+msgstr "Max."
 
 #: src/ui_sensorlist.c:333
 msgid "Color"
-msgstr ""
+msgstr "Farbe"
 
 #: src/ui_sensorlist.c:345
 msgid "Enabled"
-msgstr ""
+msgstr "Aktiviert"
 
 #: src/ui_sensorlist.c:374 src/ui_sensorlist.c:375 src/ui_sensorlist.c:376
 #: src/glade/sensor-edit.glade:87 src/glade/sensor-edit.glade:153
 msgid "N/A"
-msgstr ""
+msgstr "N/V"
 
 #: src/ui_notify.c:45
 msgid "gettimeofday failed"
-msgstr ""
+msgstr "»gettimeofday« gescheitert"
 
 #: src/ui_notify.c:67 src/ui_notify.c:69
 msgid "Temperature alert"
-msgstr ""
+msgstr "Temperaturalarm"
 
 #: src/ui_sensorpref.c:397
 msgid "Sensor Name"
-msgstr ""
+msgstr "Sensor-Name"
 
 #: src/rsensor.c:107
 #, c-format
 msgid "Fail to connect to: %s"
-msgstr ""
+msgstr "Herstellen der Verbindung gescheitert: %s"
 
 #: src/rsensor.c:144
 #, c-format
 msgid "Invalid content: %s"
-msgstr ""
+msgstr "Ungültiger Inhalt: %s"
 
 #: src/rsensor.c:184
 #, c-format
 msgid "Invalid JSON: %s"
-msgstr ""
+msgstr "Ungültiges JSON: %s"
 
 #: src/server/server.c:53
 msgid ""
 "<html><body><p>Page not found - Go to <a href='/'>Main page</a></p></body>"
 msgstr ""
+"<html><body><p>Seite nicht gefunden – Gehen Sie zurück zur <a "
+"href='/'>Startseite</a></p></body>"
 
 #: src/server/server.c:76
 #, c-format
@@ -220,17 +240,26 @@ msgid ""
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
+"Copyright © %s jeanfi@gmail.com\n"
+"Lizenz GPLv2: GNU GPL Version 2 oder neuer <http://www.gnu.org/licenses/old-"
+"licenses/gpl-2.0.html>\n"
+"Dies ist freie Software: Sie können Sie beliebig ändern und "
+"weiterverbreiten.\n"
+"Sie wird OHNE JEGLICHE GEWÄHRLEISTUNG zur Verfügung gestellt.\n"
 
 #: src/server/server.c:88
 msgid ""
 "psensor-server is an HTTP server for monitoring hardware sensors remotely."
 msgstr ""
+"psensor-server ist ein HTTP-Server zur Fernüberwachung von Hardware-Sensoren."
 
 #: src/server/server.c:93
 msgid ""
 "  -h, --help\t\tdisplay this help and exit\n"
 "  -v, --version\t\tdisplay version information and exit"
 msgstr ""
+"  -h, --help\t\tDiese Hilfe anzeigen und beenden\n"
+"  -v, --version\t\tVersionsinformationen anzeigen und beenden"
 
 #: src/server/server.c:98
 msgid ""
@@ -238,248 +267,254 @@ msgid ""
 "  -p,--port=PORT\twebserver port\n"
 "  -w,--wdir=DIR\t\tdirectory containing webserver pages"
 msgstr ""
+"  -d,--debug\t\tIm Fehlerdiagnosemodus ausführen\n"
+"  -p,--port=PORT\tWebserver-Port\n"
+"  -w,--wdir=ORDNER\t\tOrdner, der die Webserver-Seiten enthält"
 
 #: src/server/server.c:175
 msgid "<html><body><p>Server stop requested</p></body></html>"
-msgstr ""
+msgstr "<html><body><p>Anhalten des Servers angefordert</p></body></html>"
 
 #: src/server/server.c:290
 #, c-format
 msgid "HTTP Request: %s\n"
-msgstr ""
+msgstr "HTTP-Anfrage: %s\n"
 
 #: src/server/server.c:366
 #, c-format
 msgid "ERROR: no sensors detected\n"
-msgstr ""
+msgstr "FEHLER: Es wurden keine Sensoren erkannt\n"
 
 #: src/server/server.c:373
 #, c-format
 msgid "ERROR: Fail to create web server\n"
-msgstr ""
+msgstr "ERROR: Erzeugen des Web-Servers gescheitert\n"
 
 #: src/server/server.c:377
 #, c-format
 msgid "Web server started on port: %d"
-msgstr ""
+msgstr "Web-Server wurde gestartet auf Port: %d"
 
 #: src/server/server.c:378
 #, c-format
 msgid "WWW directory: %s"
-msgstr ""
+msgstr "WWW-Ordner: %s"
 
 #: src/server/server.c:379
 #, c-format
 msgid "URL: http://localhost:%d"
-msgstr ""
+msgstr "Adresse: http://localhost:%d"
 
 #: src/lib/amd.c:151
 #, c-format
 msgid "ERROR: ADL library not found!\n"
-msgstr ""
+msgstr "FEHLER: ADL-Bibliothek wurde nicht gefunden!\n"
 
 #: src/lib/amd.c:176
 #, c-format
 msgid "ERROR: ADL's API is missing!\n"
-msgstr ""
+msgstr "FEHLER: Die ADL-Anwendungsschnittstelle (API) fehlt!\n"
 
 #: src/lib/amd.c:185
 #, c-format
 msgid "ERROR: ADL Initialization Error!\n"
-msgstr ""
+msgstr "FEHLER: ADL-Initialisierungsfehler!\n"
 
 #: src/lib/amd.c:193
 #, c-format
 msgid "ERROR: Cannot get the number of adapters!\n"
-msgstr ""
+msgstr "FEHLER: Anzahl der Schnittstellen kann nicht abgerufen werden!\n"
 
 #: src/lib/hdd.c:58
 #, c-format
 msgid "ERROR: hdd fetch, failed to open socket\n"
-msgstr ""
+msgstr "FEHLER: HDD-Abruf, Öffnen des Sockets gescheitert\n"
 
 #: src/lib/hdd.c:72
 #, c-format
 msgid "ERROR: hdd fetch, failed to open connection\n"
-msgstr ""
+msgstr "FEHLER: HDD-Abruf, Herstellen der Verbindung gescheitert\n"
 
 #: src/lib/hdd.c:182
 #, c-format
 msgid "ERROR: wrong hdd string: %s"
-msgstr ""
+msgstr "FEHLER: Ungültige HDD-Zeichenkette: %s"
 
 #: src/lib/hdd.c:252
 #, c-format
 msgid "ERROR: wrong hdd string: %s\n"
-msgstr ""
+msgstr "FEHLER: Ungültige HDD-Zeichenkette: %s\n"
 
 #: src/lib/log.c:37
 #, c-format
 msgid "Cannot open log file: %s"
-msgstr ""
+msgstr "Protokolldatei kann nicht geöffnet werden: %s"
 
 #: src/lib/nvidia.c:54
 #, c-format
 msgid "ERROR: failed to retrieve nvidia temperature\n"
-msgstr ""
+msgstr "FEHLER: Abrufen der NVIDIA-Temperatur gescheitert\n"
 
 #: src/lib/nvidia.c:91
 #, c-format
 msgid "ERROR: Cannot open connection to X Server\n"
-msgstr ""
+msgstr "FEHLER: Verbindung zum X-Server kann nicht hergestellt werden\n"
 
 #: src/lib/nvidia.c:99
 #, c-format
 msgid "ERROR: Cannot retrieve NVidia information\n"
-msgstr ""
+msgstr "FEHLER: NVIDIA-Informationen können nicht abgerufen werden\n"
 
 #: src/lib/lmsensor.c:43
 #, c-format
 msgid "ERROR: Can't get value of subfeature %s: %s\n"
-msgstr ""
+msgstr "FEHLER: Wert der Unterfunktion %s kann nicht ermittelt werden: %s\n"
 
 #: src/lib/lmsensor.c:125
 #, c-format
 msgid "ERROR: create_sensor, wrong feature type\n"
-msgstr ""
+msgstr "FEHLER: create_sensor, ungültiger Funktionstyp\n"
 
 #: src/lib/lmsensor.c:208
 #, c-format
 msgid "ERROR: lm-sensors initialization failure: %s\n"
-msgstr ""
+msgstr "FEHLER: Initialisierung von lm-sensors gescheitert: %s\n"
 
 #: src/lib/psensor.c:433
 msgid "RPM"
-msgstr ""
+msgstr "U/min"
 
 #: src/lib/psensor.c:436
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: src/glade/psensor-pref.glade:7
 msgid "Edit Preferences"
-msgstr ""
+msgstr "Einstellungen bearbeiten"
 
 #: src/glade/psensor-pref.glade:70
 msgid "Graph Colors"
-msgstr ""
+msgstr "Graphenfarben"
 
 #: src/glade/psensor-pref.glade:86
 msgid "Foreground:"
-msgstr ""
+msgstr "Vordergrund:"
 
 #: src/glade/psensor-pref.glade:100
 msgid "Background:"
-msgstr ""
+msgstr "Hintergrund:"
 
 #: src/glade/psensor-pref.glade:114
 msgid "Background opacity:"
-msgstr ""
+msgstr "Hintergrunddeckkraft:"
 
 #: src/glade/psensor-pref.glade:165 src/glade/sensor-edit.glade:184
 msgid "Graph"
-msgstr ""
+msgstr "Graph"
 
 #: src/glade/psensor-pref.glade:183
 msgid "Update interval:"
-msgstr ""
+msgstr "Aktualisierungsintervall:"
 
 #: src/glade/psensor-pref.glade:197
 msgid "Monitoring duration:"
-msgstr ""
+msgstr "Überwachungszeitraum:"
 
 #: src/glade/psensor-pref.glade:210 src/glade/psensor-pref.glade:272
 msgid "second(s)"
-msgstr ""
+msgstr "Sekunde(n)"
 
 #: src/glade/psensor-pref.glade:225
 msgid "minute(s)"
-msgstr ""
+msgstr "Minute(n)"
 
 #: src/glade/psensor-pref.glade:259
 msgid "Measure update interval:"
-msgstr ""
+msgstr "Messintervall:"
 
 #: src/glade/psensor-pref.glade:288
 msgid "Interface"
-msgstr ""
+msgstr "Benutzeroberfläche"
 
 #: src/glade/psensor-pref.glade:306
 msgid "Position of sensors table:"
-msgstr ""
+msgstr "Position der Sensoren-Tabelle:"
 
 #: src/glade/psensor-pref.glade:317
 msgid "Hide window decoration"
-msgstr ""
+msgstr "Keine Fensterdekorationen verwenden"
 
 #: src/glade/psensor-pref.glade:335
 msgid "Keep window below"
-msgstr ""
+msgstr "Fenster unterhalb anheften"
 
 #: src/glade/psensor-pref.glade:436
 msgid "<i>Min</i>"
-msgstr ""
+msgstr "<i>Min.</i>"
 
 #: src/glade/psensor-pref.glade:463
 msgid "<i>Max</i>"
-msgstr ""
+msgstr "<i>Max.</i>"
 
 #: src/glade/psensor-pref.glade:483
 msgid "Enable menu"
-msgstr ""
+msgstr "Menü aktivieren"
 
 #: src/glade/psensor-pref.glade:500
 msgid "Enable Unity Launcher counter"
-msgstr ""
+msgstr "Wert im Starter von Unity anzeigen"
 
 #: src/glade/psensor-pref.glade:518
 msgid "Hide window on startup"
-msgstr ""
+msgstr "Fenster beim Programmstart ausblenden"
 
 #: src/glade/psensor-pref.glade:535
 msgid "Restore window position and size"
-msgstr ""
+msgstr "Fensterposition und -größe merken"
 
 #: src/glade/sensor-edit.glade:8
 msgid "Edit Sensor Preferences"
-msgstr ""
+msgstr "Sensor-Einstellungen bearbeiten"
 
 #: src/glade/sensor-edit.glade:104
 msgid "Name:"
-msgstr ""
+msgstr "Name:"
 
 #: src/glade/sensor-edit.glade:139
 msgid "Type:"
-msgstr ""
+msgstr "Typ:"
 
 #: src/glade/sensor-edit.glade:169
 msgid "Id:"
-msgstr ""
+msgstr "Id:"
 
 #: src/glade/sensor-edit.glade:202
 msgid "Color:"
-msgstr ""
+msgstr "Farbe:"
 
 #: src/glade/sensor-edit.glade:216
 msgid "Alarm"
-msgstr ""
+msgstr "Alarm"
 
 #: src/glade/sensor-edit.glade:231
 msgid "Activate desktop notifications"
-msgstr ""
+msgstr "Benachrichtigungen aktivieren"
 
 #: src/glade/sensor-edit.glade:251
 msgid "Temperature limit:"
-msgstr ""
+msgstr "Temperaturgrenzwert:"
 
 #: src/glade/sensor-edit.glade:266
 msgid "Sensor Information"
-msgstr ""
+msgstr "Sensor-Informationen"
 
 #: src/glade/sensor-edit.glade:279
 msgid "Draw sensor curve"
-msgstr ""
+msgstr "Sensor-Graph darstellen"
 
 #: src/glade/sensor-edit.glade:327
 msgid "°C"
-msgstr ""
+msgstr "°C"
+
+#~ msgid "C"
+#~ msgstr "C"

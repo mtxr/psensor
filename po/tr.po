@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2012-03-26 09:20+0200\n"
-"PO-Revision-Date: 2011-04-10 13:11+0000\n"
+"POT-Creation-Date: 2012-07-07 00:37+0200\n"
+"PO-Revision-Date: 2012-03-28 11:40+0000\n"
 "Last-Translator: zeugma <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2011-04-11 05:41+0000\n"
-"X-Generator: Launchpad (build 12735)\n"
+"X-Launchpad-Export-Date: 2012-07-09 21:00+0000\n"
+"X-Generator: Launchpad (build 15558)\n"
 
 #: src/main.c:77
 #, c-format
@@ -102,7 +102,6 @@ msgid "Psensor Homepage"
 msgstr ""
 
 #: src/ui.c:144
-#, fuzzy
 msgid "_Preferences"
 msgstr "Tercihler"
 
@@ -111,12 +110,10 @@ msgid "Preferences"
 msgstr "Tercihler"
 
 #: src/ui.c:149
-#, fuzzy
 msgid "_Sensor Preferences"
 msgstr "Tercihleri düzenle"
 
 #: src/ui.c:150
-#, fuzzy
 msgid "Sensor Preferences"
 msgstr "Tercihleri düzenle"
 
@@ -192,7 +189,6 @@ msgid "Temperature alert"
 msgstr ""
 
 #: src/ui_sensorpref.c:397
-#, fuzzy
 msgid "Sensor Name"
 msgstr "Algılayıcı"
 
@@ -353,10 +349,6 @@ msgstr ""
 msgid "ERROR: lm-sensors initialization failure: %s\n"
 msgstr ""
 
-#: src/lib/psensor.c:430
-msgid "C"
-msgstr ""
-
 #: src/lib/psensor.c:433
 msgid "RPM"
 msgstr ""
@@ -374,9 +366,8 @@ msgid "Graph Colors"
 msgstr "Grafik Renkleri"
 
 #: src/glade/psensor-pref.glade:86
-#, fuzzy
 msgid "Foreground:"
-msgstr "Arkaplan:"
+msgstr ""
 
 #: src/glade/psensor-pref.glade:100
 msgid "Background:"
@@ -451,7 +442,6 @@ msgid "Restore window position and size"
 msgstr ""
 
 #: src/glade/sensor-edit.glade:8
-#, fuzzy
 msgid "Edit Sensor Preferences"
 msgstr "Tercihleri düzenle"
 

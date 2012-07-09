@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor 0.6.0.10\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2012-03-26 09:20+0200\n"
-"PO-Revision-Date: 2012-04-10 11:43+0000\n"
+"POT-Creation-Date: 2012-07-07 00:37+0200\n"
+"PO-Revision-Date: 2012-05-09 02:21+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (simplified)\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-04-27 21:40+0000\n"
-"X-Generator: Launchpad (build 15149)\n"
+"X-Launchpad-Export-Date: 2012-07-09 21:00+0000\n"
+"X-Generator: Launchpad (build 15558)\n"
 
 #: src/main.c:77
 #, c-format
@@ -69,7 +69,7 @@ msgstr "  -d，--debug=LEVEL 设置调试等级，等级为 0 到 3 之间的整
 #: src/main.c:110 src/server/server.c:104
 #, c-format
 msgid "Report bugs to: %s\n"
-msgstr "将程序缺陷报告给: %s\n"
+msgstr "报告问题至：%s\n"
 
 #: src/main.c:112 src/server/server.c:106
 #, c-format
@@ -91,7 +91,6 @@ msgid "ERROR: Not compiled with remote sensor support.\n"
 msgstr "错误：无法支持编译远程监测器。\n"
 
 #: src/ui.c:80
-#, fuzzy
 msgid "Psensor is a GTK+ application for monitoring hardware sensors"
 msgstr "Psensor 是一款 GTK+ 硬件监测传感应用程序"
 
@@ -117,7 +116,7 @@ msgstr "首选项(_P)"
 
 #: src/ui.c:145 src/ui_sensorlist.c:200
 msgid "Preferences"
-msgstr "选项"
+msgstr "首选项"
 
 #: src/ui.c:149
 msgid "_Sensor Preferences"
@@ -188,7 +187,7 @@ msgstr "激活"
 #: src/ui_sensorlist.c:374 src/ui_sensorlist.c:375 src/ui_sensorlist.c:376
 #: src/glade/sensor-edit.glade:87 src/glade/sensor-edit.glade:153
 msgid "N/A"
-msgstr ""
+msgstr "不可用"
 
 #: src/ui_notify.c:45
 msgid "gettimeofday failed"
@@ -243,7 +242,6 @@ msgid ""
 msgstr "psensor 服务器是用来远程监视硬件的 HTTP 服务器。"
 
 #: src/server/server.c:93
-#, fuzzy
 msgid ""
 "  -h, --help\t\tdisplay this help and exit\n"
 "  -v, --version\t\tdisplay version information and exit"
@@ -293,7 +291,7 @@ msgstr "WWW 目录：%s"
 #: src/server/server.c:379
 #, c-format
 msgid "URL: http://localhost:%d"
-msgstr ""
+msgstr "URL: http://localhost:%d"
 
 #: src/lib/amd.c:151
 #, c-format
@@ -370,10 +368,6 @@ msgstr "错误：创建传感器时，不正确的特征类型\n"
 msgid "ERROR: lm-sensors initialization failure: %s\n"
 msgstr "错误：lm-sensors 初始化失败：%s\n"
 
-#: src/lib/psensor.c:430
-msgid "C"
-msgstr "C"
-
 #: src/lib/psensor.c:433
 msgid "RPM"
 msgstr "转速"
@@ -392,7 +386,7 @@ msgstr "图表颜色"
 
 #: src/glade/psensor-pref.glade:86
 msgid "Foreground:"
-msgstr "坐标栏:"
+msgstr "前景："
 
 #: src/glade/psensor-pref.glade:100
 msgid "Background:"
@@ -400,7 +394,7 @@ msgstr "背景:"
 
 #: src/glade/psensor-pref.glade:114
 msgid "Background opacity:"
-msgstr "背景亮度:"
+msgstr "背景透明："
 
 #: src/glade/psensor-pref.glade:165 src/glade/sensor-edit.glade:184
 msgid "Graph"
@@ -469,7 +463,7 @@ msgstr "恢复窗口位置和大小"
 
 #: src/glade/sensor-edit.glade:8
 msgid "Edit Sensor Preferences"
-msgstr "监视设备选项"
+msgstr "编辑传感器首选项"
 
 #: src/glade/sensor-edit.glade:104
 msgid "Name:"
@@ -489,7 +483,7 @@ msgstr "颜色："
 
 #: src/glade/sensor-edit.glade:216
 msgid "Alarm"
-msgstr "警告信息"
+msgstr "警告"
 
 #: src/glade/sensor-edit.glade:231
 msgid "Activate desktop notifications"
@@ -501,7 +495,7 @@ msgstr "温度警戒线:"
 
 #: src/glade/sensor-edit.glade:266
 msgid "Sensor Information"
-msgstr "设备信息"
+msgstr "传感器信息"
 
 #: src/glade/sensor-edit.glade:279
 msgid "Draw sensor curve"

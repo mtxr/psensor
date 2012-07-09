@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2012-03-26 09:20+0200\n"
+"POT-Creation-Date: 2012-07-07 00:37+0200\n"
 "PO-Revision-Date: 2012-03-28 11:40+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Serbian <sr@li.org>\n"
@@ -14,8 +14,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-04-27 21:40+0000\n"
-"X-Generator: Launchpad (build 15149)\n"
+"X-Launchpad-Export-Date: 2012-07-09 21:00+0000\n"
+"X-Generator: Launchpad (build 15558)\n"
 
 #: src/main.c:77
 #, c-format
@@ -348,10 +348,6 @@ msgstr ""
 msgid "ERROR: lm-sensors initialization failure: %s\n"
 msgstr ""
 
-#: src/lib/psensor.c:430
-msgid "C"
-msgstr ""
-
 #: src/lib/psensor.c:433
 msgid "RPM"
 msgstr ""
@@ -430,7 +426,7 @@ msgstr ""
 
 #: src/glade/psensor-pref.glade:483
 msgid "Enable menu"
-msgstr ""
+msgstr "Укључено"
 
 #: src/glade/psensor-pref.glade:500
 msgid "Enable Unity Launcher counter"

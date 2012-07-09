@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2012-03-26 09:20+0200\n"
+"POT-Creation-Date: 2012-07-07 00:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -346,10 +346,6 @@ msgstr ""
 #: src/lib/lmsensor.c:208
 #, c-format
 msgid "ERROR: lm-sensors initialization failure: %s\n"
-msgstr ""
-
-#: src/lib/psensor.c:430
-msgid "C"
 msgstr ""
 
 #: src/lib/psensor.c:433

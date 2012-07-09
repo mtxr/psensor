@@ -1,9 +1,9 @@
 * v0.6.2.18
-** added Slovenian translation file.
-** added Serbian translation file.
 ** merged some chinese translation from LP.
 ** fixed some french translation typo.
 ** added degree sign for celcius (Closes LP: #1021900).
+** added russian, brazilian, hungarian, serbian, slovenian,
+   italian, ukrainian and german translation files
 
 * v0.6.2.17
 
