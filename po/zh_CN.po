@@ -453,7 +453,6 @@ msgid "Enable Unity Launcher counter"
 msgstr "启用 Unity 启动器计数器"
 
 #: src/glade/psensor-pref.glade:518
-#, fuzzy
 msgid "Hide window on startup"
 msgstr "启动时隐藏窗口"
 
