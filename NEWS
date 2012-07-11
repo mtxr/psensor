@@ -1,9 +1,12 @@
 * v0.6.2.18
+
 ** merged some chinese translation from LP.
 ** fixed some french translation typo.
 ** added degree sign for celcius (Closes LP: #1021900).
 ** added russian, brazilian, hungarian, serbian, slovenian,
    italian, ukrainian and german translation files
+** psensor: fixed hide window on startup for gnome-shell (Closes:
+   #676361).
 
 * v0.6.2.17
 
