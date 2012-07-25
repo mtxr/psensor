@@ -1,3 +1,8 @@
+* v0.6.2.19
+
+** psensor: fixed size of the icon hicolor/48x48/psensor_hot.png.
+   (LP: #1029065)
+
 * v0.6.2.18
 
 ** added degree sign for celcius (Closes LP: #1021900).
