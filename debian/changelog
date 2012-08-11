@@ -1,3 +1,9 @@
+psensor (0.6.2.19-1ubuntu1) precise; urgency=low
+
+  * Ubuntu build
+
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Sat, 11 Aug 2012 11:05:45 +0200
+
 psensor (0.6.2.19-1) unstable; urgency=low
 
   * New upstream release
@@ -25,12 +31,47 @@ psensor (0.6.2.17-2) unstable; urgency=low
 psensor (0.6.2.17-1) unstable; urgency=low
 
   * New upstream release
+      - Fixed sensor type displayed in sensor preferences. (LP: #968912)
   * debian/control
       - Switched to Standards-Version 3.9.3.
   * debian/copyright
       - Changed end date to 2012.
 
  -- Jean-Philippe Orsini <jeanfi@gmail.com>  Mon, 26 Mar 2012 05:14:19 -0400
+
+psensor (0.6.2.16-1ubuntu4) precise; urgency=low
+ 
+  * debian/patches/LP968912.patch
+    - fixed displayed sensor type. (LP: #968912)
+
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Fri, 30 Mar 2012 09:07:58 +0200
+
+psensor (0.6.2.16-1ubuntu3) precise; urgency=low
+
+  * debian/control
+    + Modified build-dep to add libunity-dev. (Closes LP: #919962)
+    + Applied wrap-and-sort.
+
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Sun, 22 Jan 2012 14:13:21 +0100
+
+psensor (0.6.2.16-1ubuntu2) precise; urgency=low
+
+  * debian/control
+    + Modified build-dep to libappindicator3-dev. (Closes LP: #919959)
+
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Sun, 22 Jan 2012 12:24:13 +0100
+
+psensor (0.6.2.16-1ubuntu1) precise; urgency=low
+
+  * Merge from Debian testing.  Remaining changes:
+    + Modifed build-dep to add NVidia and Application Indicator support
+    + Only add an nvidia-settings build-dep on i386 and amd64
+
+  * Add a patch to drop the deprecated g_thread_init() call
+    - add debian/patches/drop_g_thread_init.patch
+    - add debian/patches/series
+
+ -- Micah Gersten <micahg@ubuntu.com>  Sat, 21 Jan 2012 22:41:34 -0600
 
 psensor (0.6.2.16-1) unstable; urgency=low
 
@@ -73,12 +114,36 @@ psensor (0.6.2.14-1) unstable; urgency=low
 
  -- Jean-Philippe Orsini <jeanfi@gmail.com>  Fri, 25 Nov 2011 02:56:22 -0500
 
+psensor (0.6.1.9-3ubuntu1) precise; urgency=low
+
+  * Merge from Debian testing.  Remaining changes:
+    + Modifed build-dep to add NVidia and Application Indicator support
+    + Only add an nvidia-settings build-dep on i386 and amd64
+
+ -- Micah Gersten <micahg@ubuntu.com>  Wed, 26 Oct 2011 04:46:38 -0500
+
 psensor (0.6.1.9-3) unstable; urgency=low
 
   * debian/copyright:
       - Fixed Lintian error: helper-templates-in-copyright
 
  -- Jean-Philippe Orsini <jeanfi@gmail.com>  Mon, 12 Sep 2011 05:47:02 -0400
+
+psensor (0.6.1.9-2ubuntu2) oneiric; urgency=low
+
+  * Only add an nvidia-settings build-dep on i386 and amd64 since these are the
+    only two arches this package exists on
+    - update debian/control
+
+ -- Micah Gersten <micahg@ubuntu.com>  Fri, 10 Jun 2011 02:25:53 -0500
+
+psensor (0.6.1.9-2ubuntu1) oneiric; urgency=low
+
+  * Merge from debian unstable.  Remaining changes:
+    + Modifed build-dep to add NVidia and Application Indicator support
+      (LP: #793443).
+
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Tue, 07 Jun 2011 02:41:01 -0500
 
 psensor (0.6.1.9-2) unstable; urgency=low
 
@@ -94,6 +159,15 @@ psensor (0.6.1.9-1) unstable; urgency=low
       - Fixed Lintian warning: newer-standards-version.
 
  -- Jean-Philippe Orsini <jeanfi@gmail.com>  Tue, 03 May 2011 11:26:03 +0200
+
+psensor (0.6.1.8-1ubuntu1) oneiric; urgency=low
+
+  * debian/control:
+    - added build-dep nvidia-settings and libappindicator-dev. It allows
+      psensor to monitor NVidia GPUs and to use Ubuntu Application Indicator
+      (LP: #778415).
+
+ -- Jean-Philippe Orsini <jeanfi@gmail.com>  Sat, 14 May 2011 18:04:25 +0200
 
 psensor (0.6.1.8-1) unstable; urgency=low
 
