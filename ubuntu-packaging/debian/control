@@ -9,7 +9,7 @@ Build-Depends: autoconf,
                gettext,
                help2man,
                libappindicator3-dev,
-               libcurl4-openssl-dev,
+               libcurl4-gnutls-dev,
                libgconf2-dev,
                libgtk-3-dev,
                libgtop2-dev,
@@ -18,9 +18,9 @@ Build-Depends: autoconf,
                libnotify-dev,
                libsensors4-dev,
                libunity-dev,
-               nvidia-settings,
+               nvidia-settings [i386 amd64],
                perl
-Standards-Version: 3.9.2
+Standards-Version: 3.9.3
 Homepage: http://wpitchoune.net/psensor
 
 Package: psensor
