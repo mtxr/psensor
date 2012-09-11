@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-07-09 21:00+0000\n"
-"X-Generator: Launchpad (build 15558)\n"
+"X-Launchpad-Export-Date: 2012-09-11 13:56+0000\n"
+"X-Generator: Launchpad (build 15930)\n"
 
 #: src/main.c:77
 #, c-format
@@ -90,7 +90,7 @@ msgstr ""
 
 #: src/ui.c:80
 msgid "Psensor is a GTK+ application for monitoring hardware sensors"
-msgstr ""
+msgstr "Psensor é uma aplicação GTK+ para monitorar sensores de hardware"
 
 #: src/ui.c:83
 msgid ""
@@ -122,7 +122,7 @@ msgstr ""
 
 #: src/ui.c:150
 msgid "Sensor Preferences"
-msgstr ""
+msgstr "Preferências de sensores"
 
 #: src/ui.c:154
 msgid "_Quit"
@@ -147,7 +147,7 @@ msgstr "falha na montagem dos menus: %s"
 
 #: src/ui.c:231
 msgid "Psensor - Temperature Monitor"
-msgstr ""
+msgstr "Psensor - Monitor de temperatura"
 
 #: src/ui.c:248
 #, c-format
@@ -193,7 +193,7 @@ msgstr ""
 
 #: src/ui_notify.c:67 src/ui_notify.c:69
 msgid "Temperature alert"
-msgstr ""
+msgstr "Alerta de temperatura"
 
 #: src/ui_sensorpref.c:397
 msgid "Sensor Name"
@@ -326,7 +326,7 @@ msgstr ""
 #: src/lib/log.c:37
 #, c-format
 msgid "Cannot open log file: %s"
-msgstr ""
+msgstr "Não é possível abrir arquivo de log: %s"
 
 #: src/lib/nvidia.c:54
 #, c-format
@@ -396,7 +396,7 @@ msgstr "Intervalo de atualização:"
 
 #: src/glade/psensor-pref.glade:197
 msgid "Monitoring duration:"
-msgstr ""
+msgstr "Duração do monitoramento:"
 
 #: src/glade/psensor-pref.glade:210 src/glade/psensor-pref.glade:272
 msgid "second(s)"
@@ -452,7 +452,7 @@ msgstr "Restaurar posição e tamanho da janela"
 
 #: src/glade/sensor-edit.glade:8
 msgid "Edit Sensor Preferences"
-msgstr ""
+msgstr "Editar preferências do sensor"
 
 #: src/glade/sensor-edit.glade:104
 msgid "Name:"
@@ -484,7 +484,7 @@ msgstr ""
 
 #: src/glade/sensor-edit.glade:266
 msgid "Sensor Information"
-msgstr ""
+msgstr "Informações do sensor"
 
 #: src/glade/sensor-edit.glade:279
 msgid "Draw sensor curve"

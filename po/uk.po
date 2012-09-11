@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2012-07-09 21:00+0000\n"
-"X-Generator: Launchpad (build 15558)\n"
+"X-Launchpad-Export-Date: 2012-09-11 13:56+0000\n"
+"X-Generator: Launchpad (build 15930)\n"
 
 #: src/main.c:77
 #, c-format
@@ -396,7 +396,7 @@ msgstr "Інтервал оновлення:"
 
 #: src/glade/psensor-pref.glade:197
 msgid "Monitoring duration:"
-msgstr ""
+msgstr "Тривалість спостереження"
 
 #: src/glade/psensor-pref.glade:210 src/glade/psensor-pref.glade:272
 msgid "second(s)"
@@ -408,7 +408,7 @@ msgstr "хв."
 
 #: src/glade/psensor-pref.glade:259
 msgid "Measure update interval:"
-msgstr ""
+msgstr "Інтервал оновлення замірів:"
 
 #: src/glade/psensor-pref.glade:288
 msgid "Interface"
@@ -420,7 +420,7 @@ msgstr "Положення таблиці датчиків:"
 
 #: src/glade/psensor-pref.glade:317
 msgid "Hide window decoration"
-msgstr ""
+msgstr "Сховати каркас вікна"
 
 #: src/glade/psensor-pref.glade:335
 msgid "Keep window below"
@@ -436,19 +436,19 @@ msgstr "<i>Макс.</i>"
 
 #: src/glade/psensor-pref.glade:483
 msgid "Enable menu"
-msgstr ""
+msgstr "Увімкнути меню"
 
 #: src/glade/psensor-pref.glade:500
 msgid "Enable Unity Launcher counter"
-msgstr ""
+msgstr "Увімкнути лічильник на панелі запуску Unity"
 
 #: src/glade/psensor-pref.glade:518
 msgid "Hide window on startup"
-msgstr ""
+msgstr "Сховати вікно після запуску"
 
 #: src/glade/psensor-pref.glade:535
 msgid "Restore window position and size"
-msgstr ""
+msgstr "Відновляти позицію і розмір вікна"
 
 #: src/glade/sensor-edit.glade:8
 msgid "Edit Sensor Preferences"
@@ -472,11 +472,11 @@ msgstr "Колір:"
 
 #: src/glade/sensor-edit.glade:216
 msgid "Alarm"
-msgstr ""
+msgstr "Оповіщення"
 
 #: src/glade/sensor-edit.glade:231
 msgid "Activate desktop notifications"
-msgstr ""
+msgstr "Увімкнути оповіщення"
 
 #: src/glade/sensor-edit.glade:251
 msgid "Temperature limit:"
@@ -488,7 +488,7 @@ msgstr "Інформація датчика"
 
 #: src/glade/sensor-edit.glade:279
 msgid "Draw sensor curve"
-msgstr ""
+msgstr "Малювати криву датчика"
 
 #: src/glade/sensor-edit.glade:327
 msgid "°C"

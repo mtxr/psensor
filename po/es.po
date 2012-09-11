@@ -1,4 +1,4 @@
-# Italian translation for psensor
+# Spanish translation for psensor
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the psensor package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
 "POT-Creation-Date: 2012-07-07 00:37+0200\n"
-"PO-Revision-Date: 2012-04-28 16:28+0000\n"
+"PO-Revision-Date: 2012-08-18 17:27+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Italian <it@li.org>\n"
-"Language: it\n"
+"Language-Team: Spanish <es@li.org>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,11 +27,17 @@ msgid ""
 "This is free software: you are free to change and  redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
+"Copyright (C) %s jeanfi@gmail.com\n"
+"Licencia GPLv2: GNU GPL versión 2 o posterior <http://www.gnu.org/licenses/"
+"old-licenses/gpl-2.0.html>\n"
+"Este programa es software libre:  su modificación y difusión está autorizada "
+"y apoyada por su autor.\n"
+"No existe NINGUNA GARANTÍA hasta donde la ley lo permita.\n"
 
 #: src/main.c:88 src/server/server.c:86
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
-msgstr "Uso: %s [OPZIONE]...\n"
+msgstr "Uso: %s [OPTION]...\n"
 
 #: src/main.c:90
 msgid ""
@@ -41,15 +47,15 @@ msgstr ""
 
 #: src/main.c:94
 msgid "Options:"
-msgstr "Opzioni:"
+msgstr "Opciones"
 
 #: src/main.c:95
 msgid ""
 "  -h, --help          display this help and exit\n"
 "  -v, --version       display version information and exit"
 msgstr ""
-"  -h, --help mostra questo help ed esce\n"
-"  -v, --version mostra le informazioni sulla versione ed esce"
+"  -h, --ayuda         Muestra esta ayuda. \n"
+"  -v, --versión       Muestra información sobre la versión."
 
 #: src/main.c:100
 msgid ""
@@ -60,26 +66,27 @@ msgstr ""
 #: src/main.c:105
 msgid "  -d, --debug=LEVEL   set the debug level, integer between 0 and 3"
 msgstr ""
-"  -d, --debug=LEVEL imposta il livello di debug, un intero compreso tra 0 e 3"
+"  -d, --depurar=NIVEL   Establece el nivel de depuración con un valor entre "
+"0 y 3"
 
 #: src/main.c:110 src/server/server.c:104
 #, c-format
 msgid "Report bugs to: %s\n"
-msgstr "Segnalare i bug a: %s\n"
+msgstr "Comunicar fallos: %s\n"
 
 #: src/main.c:112 src/server/server.c:106
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr "%s home page: <%s>\n"
+msgstr "%s Página Oficial: <%s>\n"
 
 #: src/main.c:425
 msgid "Enables debug mode."
-msgstr "Abilita la modalità debug."
+msgstr "Activa el modo de depuración"
 
 #: src/main.c:434 src/server/server.c:352
 #, c-format
 msgid "Try `%s --help' for more information.\n"
-msgstr "Usare '%s --help' per maggiori informazioni.\n"
+msgstr "Introducir `%s --ayuda' para obtener más información\n"
 
 #: src/main.c:469
 #, c-format
@@ -88,7 +95,9 @@ msgstr ""
 
 #: src/ui.c:80
 msgid "Psensor is a GTK+ application for monitoring hardware sensors"
-msgstr "Psensore è un'applicazione GTK+ per monitorare sernsori hardware"
+msgstr ""
+"Psensor es una aplicación GTK+ que recoge y muestra información de los "
+"sensores del hardware."
 
 #: src/ui.c:83
 msgid ""
@@ -100,19 +109,19 @@ msgstr ""
 
 #: src/ui.c:86
 msgid "About Psensor"
-msgstr "Informazioni su Psensor"
+msgstr "Sobre Psensor"
 
 #: src/ui.c:89
 msgid "Psensor Homepage"
-msgstr "Psensor Homepage"
+msgstr "Página de Psensor"
 
 #: src/ui.c:144
 msgid "_Preferences"
-msgstr "_Preferenze"
+msgstr "_Configuración"
 
 #: src/ui.c:145 src/ui_sensorlist.c:200
 msgid "Preferences"
-msgstr "Preferenze"
+msgstr "Configuración"
 
 #: src/ui.c:149
 msgid "_Sensor Preferences"
@@ -120,32 +129,32 @@ msgstr ""
 
 #: src/ui.c:150
 msgid "Sensor Preferences"
-msgstr "Sensor Preferenze"
+msgstr "Configurar sensores"
 
 #: src/ui.c:154
 msgid "_Quit"
-msgstr "_Esci"
+msgstr "_Salir"
 
 #: src/ui.c:154
 msgid "Quit"
-msgstr "Esci"
+msgstr "Salir"
 
 #: src/ui.c:160
 msgid "_About"
-msgstr "_Informazioni"
+msgstr "_Acerca de"
 
 #: src/ui.c:161
 msgid "About"
-msgstr "Informazioni su..."
+msgstr "Acerca de"
 
 #: src/ui.c:183 src/ui_appindicator.c:176
 #, c-format
 msgid "building menus failed: %s"
-msgstr "costruzione dei menù fallita: %s"
+msgstr "Error al construir los menús :%s"
 
 #: src/ui.c:231
 msgid "Psensor - Temperature Monitor"
-msgstr "Psensor - Monitor temperatura"
+msgstr "Psensor - Monitor de temperatura"
 
 #: src/ui.c:248
 #, c-format
@@ -154,36 +163,36 @@ msgstr ""
 
 #: src/ui_sensorlist.c:231
 msgid "Select foreground color"
-msgstr "Colore di primo piano:"
+msgstr "Seleccionar el color del primer plano"
 
 #: src/ui_sensorlist.c:308 src/glade/psensor-pref.glade:241
 msgid "Sensor"
-msgstr "Sensore"
+msgstr "Sensor"
 
 #: src/ui_sensorlist.c:314
 msgid "Value"
-msgstr "Valore"
+msgstr "Valor"
 
 #: src/ui_sensorlist.c:320
 msgid "Min"
-msgstr "Minimo"
+msgstr "Mín"
 
 #: src/ui_sensorlist.c:326
 msgid "Max"
-msgstr "Massimo"
+msgstr "Máx"
 
 #: src/ui_sensorlist.c:333
 msgid "Color"
-msgstr "Colore"
+msgstr "Color"
 
 #: src/ui_sensorlist.c:345
 msgid "Enabled"
-msgstr "Abilitato"
+msgstr "Activado."
 
 #: src/ui_sensorlist.c:374 src/ui_sensorlist.c:375 src/ui_sensorlist.c:376
 #: src/glade/sensor-edit.glade:87 src/glade/sensor-edit.glade:153
 msgid "N/A"
-msgstr "N/A"
+msgstr "No disponible"
 
 #: src/ui_notify.c:45
 msgid "gettimeofday failed"
@@ -191,33 +200,33 @@ msgstr ""
 
 #: src/ui_notify.c:67 src/ui_notify.c:69
 msgid "Temperature alert"
-msgstr "Allarme temperatura"
+msgstr "Alarma por temperatura."
 
 #: src/ui_sensorpref.c:397
 msgid "Sensor Name"
-msgstr "Nome sensore"
+msgstr "Nombre del sensor"
 
 #: src/rsensor.c:107
 #, c-format
 msgid "Fail to connect to: %s"
-msgstr "Impossibile connettersi a: %s"
+msgstr "Error al conectar a:%s"
 
 #: src/rsensor.c:144
 #, c-format
 msgid "Invalid content: %s"
-msgstr "Conenuto non valido: %s"
+msgstr "Contenido no válido:%s"
 
 #: src/rsensor.c:184
 #, c-format
 msgid "Invalid JSON: %s"
-msgstr "JSON non valido: %s"
+msgstr "JSON no válido:%s"
 
 #: src/server/server.c:53
 msgid ""
 "<html><body><p>Page not found - Go to <a href='/'>Main page</a></p></body>"
 msgstr ""
-"<html><body><p>Pagina non trovata - Vai a <a href='/'>Pagina principale</a></"
-"p></body>"
+"<html><body><p>Página no encontrada- Ir a <a href='/'>Main page</a></p></"
+"body>"
 
 #: src/server/server.c:76
 #, c-format
@@ -228,21 +237,27 @@ msgid ""
 "This is free software: you are free to change and redistribute it.\n"
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
+"Copyright (C) %s jeanfi@gmail.com\n"
+"Licencia GPLv2: GNU GPL versión 2 o posterior <http://www.gnu.org/licenses/"
+"old-licenses/gpl-2.0.html>\n"
+"Este programa es software libre: su modificación y difusión está aprobada y "
+"apoyada por el autor. \n"
+"No existe NINGUNA GARANTÍA hasta donde la ley lo permita.\n"
 
 #: src/server/server.c:88
 msgid ""
 "psensor-server is an HTTP server for monitoring hardware sensors remotely."
 msgstr ""
-"psensor-server è un server HTTP per il monitoraggio remoto di sensori "
-"hardware."
+"psensor-server es un servidor HTTP para obtener información de los sensores "
+"de forma remota."
 
 #: src/server/server.c:93
 msgid ""
 "  -h, --help\t\tdisplay this help and exit\n"
 "  -v, --version\t\tdisplay version information and exit"
 msgstr ""
-"  -h, --help\t\tmostra questo help ed esce\n"
-"  -v, --version\t\tmostra le informazioni sulla versione ed esce"
+"  -h, --ayuda\t\tMuestra esta ayuda.\n"
+"  -v, --versión\t\tMuestra la versión."
 
 #: src/server/server.c:98
 msgid ""
@@ -253,7 +268,7 @@ msgstr ""
 
 #: src/server/server.c:175
 msgid "<html><body><p>Server stop requested</p></body></html>"
-msgstr "<html><body><p>Arresto del server richiesto</p></body></html>"
+msgstr "<html><body><p>El servidor solicitó detenerse</p></body></html>"
 
 #: src/server/server.c:290
 #, c-format
@@ -273,12 +288,12 @@ msgstr ""
 #: src/server/server.c:377
 #, c-format
 msgid "Web server started on port: %d"
-msgstr "Web server inizializzato sulla porta: %d"
+msgstr "Servidor web iniciado en el puerto:%d"
 
 #: src/server/server.c:378
 #, c-format
 msgid "WWW directory: %s"
-msgstr "WWW directory: %s"
+msgstr "directorio WWW:%s"
 
 #: src/server/server.c:379
 #, c-format
@@ -328,7 +343,7 @@ msgstr ""
 #: src/lib/log.c:37
 #, c-format
 msgid "Cannot open log file: %s"
-msgstr "Impossibile aprire il file di log: %s"
+msgstr "Imposible abrir el archivo de registro: %s"
 
 #: src/lib/nvidia.c:54
 #, c-format
@@ -370,7 +385,7 @@ msgstr "%"
 
 #: src/glade/psensor-pref.glade:7
 msgid "Edit Preferences"
-msgstr "Modifica le preferenze"
+msgstr "Editar preferencias"
 
 #: src/glade/psensor-pref.glade:70
 msgid "Graph Colors"
@@ -378,87 +393,87 @@ msgstr ""
 
 #: src/glade/psensor-pref.glade:86
 msgid "Foreground:"
-msgstr "Primo piano:"
+msgstr "Escalas y cuadrícula"
 
 #: src/glade/psensor-pref.glade:100
 msgid "Background:"
-msgstr "Sfondo:"
+msgstr "Fondo de gráfica"
 
 #: src/glade/psensor-pref.glade:114
 msgid "Background opacity:"
-msgstr "Opacità dello sfondo:"
+msgstr "Opacidad del fondo:"
 
 #: src/glade/psensor-pref.glade:165 src/glade/sensor-edit.glade:184
 msgid "Graph"
-msgstr "Grafico"
+msgstr "Gráfica"
 
 #: src/glade/psensor-pref.glade:183
 msgid "Update interval:"
-msgstr "Intervallo di aggiornamento:"
+msgstr "Intervalo de actualización:"
 
 #: src/glade/psensor-pref.glade:197
 msgid "Monitoring duration:"
-msgstr "Durata del monitoraggio:"
+msgstr "Intervalo de la gráfica"
 
 #: src/glade/psensor-pref.glade:210 src/glade/psensor-pref.glade:272
 msgid "second(s)"
-msgstr "secondo/i"
+msgstr "segundo(s)"
 
 #: src/glade/psensor-pref.glade:225
 msgid "minute(s)"
-msgstr "minuto/i"
+msgstr "minuto(s)"
 
 #: src/glade/psensor-pref.glade:259
 msgid "Measure update interval:"
-msgstr "Intervallo di aggiornamento delle misure"
+msgstr "Medir sensores cada:"
 
 #: src/glade/psensor-pref.glade:288
 msgid "Interface"
-msgstr "Interfaccia"
+msgstr "Interfaz"
 
 #: src/glade/psensor-pref.glade:306
 msgid "Position of sensors table:"
-msgstr "Posizione della tabella dei sensori"
+msgstr "Ubicación de los valores"
 
 #: src/glade/psensor-pref.glade:317
 msgid "Hide window decoration"
-msgstr "Nascondi le decorazioni della finestra"
+msgstr "Ocultar el marco de la ventana"
 
 #: src/glade/psensor-pref.glade:335
 msgid "Keep window below"
-msgstr "Mantieni la finestra sotto"
+msgstr "Mantener debajo del resto de ventanas"
 
 #: src/glade/psensor-pref.glade:436
 msgid "<i>Min</i>"
-msgstr "<i>Minimo</i>"
+msgstr "<i>Mín</i>"
 
 #: src/glade/psensor-pref.glade:463
 msgid "<i>Max</i>"
-msgstr "<i>Massimo</i>"
+msgstr "<i>Máx</i>"
 
 #: src/glade/psensor-pref.glade:483
 msgid "Enable menu"
-msgstr "Abilita il menù"
+msgstr "Activar menú"
 
 #: src/glade/psensor-pref.glade:500
 msgid "Enable Unity Launcher counter"
-msgstr ""
+msgstr "Inicio retardado al abrir sesión"
 
 #: src/glade/psensor-pref.glade:518
 msgid "Hide window on startup"
-msgstr "Nascondi la finestra all'avvio"
+msgstr "Ocultar la ventana de gráficas al iniciar sesión."
 
 #: src/glade/psensor-pref.glade:535
 msgid "Restore window position and size"
-msgstr "Ripristina posizione e dimensione della finestra"
+msgstr "Restaurar tamaño y posición de la ventana"
 
 #: src/glade/sensor-edit.glade:8
 msgid "Edit Sensor Preferences"
-msgstr "Modifica preferenze del sensore"
+msgstr "Configurar sensores"
 
 #: src/glade/sensor-edit.glade:104
 msgid "Name:"
-msgstr "Nome:"
+msgstr "Nombre:"
 
 #: src/glade/sensor-edit.glade:139
 msgid "Type:"
@@ -466,19 +481,19 @@ msgstr "Tipo:"
 
 #: src/glade/sensor-edit.glade:169
 msgid "Id:"
-msgstr "Id:"
+msgstr "Identificativo:"
 
 #: src/glade/sensor-edit.glade:202
 msgid "Color:"
-msgstr "Colore:"
+msgstr "Color:"
 
 #: src/glade/sensor-edit.glade:216
 msgid "Alarm"
-msgstr "Avviso"
+msgstr "Alarma"
 
 #: src/glade/sensor-edit.glade:231
 msgid "Activate desktop notifications"
-msgstr "Attiva le notifiche sul desktop"
+msgstr "Mostrar alarma en el escritorio"
 
 #: src/glade/sensor-edit.glade:251
 msgid "Temperature limit:"
@@ -486,11 +501,11 @@ msgstr ""
 
 #: src/glade/sensor-edit.glade:266
 msgid "Sensor Information"
-msgstr "Informazioni sul Sensore"
+msgstr "Información del sensor"
 
 #: src/glade/sensor-edit.glade:279
 msgid "Draw sensor curve"
-msgstr "Disegna curva"
+msgstr "Representar el sensor en la gráfica"
 
 #: src/glade/sensor-edit.glade:327
 msgid "°C"
