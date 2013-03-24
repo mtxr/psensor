@@ -1,3 +1,7 @@
+* v07.0.5
+
+** fixed cpu load when fahrenheit is enabled.
+
 * v0.7.0.4
 
 ** added Spanish translation from LP (Javier and Eduardo Alberto
