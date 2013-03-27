@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2013-03-13 21:15+0100\n"
+"POT-Creation-Date: 2013-03-27 19:29+0100\n"
 "PO-Revision-Date: 2013-01-15 12:24+0000\n"
 "Last-Translator: Wang Dianjin <Unknown>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -137,7 +137,7 @@ msgstr "类型:"
 
 #: src/glade/sensor-edit.glade:136 src/glade/sensor-edit.glade:281
 #: src/glade/sensor-edit.glade:377 src/glade/sensor-edit.glade:450
-#: src/glade/sensor-edit.glade:499 src/lib/psensor.c:482
+#: src/glade/sensor-edit.glade:499 src/lib/psensor.c:481
 #: src/ui_sensorlist.c:378 src/ui_sensorlist.c:379 src/ui_sensorlist.c:380
 #: src/ui_notify.c:81
 msgid "N/A"
@@ -260,11 +260,11 @@ msgstr "无法打开到 X11 服务器的连接。"
 msgid "Failed to retrieve NVIDIA information."
 msgstr "无法获取 NVIDIA 信息。"
 
-#: src/lib/psensor.c:478 tests/test_psensor_type_to_unit_str.c:62
+#: src/lib/psensor.c:477 tests/test_psensor_type_to_unit_str.c:62
 msgid "RPM"
 msgstr "转速"
 
-#: src/lib/psensor.c:480
+#: src/lib/psensor.c:479
 msgid "%"
 msgstr "%"
 

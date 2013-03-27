@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2013-03-13 21:15+0100\n"
+"POT-Creation-Date: 2013-03-27 19:29+0100\n"
 "PO-Revision-Date: 2012-11-11 10:38+0000\n"
 "Last-Translator: tuxmaniack <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
@@ -137,7 +137,7 @@ msgstr "Tips:"
 
 #: src/glade/sensor-edit.glade:136 src/glade/sensor-edit.glade:281
 #: src/glade/sensor-edit.glade:377 src/glade/sensor-edit.glade:450
-#: src/glade/sensor-edit.glade:499 src/lib/psensor.c:482
+#: src/glade/sensor-edit.glade:499 src/lib/psensor.c:481
 #: src/ui_sensorlist.c:378 src/ui_sensorlist.c:379 src/ui_sensorlist.c:380
 #: src/ui_notify.c:81
 msgid "N/A"
@@ -260,11 +260,11 @@ msgstr "Nevar atvērt savienojumu ar X11 server."
 msgid "Failed to retrieve NVIDIA information."
 msgstr "Neizdevās saņemt NVIDIA informāciju."
 
-#: src/lib/psensor.c:478 tests/test_psensor_type_to_unit_str.c:62
+#: src/lib/psensor.c:477 tests/test_psensor_type_to_unit_str.c:62
 msgid "RPM"
 msgstr "RPM"
 
-#: src/lib/psensor.c:480
+#: src/lib/psensor.c:479
 msgid "%"
 msgstr "%"
 
