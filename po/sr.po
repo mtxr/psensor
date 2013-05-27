@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2013-05-19 10:32+0200\n"
+"POT-Creation-Date: 2013-05-27 08:45+0200\n"
 "PO-Revision-Date: 2012-05-03 02:31+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <sr@li.org>\n"
@@ -131,7 +131,7 @@ msgid "Measures"
 msgstr ""
 
 #: src/glade/psensor-pref.glade:586 src/glade/sensor-edit.glade:169
-#: src/ui_sensorlist.c:333
+#: src/ui_sensorlist.c:334
 msgid "Graph"
 msgstr ""
 
@@ -403,7 +403,7 @@ msgstr ""
 msgid "Enables debug mode."
 msgstr ""
 
-#: src/main.c:526 src/server/server.c:377
+#: src/main.c:526 src/server/server.c:379
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Покушајте„%s --help“ за више информација.\n"
@@ -484,35 +484,35 @@ msgstr ""
 msgid "HTTP Request: %s"
 msgstr ""
 
-#: src/server/server.c:357
+#: src/server/server.c:359
 #, c-format
 msgid "Enables debug mode: %d"
 msgstr ""
 
-#: src/server/server.c:399
+#: src/server/server.c:401
 msgid "No sensors detected."
 msgstr ""
 
-#: src/server/server.c:406
+#: src/server/server.c:408
 msgid "Failed to create Web server."
-msgstr ""
-
-#: src/server/server.c:410
-#, c-format
-msgid "Web server started on port: %d"
-msgstr ""
-
-#: src/server/server.c:411
-#, c-format
-msgid "WWW directory: %s"
 msgstr ""
 
 #: src/server/server.c:412
 #, c-format
+msgid "Web server started on port: %d"
+msgstr ""
+
+#: src/server/server.c:413
+#, c-format
+msgid "WWW directory: %s"
+msgstr ""
+
+#: src/server/server.c:414
+#, c-format
 msgid "URL: http://localhost:%d"
 msgstr ""
 
-#: src/server/server.c:422
+#: src/server/server.c:424
 msgid "Failed to activate logging of sensors."
 msgstr ""
 
@@ -542,23 +542,23 @@ msgstr ""
 msgid "Select foreground color"
 msgstr "Одаберите боју текста"
 
-#: src/ui_sensorlist.c:296
+#: src/ui_sensorlist.c:297
 msgid "Sensor"
 msgstr "Сензор"
 
-#: src/ui_sensorlist.c:302
+#: src/ui_sensorlist.c:303
 msgid "Value"
 msgstr ""
 
-#: src/ui_sensorlist.c:308
+#: src/ui_sensorlist.c:309
 msgid "Min"
 msgstr "Најмање"
 
-#: src/ui_sensorlist.c:314
+#: src/ui_sensorlist.c:315
 msgid "Max"
 msgstr "Највише"
 
-#: src/ui_sensorlist.c:321
+#: src/ui_sensorlist.c:322
 msgid "Color"
 msgstr "У боји"
 
