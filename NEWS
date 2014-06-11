@@ -1,6 +1,12 @@
 Psensor NEWS
 ============
 
+v1.0.3
+------
+
+* fixed bug: psensor not autostarted when $HOME/.config/autostart does
+  not exist.
+
 v1.0.2
 ------
 
