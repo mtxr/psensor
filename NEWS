@@ -10,6 +10,7 @@ v1.0.3
 * Fixed psensor does not start: Attempt to unlock mutex that was not
   locked during startup with glib 2.41.2. (LP: #1346299).
 * Fixed FTBFS with clang instead of gcc. (Closes: #753061).
+* Fixed notification script call (wrong allocation of command string).
 
 v1.0.2
 ------
