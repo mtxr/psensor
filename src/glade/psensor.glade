@@ -103,6 +103,12 @@
       </object>
     </child>
     <child>
+      <object class="GtkSeparatorMenuItem" id="menuitem3">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+      </object>
+    </child>
+    <child>
       <object class="GtkImageMenuItem" id="menuitem1">
         <property name="related_action">AppIndicatorPreferencesAction</property>
         <property name="visible">True</property>
@@ -118,12 +124,6 @@
         <property name="can_focus">False</property>
         <property name="use_underline">True</property>
         <property name="use_stock">True</property>
-      </object>
-    </child>
-    <child>
-      <object class="GtkSeparatorMenuItem" id="menuitem3">
-        <property name="visible">True</property>
-        <property name="can_focus">False</property>
       </object>
     </child>
     <child>
