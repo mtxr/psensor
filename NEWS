@@ -1,6 +1,12 @@
 Psensor NEWS
 ============
 
+v1.1.4
+------
+
+* psensor-server: avoid to retrieve files which are not under the
+  webserver directory.
+
 v1.1.3
 ------
 
