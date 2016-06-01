@@ -11,7 +11,7 @@
 # Origin: gettext-0.16
 
 PACKAGE = psensor
-VERSION = 1.1.3
+VERSION = 1.1.4
 PACKAGE_BUGREPORT = jeanfi@gmail.com
 
 SHELL = /bin/sh
