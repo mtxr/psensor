@@ -22,7 +22,7 @@ v1.2.0
 * Updated German translation (Max).
 * Added Polish translation (hawkeye116477).
 * Fixed GtkDialog mapped without a transient parent (Francis
-  Chin). (Closes: #1642696).
+  Chin). (LP: #1642696).
 
 v1.1.5
 ------
