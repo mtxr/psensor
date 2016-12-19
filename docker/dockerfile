@@ -1,0 +1,22 @@
+FROM resin/rpi-raspbian
+
+RUN apt-get update
+RUN apt-get install git
+RUN apt-get install make
+RUN apt-get install gcc
+RUN apt-get install libc6-dev
+RUN apt-get install pkg-config
+RUN apt-get install libgtk-3-dev
+RUN apt-get install automake
+
+RUN apt-get install autopoint
+RUN apt-get install intltool
+RUN apt-get install intltool-debian
+
+RUN apt-get install help2man
+
+RUN cd /root && git clone https://git.wpitchoune.net/psensor.git -b master
+
+COPY psensor_build.sh /root
+
+CMD /root/psensor_build.sh
