@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor 1.2.0\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2016-08-24 23:30+0200\n"
+"POT-Creation-Date: 2017-01-22 15:41+0100\n"
 "PO-Revision-Date: 2016-08-25 11:09+0200\n"
 "Last-Translator: hawkeye116477 <hawkeye116477@gmail.com>\n"
 "Language-Team: Polish\n"
@@ -207,6 +207,7 @@ msgid "<i>Max</i>"
 msgstr "<i>Max</i>"
 
 #: src/glade/psensor-pref.glade:636 src/glade/psensor-pref.glade:813
+#: src/glade/psensor-pref.glade:881
 msgid "second(s)"
 msgstr "sekund(y)"
 
@@ -233,10 +234,6 @@ msgstr "Włącz logowanie czujników"
 #: src/glade/psensor-pref.glade:866
 msgid "Sensors logging interval:"
 msgstr "Częstość logowania czujników:"
-
-#: src/glade/psensor-pref.glade:881
-msgid "seconds(s)"
-msgstr "sekund(y)"
 
 #: src/glade/psensor-pref.glade:896
 msgid "Script executed when an alarm is raised:"

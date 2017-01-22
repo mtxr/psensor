@@ -878,7 +878,7 @@
                     <property name="margin_right">4</property>
                     <property name="margin_top">4</property>
                     <property name="margin_bottom">4</property>
-                    <property name="label" translatable="yes">seconds(s)</property>
+                    <property name="label" translatable="yes">second(s)</property>
                   </object>
                   <packing>
                     <property name="left_attach">2</property>

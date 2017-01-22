@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2016-08-24 23:30+0200\n"
+"POT-Creation-Date: 2017-01-22 15:41+0100\n"
 "PO-Revision-Date: 2014-09-20 11:26+0000\n"
 "Last-Translator: Jean-Philippe Orsini <Unknown>\n"
 "Language-Team: Hungarian <gnome-hu-list-request@gnome.org>\n"
@@ -210,6 +210,7 @@ msgid "<i>Max</i>"
 msgstr "<i>Max</i>"
 
 #: src/glade/psensor-pref.glade:636 src/glade/psensor-pref.glade:813
+#: src/glade/psensor-pref.glade:881
 msgid "second(s)"
 msgstr "másodperc"
 
@@ -236,10 +237,6 @@ msgstr "Érzékelők naplózásának engedélyezése"
 #: src/glade/psensor-pref.glade:866
 msgid "Sensors logging interval:"
 msgstr "Naplózás időköze:"
-
-#: src/glade/psensor-pref.glade:881
-msgid "seconds(s)"
-msgstr "másodperc"
 
 #: src/glade/psensor-pref.glade:896
 msgid "Script executed when an alarm is raised:"
