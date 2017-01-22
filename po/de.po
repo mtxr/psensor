@@ -133,7 +133,7 @@ msgstr "Wert im Unity Starter anzeigen"
 
 #: src/glade/psensor-pref.glade:190
 msgid "Psensor has not been build with Unity Launcher support"
-msgstr "Psensor wurde ohne Unterstützung für Unity Starter kompiliert."
+msgstr "Psensor wurde ohne Unterstützung für Unity Starter kompiliert"
 
 #: src/glade/psensor-pref.glade:215
 msgid "Celsius"
@@ -254,7 +254,7 @@ msgstr "Unterstützung für NVCtrl (NVidia) aktivieren"
 
 #: src/glade/psensor-pref.glade:974
 msgid "Psensor has not been build with NVCtrl support"
-msgstr "Psensor wurde ohne Unterstützung für NVCtrl kompiliert."
+msgstr "Psensor wurde ohne Unterstützung für NVCtrl kompiliert"
 
 #: src/glade/psensor-pref.glade:989
 msgid "Enable support of ATI ADL"
@@ -262,7 +262,7 @@ msgstr "Unterstützung für ATI ADL aktivieren"
 
 #: src/glade/psensor-pref.glade:993
 msgid "Psensor has not been build with ATI ADL support"
-msgstr "Psensor wurde ohne Unterstützung für ATI ADL kompiliert."
+msgstr "Psensor wurde ohne Unterstützung für ATI ADL kompiliert"
 
 #: src/glade/psensor-pref.glade:1008
 msgid "Enable support of gtop2"
@@ -270,7 +270,7 @@ msgstr "Unterstützung für gtop2 aktivieren"
 
 #: src/glade/psensor-pref.glade:1012
 msgid "Psensor has not been build with gtop2 support"
-msgstr "Psensor wurde ohne Unterstützung für gtop2 kompiliert."
+msgstr "Psensor wurde ohne Unterstützung für gtop2 kompiliert"
 
 #: src/glade/psensor-pref.glade:1027
 msgid "Enable support of hddtemp daemon"
@@ -281,18 +281,16 @@ msgid "Enable support of libatasmart"
 msgstr "Unterstützung für libatasmart aktivieren"
 
 #: src/glade/psensor-pref.glade:1049
-#, fuzzy
 msgid "Psensor has not been build with libatasmart support"
-msgstr "Psensor wurde ohne Unterstützung für libatasmart kompiliert."
+msgstr "Psensor wurde ohne Unterstützung für libatasmart kompiliert"
 
 #: src/glade/psensor-pref.glade:1064
 msgid "Enable support of udisks2"
 msgstr "Unterstützung für udisks2 aktivieren"
 
 #: src/glade/psensor-pref.glade:1068
-#, fuzzy
 msgid "Psensor has not been build with udisks2 support"
-msgstr "Psensor wurde ohne Unterstützung für udisks2 kompiliert."
+msgstr "Psensor wurde ohne Unterstützung für udisks2 kompiliert"
 
 #: src/glade/psensor-pref.glade:1090
 msgid "The changes are applied after the restart of psensor."
@@ -406,7 +404,7 @@ msgstr "Sensor im Menü anzeigen"
 
 #: src/glade/sensor-edit.glade:701 src/glade/sensor-edit.glade:723
 msgid "Psensor has not been build with AppIndicator support"
-msgstr "Psensor wurde ohne Unterstützung für AppIndicator kompiliert."
+msgstr "Psensor wurde ohne Unterstützung für AppIndicator kompiliert"
 
 #: src/glade/sensor-edit.glade:719
 msgid "Display sensor in the label (experimental)"
@@ -676,7 +674,7 @@ msgstr "Es existiert bereits eine Psensor-Instanz."
 
 #: src/main.c:527
 msgid "Failed to create thread for monitoring sensors"
-msgstr "Erzeugung eines Threads zur Sensorenüberwachung fehlgeschlagen."
+msgstr "Erzeugung eines Threads zur Sensorenüberwachung fehlgeschlagen"
 
 #: src/rsensor.c:115
 #, c-format
@@ -701,7 +699,7 @@ msgstr "<html><body><p>Anhalten des Servers angefordert</p></body></html>"
 msgid ""
 "<html><body><p>Page not found - Go to <a href='/'>Main page</a></p></body>"
 msgstr ""
-"<html><body><p>Seite nicht gefunden – Gehen Sie zurück zur <a "
+"<html><body><p>Seite nicht gefunden - Gehen Sie zurück zur <a "
 "href='/'>Startseite</a></p></body>"
 
 #: src/server/server.c:100
@@ -749,12 +747,12 @@ msgstr ""
 #: src/server/server.c:262
 #, c-format
 msgid "Resource access refused %s real path is %s"
-msgstr ""
+msgstr "Zugriff auf Ressource verweigert, %s tatsächlicher Pfad ist %s"
 
 #: src/server/server.c:269
-#, fuzzy, c-format
+#, c-format
 msgid "Cannot get real path of %s"
-msgstr "Protokolldatei kann nicht geöffnet werden: %s"
+msgstr "Tatsächlicher Pfad von %s kann nicht ermittelt werden"
 
 #: src/server/server.c:339
 #, c-format
@@ -769,7 +767,7 @@ msgstr "Aktiviert den Fehlerdiagnosemodus: %d"
 #: src/server/server.c:431
 #, c-format
 msgid "Webserver directory does not exist.\n"
-msgstr ""
+msgstr "Webserver-Ordner existiert nicht.\n"
 
 #: src/server/server.c:452
 msgid "No sensors detected."
@@ -803,7 +801,6 @@ msgid "Psensor is a GTK+ application for monitoring hardware sensors"
 msgstr "Psensor ist eine GTK-Anwendung zur Überwachung von Hardware-Sensoren"
 
 #: src/ui.c:216
-#, fuzzy
 msgid "Copyright(c) 2010-2016 jeanfi@gmail.com"
 msgstr "Copyright(c) 2010-2016 jeanfi@gmail.com"
 
