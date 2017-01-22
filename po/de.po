@@ -97,7 +97,7 @@ msgstr "Anzeigen"
 #: src/glade/psensor-pref.glade:24
 msgctxt "psensor"
 msgid "Right"
-msgstr ""
+msgstr "Rechts"
 
 #: src/glade/psensor-pref.glade:27
 msgid "Left"
