@@ -76,10 +76,10 @@ void config_cleanup(void);
 GdkRGBA *config_get_sensor_color(const char *);
 void config_set_sensor_color(const char *, const GdkRGBA *);
 
-bool config_get_sensor_alarm_high_threshold(const char *, double *);
+bool config_get_sensor_alarm_high_threshold(const char *, double *, double);
 void config_set_sensor_alarm_high_threshold(const char *, int);
 
-bool config_get_sensor_alarm_low_threshold(const char *, double *);
+bool config_get_sensor_alarm_low_threshold(const char *, double *, double);
 void config_set_sensor_alarm_low_threshold(const char *, int);
 
 bool config_get_sensor_alarm_enabled(const char *);

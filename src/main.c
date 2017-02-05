@@ -229,7 +229,7 @@ associate_cb_alarm_raised(struct psensor **sensors, struct ui_psensor *ui)
 {
 	bool ret;
 	struct psensor *s;
-	double high_temp;
+	double high_temp, high_default, low_default;
 
 	high_temp = config_get_default_high_threshold_temperature();
 
@@ -239,23 +239,31 @@ associate_cb_alarm_raised(struct psensor **sensors, struct ui_psensor *ui)
 		s->cb_alarm_raised = cb_alarm_raised;
 		s->cb_alarm_raised_data = ui;
 
-		ret = config_get_sensor_alarm_high_threshold
-			(s->id, &s->alarm_high_threshold);
-
-		if (!ret) {
-			if (s->max == UNKNOWN_DBL_VALUE) {
-				if (s->type & SENSOR_TYPE_TEMP)
-					s->alarm_high_threshold = high_temp;
-			} else {
-				s->alarm_high_threshold = s->max;
-			}
+		if (s->max == UNKNOWN_DBL_VALUE) {
+			if (s->type & SENSOR_TYPE_TEMP)
+				high_default = high_temp;
+			else
+				high_default = UNKNOWN_DBL_VALUE;
+		} else {
+			high_default = s->max;
 		}
 
-		ret = config_get_sensor_alarm_low_threshold
-			(s->id, &s->alarm_low_threshold);
+		ret = config_get_sensor_alarm_high_threshold
+			(s->id, &s->alarm_high_threshold, high_default);
 
-		if (!ret && s->min != UNKNOWN_DBL_VALUE)
-			s->alarm_low_threshold = s->min;
+		if (!ret)
+			s->alarm_high_threshold = high_default;
+
+		if (s->min == UNKNOWN_DBL_VALUE)
+			low_default = 0;
+		else
+			low_default = s->min;
+
+		ret = config_get_sensor_alarm_low_threshold
+			(s->id, &s->alarm_low_threshold, low_default);
+
+		if (!ret)
+			s->alarm_low_threshold = low_default;
 
 		sensors++;
 	}

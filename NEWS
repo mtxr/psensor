@@ -7,6 +7,8 @@ v1.2.1
 * documentation files are generated with asciidoctor instead of
   asciidoc.
 * added support of BCM2835 which is mostly used in the Raspberry PI3.
+* Fresh install of 1.2.0 complains about missing sensor config
+  keys. (LP :#1650378)
 
 v1.2.0
 ------
