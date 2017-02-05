@@ -22,6 +22,8 @@
 
 #define P_IO_VER 6
 
+#include <sys/types.h>
+
 /* Returns '1' if a given 'path' denotates a directory else returns
  * 0
  */
