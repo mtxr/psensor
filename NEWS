@@ -1,6 +1,11 @@
 = Psensor NEWS
 :docinfo2:
 
+v1.2.1
+------
+
+* documentation files are generated with asciidoctor instead of asciidoc.
+
 v1.2.0
 ------
 
