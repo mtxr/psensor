@@ -12,6 +12,7 @@ src/lib/pgtop2.c
 src/lib/plog.c
 src/lib/nvidia.c
 src/lib/psensor.c
+src/lib/pudisks2.c
 src/lib/slog.c
 src/main.c
 src/rsensor.c
