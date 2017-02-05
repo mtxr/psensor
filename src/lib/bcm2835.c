@@ -29,7 +29,7 @@
 #include <bcm2835.h>
 
 /*
- * Support of the BCM2835 chip which is mostly used by by the
+ * Support of the BCM2835 chip which is mostly used by the
  * Raspberry PI3 and provides the temperature of the chip.
  */
 static const char *PROVIDER_NAME = "BCM2835";
