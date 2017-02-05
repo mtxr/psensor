@@ -2,6 +2,7 @@ noinst_LIBRARIES = libpsensor.a
 
 libpsensor_a_SOURCES = \
 	amd.h\
+	bcm2835.c bcm2835.h\
 	bool.h\
 	color.h color.c\
 	hdd.h hdd_hddtemp.c\

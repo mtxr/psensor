@@ -5,6 +5,7 @@ src/glade/psensor-pref.glade
 src/glade/sensor-edit.glade
 src/graph.c
 src/lib/amd.c
+src/lib/bcm2835.c
 src/lib/hdd_atasmart.c
 src/lib/hdd_hddtemp.c
 src/lib/lmsensor.c

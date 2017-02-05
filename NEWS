@@ -4,7 +4,9 @@
 v1.2.1
 ------
 
-* documentation files are generated with asciidoctor instead of asciidoc.
+* documentation files are generated with asciidoctor instead of
+  asciidoc.
+* added support of BCM2835 which is mostly used in the Raspberry PI3.
 
 v1.2.0
 ------

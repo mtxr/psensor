@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2017-01-22 15:41+0100\n"
+"POT-Creation-Date: 2017-02-05 23:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -443,7 +443,17 @@ msgstr ""
 msgid "Number of active AMD/ATI adapters: %d"
 msgstr ""
 
-#: src/lib/hdd_atasmart.c:70 src/lib/hdd_hddtemp.c:125
+#: src/lib/bcm2835.c:85
+msgid "The BCM2835 (probably a Raspberry PI3) has been detected"
+msgstr ""
+
+#: src/lib/bcm2835.c:122
+#, c-format
+msgid "Failed to get content of file %s."
+msgstr ""
+
+#: src/lib/hdd_atasmart.c:70 src/lib/hdd_hddtemp.c:125 src/lib/pudisks2.c:193
+#: src/lib/pudisks2.c:194
 msgid "Disk"
 msgstr ""
 
@@ -561,6 +571,15 @@ msgstr ""
 msgid "%"
 msgstr ""
 
+#: src/lib/pudisks2.c:62 src/ui_notify.c:48
+msgid "gettimeofday failed."
+msgstr ""
+
+#: src/lib/pudisks2.c:142
+#, c-format
+msgid "%s: cannot get the udisks2 client"
+msgstr ""
+
 #: src/lib/slog.c:87
 msgid "HOME variable not set."
 msgstr ""
@@ -582,7 +601,7 @@ msgstr ""
 msgid "Sensor log not open, cannot close."
 msgstr ""
 
-#: src/main.c:61 src/server/server.c:88
+#: src/main.c:62 src/server/server.c:88
 #, c-format
 msgid ""
 "Copyright (C) %s jeanfi@gmail.com\n"
@@ -592,69 +611,69 @@ msgid ""
 "There is NO WARRANTY, to the extent permitted by law.\n"
 msgstr ""
 
-#: src/main.c:72 src/server/server.c:98
+#: src/main.c:73 src/server/server.c:98
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr ""
 
-#: src/main.c:74
+#: src/main.c:75
 msgid ""
 "Psensor is a GTK+ application for monitoring hardware sensors, including "
 "temperatures and fan speeds."
 msgstr ""
 
-#: src/main.c:78
+#: src/main.c:79
 msgid "Options:"
 msgstr ""
 
-#: src/main.c:79
+#: src/main.c:80
 msgid ""
 "  -h, --help          display this help and exit\n"
 "  -v, --version       display version information and exit"
 msgstr ""
 
-#: src/main.c:85
+#: src/main.c:86
 msgid ""
 "  -u, --url=URL       the URL of the psensor-server,\n"
 "                      example: http://hostname:3131"
 msgstr ""
 
-#: src/main.c:88
+#: src/main.c:89
 msgid "  -n, --new-instance  force the creation of a new Psensor application"
 msgstr ""
 
-#: src/main.c:91
+#: src/main.c:92
 msgid "  -d, --debug=LEVEL   set the debug level, integer between 0 and 3"
 msgstr ""
 
-#: src/main.c:96 src/server/server.c:121
+#: src/main.c:97 src/server/server.c:121
 #, c-format
 msgid "Report bugs to: %s\n"
 msgstr ""
 
-#: src/main.c:98 src/server/server.c:123
+#: src/main.c:99 src/server/server.c:123
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr ""
 
-#: src/main.c:390
+#: src/main.c:392
 msgid "Psensor has not been compiled with remote sensor support."
 msgstr ""
 
-#: src/main.c:460
+#: src/main.c:464
 msgid "Enables debug mode."
 msgstr ""
 
-#: src/main.c:472 src/server/server.c:422
+#: src/main.c:476 src/server/server.c:422
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr ""
 
-#: src/main.c:485
+#: src/main.c:489
 msgid "A Psensor instance already exists."
 msgstr ""
 
-#: src/main.c:527
+#: src/main.c:531
 msgid "Failed to create thread for monitoring sensors"
 msgstr ""
 
@@ -802,10 +821,6 @@ msgstr ""
 #: src/ui_appindicator.c:148
 #, c-format
 msgid "Failed to load glade file %s: %s"
-msgstr ""
-
-#: src/ui_notify.c:48
-msgid "gettimeofday failed."
 msgstr ""
 
 #: src/ui_notify.c:77

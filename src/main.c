@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010-2016 jeanfi@gmail.com
+ * Copyright (C) 2010-2017 jeanfi@gmail.com
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -31,6 +31,7 @@
 #include <config.h>
 
 #include <amd.h>
+#include <bcm2835.h>
 #include <cfg.h>
 #include <graph.h>
 #include <hdd.h>
@@ -144,6 +145,7 @@ static void *update_measures(void *data)
 		gtop2_psensor_list_update(sensors);
 		atasmart_psensor_list_update(sensors);
 		hddtemp_psensor_list_update(sensors);
+		bcm2835_psensor_list_update(sensors);
 
 		psensor_log_measures(sensors);
 
@@ -415,6 +417,8 @@ static struct psensor **create_sensors_list(const char *url)
 
 		if (config_is_udisks2_enabled())
 			udisks2_psensor_list_append(&sensors, 600);
+
+		bcm2835_psensor_list_append(&sensors, 600);
 	}
 
 	associate_preferences(sensors);
