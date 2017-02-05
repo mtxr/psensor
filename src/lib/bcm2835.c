@@ -28,8 +28,10 @@
 #include <pio.h>
 #include <bcm2835.h>
 
-/* Support of the BCM2835 chip which is mostly used by by the
- * Raspberry PI3 and provides the temperature of the chip. */
+/*
+ * Support of the BCM2835 chip which is mostly used by by the
+ * Raspberry PI3 and provides the temperature of the chip.
+ */
 static const char *PROVIDER_NAME = "BCM2835";
 
 /*
@@ -103,25 +105,30 @@ static double bcm2835_update_temp(struct psensor *s)
 {
 	char *str, *end;
 	long l;
-	
+	int n;
+
 	log_fct_enter();
 
 	str = file_get_content(SYS_THERMAL_TEMP);
 
-	if (str[strlen(str) - 1] == '\n')
-		str[strlen(str) - 1] = '\0';
+	n = strlen(str) - 1;
+	if (str[n] == '\n')
+		str[n] = '\0';
 
 	if (str) {
 		l = strtol(str, &end, 10);
 		if (*end != '\0')
-			log_debug("%s: found invalid value: A%sB %d.", PROVIDER_NAME, str, strlen(str));
+			log_debug("%s: found invalid value: %s.",
+				  PROVIDER_NAME,
+				  str);
 		else
 			psensor_set_current_value(s, l / 1000);
 		free(str);
 	} else {
-		log_err(_("Failed to get content of file %s."), SYS_THERMAL_TEMP);
+		log_err(_("Failed to get content of file %s."),
+			SYS_THERMAL_TEMP);
 	}
-		
+
 	log_fct_exit();
 
 	return 0;
@@ -130,7 +137,7 @@ static double bcm2835_update_temp(struct psensor *s)
 void bcm2835_psensor_list_update(struct psensor **sensors)
 {
 	struct psensor *s;
-	
+
 	log_fct_enter();
 
 	for (; *sensors; sensors++) {
@@ -144,6 +151,6 @@ void bcm2835_psensor_list_update(struct psensor **sensors)
 			break; /* only one possible sensor */
 		}
 	}
-	
+
 	log_fct_exit();
 }
