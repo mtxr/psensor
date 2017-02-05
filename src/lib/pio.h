@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2010-2016 jeanfi@gmail.com
+ *  Copyright (C) 2010-2017 jeanfi@gmail.com
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 #ifndef _P_IO_H
 #define _P_IO_H
 
-#define P_IO_VER 6
+#define P_IO_VER 7
 
 #include <sys/types.h>
 

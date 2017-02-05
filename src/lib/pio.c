@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010-2016 jeanfi@gmail.com
+ * Copyright (C) 2010-2017 jeanfi@gmail.com
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -150,11 +150,13 @@ void paths_free(char **paths)
 
 char *file_get_content(const char *fpath)
 {
-	long size;
-
+	long size, n;
 	char *page;
 
+	log_fct_enter();
+
 	size = file_get_size(fpath);
+
 	if (size == -1) {
 		page = NULL;
 
@@ -167,18 +169,26 @@ char *file_get_content(const char *fpath)
 
 		if (fp) {
 			page = malloc(size + 1);
-			if (!page || size != fread(page, 1, size, fp)) {
-				free(page);
-				page = NULL;
-			} else {
-				*(page + size) = '\0';
+
+			if (page) {
+				clearerr(fp);
+				n = fread(page, 1, size, fp);
+				if (n != size && ferror(fp)) {
+					free(page);
+					page = NULL;
+				} else {
+					*(page + n) = '\0';
+				}
 			}
 
 			fclose(fp);
 		} else {
+			log_debug("failed to open %s", fpath);
 			page = NULL;
 		}
 	}
+
+	log_fct_exit();
 
 	return page;
 }
