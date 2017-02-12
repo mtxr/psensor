@@ -445,6 +445,8 @@ struct config *config_load(void)
 
 	c->window_divider_pos = get_int(KEY_INTERFACE_WINDOW_DIVIDER_POS);
 
+	c->hide_on_startup = get_bool(KEY_INTERFACE_HIDE_ON_STARTUP);
+
 	if (!c->window_restore_enabled || !c->window_w || !c->window_h) {
 		c->window_w = 800;
 		c->window_h = 200;
