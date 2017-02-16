@@ -343,11 +343,8 @@ void ui_window_create(struct ui_psensor *ui)
 
 	window = GTK_WIDGET(gtk_builder_get_object(builder, "window"));
 	gtk_builder_connect_signals(builder, ui);
+
 	cfg = ui->config;
-	if (cfg->window_restore_enabled)
-		gtk_window_move(GTK_WINDOW(window),
-				cfg->window_x,
-				cfg->window_y);
 
 	config_set_slog_enabled_changed_cbk(slog_enabled_cbk, ui);
 
@@ -417,8 +414,18 @@ void ui_window_update(struct ui_psensor *ui)
 
 void ui_window_show(struct ui_psensor *ui)
 {
+	struct config *cfg;
+
 	log_debug("ui_window_show()");
+
+	cfg = ui->config;
+	if (cfg->window_restore_enabled)
+		gtk_window_move(GTK_WINDOW(ui->main_window),
+				cfg->window_x,
+				cfg->window_y);
+
 	ui_window_update(ui);
+
 	gtk_window_present(GTK_WINDOW(ui->main_window));
 }
 
