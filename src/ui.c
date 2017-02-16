@@ -188,14 +188,14 @@ on_delete_event_cb(GtkWidget *widget, GdkEvent *event, gpointer data)
 {
 	struct ui_psensor *ui = data;
 
-	save_window_pos(ui);
-
 	log_debug("is_status_supported: %d\n", is_status_supported());
 
-	if (is_appindicator_supported() || is_status_supported())
+	if (is_appindicator_supported() || is_status_supported()) {
+		save_window_pos(ui);
 		gtk_widget_hide(ui->main_window);
-	else
+	} else {
 		ui_psensor_quit(ui);
+	}
 
 	return TRUE;
 }
