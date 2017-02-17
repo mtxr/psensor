@@ -10,6 +10,7 @@ v1.2.1
 * Fresh install of 1.2.0 complains about missing sensor config
   keys. (LP: #1650378)
 * Fixed hide on startup preference (Francis Chin). (LP: #1642029).
+* Fixed restoration of the panel divider position (Francis Chin).
 
 v1.2.0
 ------

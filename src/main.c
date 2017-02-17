@@ -334,8 +334,6 @@ static gboolean check_ui_visible(gpointer data)
 	if (!is_appindicator_supported() && !is_status_supported())
 		ui_window_show(ui);
 
-	ui_window_update(ui);
-
 	return FALSE;
 }
 
