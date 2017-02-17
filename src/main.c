@@ -556,7 +556,7 @@ int main(int argc, char **argv)
 	if  (ui.config->hide_on_startup)
 		g_timeout_add(30000, (GSourceFunc)initial_window_show, &ui);
 	else
-		initial_window_show(&ui);
+		ui_window_show(&ui);
 
 	/* main loop */
 	gtk_main();
