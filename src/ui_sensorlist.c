@@ -24,7 +24,6 @@
 #include <pmutex.h>
 #include <ui.h>
 #include <ui_color.h>
-#include <ui_graph.h>
 #include <ui_pref.h>
 #include <ui_sensorlist.h>
 #include <ui_sensorpref.h>
