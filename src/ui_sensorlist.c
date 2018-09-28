@@ -20,8 +20,11 @@
 #include <string.h>
 
 #include <cfg.h>
+#include <graph.h>
+#include <pmutex.h>
 #include <ui.h>
 #include <ui_color.h>
+#include <ui_graph.h>
 #include <ui_pref.h>
 #include <ui_sensorlist.h>
 #include <ui_sensorpref.h>
@@ -362,6 +365,11 @@ void ui_sensorlist_cb_graph_toggled(GtkCellRendererToggle *cell,
 					   -1);
 		valid = gtk_tree_model_iter_next(model, &iter);
 	}
+
+	/* redraw graph */
+	pmutex_lock(&ui->sensors_mutex);
+	graph_update(ui->sensors, ui_get_graph(), ui->config, ui->main_window);
+	pmutex_unlock(&ui->sensors_mutex);
 }
 
 void ui_sensorlist_create(struct ui_psensor *ui)
