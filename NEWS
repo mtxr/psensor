@@ -12,6 +12,7 @@ v1.2.1
 * Fixed hide on startup preference (Francis Chin). (LP: #1642029).
 * Fixed restoration of the panel divider position (Francis Chin).
 * Update graph immediately when a sensor is enabled or disabled.
+* Moved the source code to GitLab: https://gitlab.com/jeanfi/psensor.git
 
 v1.2.0
 ------

@@ -2,7 +2,7 @@
 :docinfo2:
 :toc:
 
-The last version of this FAQ is available at http://wpitchoune.net/gitweb/?p=psensor.git;a=blob_plain;f=doc/faq.html;hb=HEAD.
+The last version of this FAQ is available at https://gitlab.com/jeanfi/psensor/blob/master/doc/faq.txt
 
 [[S_NoSensors]]
 No sensors or only cpu usage is displayed
@@ -35,7 +35,7 @@ For hard disk drives, psensor can use:
 
     - udisks2: added since 1.1.2 release. It is the default and
       recommended provider.
-   
+
     - hddtemp: verify that it is correctly reporting temperature by
       using the command: +sudo hddtemp /dev/sda+. It is the default
       provider until 1.1.2 release.
@@ -67,7 +67,7 @@ find the instructions in the section +ATI/AMD GPU Support+ of the
 README file available in the Psensor source archives.
 
 If you are using the ATI OpenSource driver, it is not needed to
-compile Psensor with this proprietary library.  
+compile Psensor with this proprietary library.
 
 [[S_WrongTemperature]]
 The reported temperature is obviously wrong
@@ -151,7 +151,7 @@ Check the FAQ or the TODO pages.
 If you don’t find the information, you can send an email to the public
 mailing-list psensor-users@googlegroups.com or directly to me:
 jeanfi@gmail.com.
-	
+
 
 [[S_Contribute]]
 How to contribute?
