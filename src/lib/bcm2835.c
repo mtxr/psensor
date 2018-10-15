@@ -38,8 +38,8 @@ static const char *PROVIDER_NAME = "BCM2835";
  * If this file exists and contains bcm2835_thermal it can be assumed
  * that a BCM2835 chip is present.
  */
-static const char *SYS_THERMAL_TYPE = "/sys/class/thermal/thermal_zone0/type";
-static const char *BCM2835_TYPE = "bcm2835_thermal";
+static const char *SYS_THERMAL_TYPE = "/sys/devices/virtual/misc/hw_random/rng_available";
+static const char *BCM2835_TYPE = "bcm2835";
 /* this file contains the temperature of the chip in celcius * 1000 */
 static char *SYS_THERMAL_TEMP = "/sys/class/thermal/thermal_zone0/temp";
 
