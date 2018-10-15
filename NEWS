@@ -13,6 +13,7 @@ v1.2.1
 * Fixed restoration of the panel divider position (Francis Chin).
 * Update graph immediately when a sensor is enabled or disabled.
 * Moved the source code to GitLab: https://gitlab.com/jeanfi/psensor.git
+* Fixed 'psensor-server crash when no sensor is detected' (Stéphane Gourichon).
 
 v1.2.0
 ------

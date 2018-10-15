@@ -115,10 +115,11 @@ static bool slog_open(const char *path, struct psensor **sensors)
 
 	fprintf(file, "I,%s,%s\n", t, VERSION);
 
-	while (*sensors) {
-		fprintf(file, "S,%s,%x\n", (*sensors)->id,  (*sensors)->type);
-		sensors++;
-	}
+	if (sensors)
+		while (*sensors) {
+			fprintf(file, "S,%s,%x\n", (*sensors)->id,  (*sensors)->type);
+			sensors++;
+		}
 
 	fflush(file);
 
