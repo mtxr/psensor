@@ -2,7 +2,19 @@ image: debian:unstable
 
 before_script:
   - apt update -qq
-  - apt install -y -qq build-essential autoconf automake pkg-config libtool m4 autoconf-archive autotools-dev  
+  - apt install -y -qq autoconf\
+ automake\
+ autopoint\
+ dh-autoreconf\
+ cppcheck\
+ gettext\
+ help2man\
+ libsensors4-devbuild-essential\
+ autoconf\
+ pkg-config\
+ libtool\
+ m4\
+ autotools-dev  
 
 stages:
   - build
