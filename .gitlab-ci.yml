@@ -3,7 +3,9 @@ image: debian:stable
 before_script:
   - apt update -qq
   - apt install -y -qq autoconf automake autopoint dh-autoreconf cppcheck gettext help2man autoconf pkg-config libtool m4 autotools-dev
-  - apt install -y -qq libgtk-3-dev libmicrohttpd-dev
+  - apt install -y -qq libsensors4-dev libgtop2-dev libudisks2-dev libatasmart-dev
+  - apt install -y -qq libgtk-3-dev
+  - apt install -y -qq libmicrohttpd-dev libjson-c-dev libcurl4-gnutls-dev
 
 stages:
   - build
