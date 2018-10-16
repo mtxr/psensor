@@ -11,4 +11,5 @@ build-distcheck:
   stage: build
   script:
     - autoreconf -i
+    - ./configure
     - make clean all
