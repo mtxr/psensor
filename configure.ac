@@ -30,7 +30,17 @@ AM_GNU_GETTEXT_VERSION([0.16])
 AM_GNU_GETTEXT([external])
 
 # Gsettings
-GLIB_GSETTINGS
+AC_ARG_WITH(gsettings,
+[  --with-gsettings[=yes|no]   use gsettings],[
+	with_gsettings=$withval],[
+	with_gsettings="yes"
+])
+
+if test "$with_gsettings" = "yes"; then
+        GLIB_GSETTINGS
+fi
+
+AM_CONDITIONAL(GSETTINGS, [test "x$with_gsettings" = xyes])
 
 ############### common 
 
