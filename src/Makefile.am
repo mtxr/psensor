@@ -120,4 +120,6 @@ EXTRA_DIST = description.txt\
 	ui_notify.c\
 	ui_unity.c
 
+if GSETTINGS
 @GSETTINGS_RULES@
+endif
