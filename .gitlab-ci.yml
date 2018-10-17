@@ -20,6 +20,12 @@ build:
     - ./configure
     - make clean all
 
+build-without-gsettings:
+  stage: test
+  script:
+    - ./configure --with-gsettings=no
+    - make clean all
+
 build-check:
   stage: test
   script:
