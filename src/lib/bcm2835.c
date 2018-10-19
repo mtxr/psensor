@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 jeanfi@gmail.com
+ * Copyright (C) 2017-2018 jeanfi@gmail.com
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -35,11 +35,11 @@
 static const char *PROVIDER_NAME = "BCM2835";
 
 /*
- * If this file exists and contains bcm2835_thermal it can be assumed
+ * If this file exists and contains bcm2835 it can be assumed
  * that a BCM2835 chip is present.
  */
-static const char *SYS_THERMAL_TYPE = "/sys/class/thermal/thermal_zone0/type";
-static const char *BCM2835_TYPE = "bcm2835_thermal";
+static const char *SYS_RPI_DETECTION_FILE = "/sys/devices/virtual/misc/hw_random/rng_available";
+static const char *SYS_RPI_DETECTION_FILE_EXPECTED_CONTENT = "bcm2835";
 /* this file contains the temperature of the chip in celcius * 1000 */
 static char *SYS_THERMAL_TEMP = "/sys/class/thermal/thermal_zone0/temp";
 
@@ -53,18 +53,21 @@ static bool is_bcm2835_present(void)
 	bool ret;
 	char *str;
 
-	ret = is_file(SYS_THERMAL_TYPE);
+	ret = is_file(SYS_RPI_DETECTION_FILE);
 
 	if (!ret) {
 		log_debug("%s: %s does not exist.",
 			  PROVIDER_NAME,
-			  SYS_THERMAL_TYPE);
+			  SYS_RPI_DETECTION_FILE);
 		return false;
 	}
 
-	str = file_get_content(SYS_THERMAL_TYPE);
+	str = file_get_content(SYS_RPI_DETECTION_FILE);
 
-	if (!str || strncmp(str, BCM2835_TYPE, strlen(BCM2835_TYPE) - 1)) {
+	if (!str
+	    || strncmp(str,
+		       SYS_RPI_DETECTION_FILE_EXPECTED_CONTENT,
+		       strlen(SYS_RPI_DETECTION_FILE_EXPECTED_CONTENT) - 1)) {
 		log_debug("%s: type: %s.", PROVIDER_NAME, str);
 		ret = false;
 	} else {
