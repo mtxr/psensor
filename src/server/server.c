@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2010-2016 jeanfi@gmail.com
+ * Copyright (C) 2010-2018 jeanfi@gmail.com
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -43,6 +43,7 @@
 #include <pgtop2.h>
 #endif
 
+#include <bcm2835.h>
 #include <hdd.h>
 #include <lmsensor.h>
 #include <plog.h>
@@ -443,6 +444,8 @@ int main(int argc, char *argv[])
 	hddtemp_psensor_list_append(&server_data.sensors, 600);
 
 	lmsensor_psensor_list_append(&server_data.sensors, 600);
+
+	bcm2835_psensor_list_append(&server_data.sensors, 600);
 
 #ifdef HAVE_GTOP
 	server_data.cpu_usage = create_cpu_usage_sensor(600);
