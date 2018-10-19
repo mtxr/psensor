@@ -38,7 +38,8 @@ static const char *PROVIDER_NAME = "BCM2835";
  * If this file exists and contains bcm2835 it can be assumed
  * that a BCM2835 chip is present.
  */
-static const char *SYS_RPI_DETECTION_FILE = "/sys/devices/virtual/misc/hw_random/rng_available";
+static const char *SYS_RPI_DETECTION_FILE =
+"/sys/devices/virtual/misc/hw_random/rng_available";
 static const char *SYS_RPI_DETECTION_FILE_EXPECTED_CONTENT = "bcm2835";
 /* this file contains the temperature of the chip in celcius * 1000 */
 static char *SYS_THERMAL_TEMP = "/sys/class/thermal/thermal_zone0/temp";
