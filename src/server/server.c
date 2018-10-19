@@ -494,6 +494,8 @@ int main(int argc, char *argv[])
 
 		lmsensor_psensor_list_update(server_data.sensors);
 
+		bcm2835_psensor_list_update(server_data.sensors);
+
 		psensor_log_measures(server_data.sensors);
 
 		pmutex_unlock(&mutex);
