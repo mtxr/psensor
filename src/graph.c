@@ -298,7 +298,7 @@ static void draw_background_lines(cairo_t *cr,
  * Values: array of time_t. Each time_t is corresponding to a sensor
  * measure which has been used as the start point of a Bezier curve.
  */
-static GHashTable *times;
+static GHashTable * times;
 
 static void draw_sensor_smooth_curve(struct psensor *s,
 				     cairo_t *cr,

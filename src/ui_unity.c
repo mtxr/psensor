@@ -22,7 +22,7 @@
 #include <temperature.h>
 #include <ui_unity.h>
 
-static UnityLauncherEntry *psensor_entry;
+static UnityLauncherEntry * psensor_entry;
 static bool count_visible;
 
 static void

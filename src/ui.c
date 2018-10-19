@@ -28,7 +28,7 @@
 #include <ui_sensorpref.h>
 #include <ui_status.h>
 
-static GtkWidget *w_sensors_scrolled_tree;
+static GtkWidget * w_sensors_scrolled_tree;
 static GtkWidget *w_graph;
 static GtkContainer *w_sensor_box;
 static GtkContainer *w_main_box;

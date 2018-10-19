@@ -32,7 +32,7 @@
 #include <plog.h>
 #include <ptime.h>
 
-static FILE *file;
+static FILE * file;
 int log_level =  LOG_WARN;
 
 void log_open(const char *path)

@@ -38,7 +38,7 @@
 #include "ptime.h"
 #include "slog.h"
 
-static FILE *file;
+static FILE * file;
 static double *last_values;
 static int period;
 static struct psensor **sensors;

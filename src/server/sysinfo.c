@@ -31,7 +31,7 @@
 
 #include "sysinfo.h"
 
-static glibtop_cpu *cpu;
+static glibtop_cpu * cpu;
 static float last_used;
 static float last_total;
 
