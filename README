@@ -42,7 +42,7 @@ HTTP attacks.  You should make the +psensor-server+ port available
 only to a network or computer you trust by using the usual network
 security tools of the system (for example:
 http://www.netfilter.org/projects/iptables/index.html[iptables]).
-  
+
 Installation Using Distribution Packages
 ----------------------------------------
 
@@ -73,34 +73,6 @@ sudo apt-get install psensor-server
 ------------------------------------
 
 Or search them in the Ubuntu Software Center.
-
-For other Ubuntu releases or user the more recent release, the easiest
-way is to use the dedicated PPA.
-
-Last stable version:
--------------------------------------------------
-sudo apt-get apt-add-repository ppa:/jfi/psensor
-sudo apt-get update
-sudo apt-get install psensor
-sudo apt-get install psensor-server
--------------------------------------------------
-
-Last development version which should not contain major bugs:
-----------------------------------------------------------
-sudo apt-get apt-add-repository ppa:/jfi/psensor-unstable
-sudo apt-get update
-sudo apt-get install psensor
-sudo apt-get install psensor-server
-----------------------------------------------------------
-
-Daily trunk build which may contain major bugs and partialy
-implemented features:
--------------------------------------------------------------
-sudo apt-get apt-add-repository ppa:/jfi/psensor-daily-trunk
-sudo apt-get update
-sudo apt-get install psensor
-sudo apt-get install psensor-server
--------------------------------------------------------------
 
 Installation From Source Archive
 --------------------------------
@@ -133,7 +105,7 @@ The compilation of +psensor+ requires:
 
 The specific requirements for +psensor-server+:
 
- * library libmicrohttpd 
+ * library libmicrohttpd
  * library json-c >= 0.11.99
 
 Compilation and Installation Steps

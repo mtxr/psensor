@@ -175,20 +175,6 @@ Psensor is in the official repository since Debian 7.0. You can get
 the last packaged version from the sid repository. More information
 at: http://packages.qa.debian.org/p/psensor.html.
 
-[[S_PPA]]
-What is the difference between the 3 Ubuntu PPAs?
--------------------------------------------------
-
-	- +ppa:jfi/ppa+: last stable version.
-
-	- +ppa:jfi/psensor-unstable+: last development version, no
-          major bug is expected.
-
-	- +ppa:jfi/psensor-daily-trunk+: build each day directly from
-          the GIT source repository. It may contain major bugs or
-          incomplete features. Useful for contributors or testing
-          whether a bug is fixed.
-
 [[S_ArchLinuxInstall]]
 How to install Psensor on ArchLinux?
 ------------------------------------
