@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2017 jeanfi@gmail.com
+ * Copyright (C) 2017-2018 jeanfi@gmail.com
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -35,7 +35,7 @@
 static const char *PROVIDER_NAME = "BCM2835";
 
 /*
- * If this file exists and contains bcm2835_thermal it can be assumed
+ * If this file exists and contains bcm2835 it can be assumed
  * that a BCM2835 chip is present.
  */
 static const char *SYS_RASPBERRY_PI_DETECTION_FILE = "/sys/devices/virtual/misc/hw_random/rng_available";
@@ -64,7 +64,10 @@ static bool is_bcm2835_present(void)
 
 	str = file_get_content(SYS_RASPBERRY_PI_DETECTION_FILE);
 
-	if (!str || strncmp(str, SYS_RASPBERRY_PI_DETECTION_FILE_EXPECTED_CONTENT, strlen(SYS_RASPBERRY_PI_DETECTION_FILE_EXPECTED_CONTENT) - 1)) {
+	if (!str
+	    || strncmp(str,
+		       SYS_RASPBERRY_PI_DETECTION_FILE_EXPECTED_CONTENT,
+		       strlen(SYS_RASPBERRY_PI_DETECTION_FILE_EXPECTED_CONTENT) - 1)) {
 		log_debug("%s: type: %s.", PROVIDER_NAME, str);
 		ret = false;
 	} else {
