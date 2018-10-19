@@ -11,3 +11,4 @@ stamp-h1
 **/Makefile.in
 configure
 aclocal.m4
+config.h.in
