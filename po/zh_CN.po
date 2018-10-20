@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2018-10-19 16:33+0200\n"
+"POT-Creation-Date: 2018-10-20 17:33+0200\n"
 "PO-Revision-Date: 2014-09-11 21:24+0000\n"
 "Last-Translator: Jean-Philippe Orsini <Unknown>\n"
 "Language-Team: Chinese (simplified)\n"
@@ -452,11 +452,11 @@ msgstr ""
 msgid "Number of active AMD/ATI adapters: %d"
 msgstr ""
 
-#: src/lib/bcm2835.c:90
+#: src/lib/bcm2835.c:91
 msgid "The BCM2835 (probably a Raspberry PI3) has been detected"
 msgstr ""
 
-#: src/lib/bcm2835.c:131
+#: src/lib/bcm2835.c:132
 #, fuzzy, c-format
 msgid "Failed to get content of file %s."
 msgstr "无法激活监测器日志。"
@@ -602,15 +602,15 @@ msgstr "已经打开监测器日志文件。"
 msgid "Cannot open sensor log file: %s."
 msgstr "无法打开监测器日志文件：%s。"
 
-#: src/lib/slog.c:137
+#: src/lib/slog.c:140
 msgid "Sensor log file not open."
 msgstr "监测器日志文件未打开。"
 
-#: src/lib/slog.c:193
+#: src/lib/slog.c:196
 msgid "Sensor log not open, cannot close."
 msgstr "监测器日志未打开，故无法关闭。"
 
-#: src/main.c:62 src/server/server.c:88
+#: src/main.c:62 src/server/server.c:89
 #, c-format
 msgid ""
 "Copyright (C) %s jeanfi@gmail.com\n"
@@ -625,7 +625,7 @@ msgstr ""
 "本软件为自由软件：您可以自由修改并分发。\n"
 "There is NO WARRANTY, to the extent permitted by law。\n"
 
-#: src/main.c:73 src/server/server.c:98
+#: src/main.c:73 src/server/server.c:99
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "用法：%s [选项]...\n"
@@ -664,12 +664,12 @@ msgstr "  -n, --new-instance  强制创建一个新的 Psensor 例程"
 msgid "  -d, --debug=LEVEL   set the debug level, integer between 0 and 3"
 msgstr "  -d，--debug=LEVEL 设置调试等级，等级为 0 到 3 之间的整数"
 
-#: src/main.c:97 src/server/server.c:121
+#: src/main.c:97 src/server/server.c:122
 #, c-format
 msgid "Report bugs to: %s\n"
 msgstr "报告问题至：%s\n"
 
-#: src/main.c:99 src/server/server.c:123
+#: src/main.c:99 src/server/server.c:124
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 主页：<%s>\n"
@@ -682,7 +682,7 @@ msgstr "Psensor 不支持远程传感器。"
 msgid "Enables debug mode."
 msgstr "启用调试模式。"
 
-#: src/main.c:484 src/server/server.c:422
+#: src/main.c:484 src/server/server.c:423
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "试用‘%s --help’来获得更多信息。\n"
@@ -711,21 +711,21 @@ msgstr "无效内容：%s"
 msgid "%s: Invalid JSON: %s"
 msgstr "无效 JSON：%s"
 
-#: src/server/server.c:58
+#: src/server/server.c:59
 msgid "<html><body><p>Server stop requested</p></body></html>"
 msgstr "<html><body><p>服务器停止请求</p></body></html>"
 
-#: src/server/server.c:64
+#: src/server/server.c:65
 msgid ""
 "<html><body><p>Page not found - Go to <a href='/'>Main page</a></p></body>"
 msgstr "<html><body><p>未找到页面 - 请访问<a href='/'>主页</a></p></body>"
 
-#: src/server/server.c:100
+#: src/server/server.c:101
 msgid ""
 "psensor-server is an HTTP server for monitoring hardware sensors remotely."
 msgstr "psensor 服务器是用来远程监视硬件的 HTTP 服务器。"
 
-#: src/server/server.c:105
+#: src/server/server.c:106
 msgid ""
 "  -h, --help\t\tdisplay this help and exit\n"
 "  -v, --version\t\tdisplay version information and exit"
@@ -733,7 +733,7 @@ msgstr ""
 "  -h, --help\t\t 显示本帮助并退出\n"
 "  -v, --version\t\t 显示版本信息并退出"
 
-#: src/server/server.c:109
+#: src/server/server.c:110
 msgid ""
 "  -p,--port=PORT\twebserver port\n"
 "  -w,--wdir=DIR\t\tdirectory containing webserver pages"
@@ -741,71 +741,71 @@ msgstr ""
 "  -p,--port=PORT\t 网络服务器端口\n"
 "  -w,--wdir=DIR\t\t 包括网络服务器页面的目录"
 
-#: src/server/server.c:113
+#: src/server/server.c:114
 msgid "  -d, --debug=LEVEL     set the debug level, integer between 0 and 3"
 msgstr "  -d, --debug=LEVEL     设置调试级别，0～3 之间的整数"
 
-#: src/server/server.c:115
+#: src/server/server.c:116
 msgid "  -l, --log-file=PATH   set the log file to PATH"
 msgstr "  -l, --log-file=PATH   将日志文件设为 PATH"
 
-#: src/server/server.c:116
+#: src/server/server.c:117
 msgid "  --sensor-log-file=PATH set the sensor log file to PATH"
 msgstr "  --sensor-log-file=路径 设置监测器日志文件的路径"
 
-#: src/server/server.c:117
+#: src/server/server.c:118
 msgid "  --sensor-log-interval=S set the sensor log interval to S (seconds)"
 msgstr ""
 
-#: src/server/server.c:262
+#: src/server/server.c:263
 #, c-format
 msgid "Resource access refused %s real path is %s"
 msgstr ""
 
-#: src/server/server.c:269
+#: src/server/server.c:270
 #, fuzzy, c-format
 msgid "Cannot get real path of %s"
 msgstr "无法打开日志文件：%s"
 
-#: src/server/server.c:339
+#: src/server/server.c:340
 #, c-format
 msgid "HTTP Request: %s"
 msgstr "HTTP 请求：%s"
 
-#: src/server/server.c:402
+#: src/server/server.c:403
 #, c-format
 msgid "Enables debug mode: %d"
 msgstr "启用调试模式：%d"
 
-#: src/server/server.c:431
+#: src/server/server.c:432
 #, c-format
 msgid "Webserver directory does not exist.\n"
 msgstr ""
 
-#: src/server/server.c:452
+#: src/server/server.c:455
 msgid "No sensors detected."
 msgstr "未检测到传感器。"
 
-#: src/server/server.c:459
+#: src/server/server.c:462
 msgid "Failed to create Web server."
 msgstr "无法创建网络服务器。"
 
-#: src/server/server.c:463
+#: src/server/server.c:466
 #, c-format
 msgid "Web server started on port: %d"
 msgstr "网络服务器启动端口：%d"
 
-#: src/server/server.c:464
+#: src/server/server.c:467
 #, c-format
 msgid "WWW directory: %s"
 msgstr "WWW 目录：%s"
 
-#: src/server/server.c:465
+#: src/server/server.c:468
 #, c-format
 msgid "URL: http://localhost:%d"
 msgstr "URL: http://localhost:%d"
 
-#: src/server/server.c:475
+#: src/server/server.c:478
 msgid "Failed to activate logging of sensors."
 msgstr "无法激活监测器日志。"
 
@@ -815,7 +815,7 @@ msgstr "Psensor 是一款 GTK+ 硬件监测传感应用程序"
 
 #: src/ui.c:216
 #, fuzzy
-msgid "Copyright(c) 2010-2016 jeanfi@gmail.com"
+msgid "Copyright(c) 2010-2018 jeanfi@gmail.com"
 msgstr ""
 "版权所有(c) 2010-2014\n"
 "jeanfi@gmail.com"

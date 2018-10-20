@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2018-10-19 16:33+0200\n"
+"POT-Creation-Date: 2018-10-20 17:33+0200\n"
 "PO-Revision-Date: 2014-09-21 06:25+0000\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <hr@li.org>\n"
@@ -451,11 +451,11 @@ msgstr "Broj AMD/ATI adaptera: %d"
 msgid "Number of active AMD/ATI adapters: %d"
 msgstr "Broj aktivnih AMD/ATI adaptera: %d"
 
-#: src/lib/bcm2835.c:90
+#: src/lib/bcm2835.c:91
 msgid "The BCM2835 (probably a Raspberry PI3) has been detected"
 msgstr ""
 
-#: src/lib/bcm2835.c:131
+#: src/lib/bcm2835.c:132
 #, fuzzy, c-format
 msgid "Failed to get content of file %s."
 msgstr "Neuspjelo spremanje datoteke podešavanja %s."
@@ -601,15 +601,15 @@ msgstr "Datoteka zapisa senzora je već otvorena."
 msgid "Cannot open sensor log file: %s."
 msgstr "Nemoguće otvaranje datoteke zapisa senzora: %s."
 
-#: src/lib/slog.c:137
+#: src/lib/slog.c:140
 msgid "Sensor log file not open."
 msgstr "Datoteka zapisa senzora nije otvorena."
 
-#: src/lib/slog.c:193
+#: src/lib/slog.c:196
 msgid "Sensor log not open, cannot close."
 msgstr "Datoteka zapisa senzora nije otvorena, nemoguće zatvaranje."
 
-#: src/main.c:62 src/server/server.c:88
+#: src/main.c:62 src/server/server.c:89
 #, c-format
 msgid ""
 "Copyright (C) %s jeanfi@gmail.com\n"
@@ -624,7 +624,7 @@ msgstr ""
 "Ovo je slobodan softver: slobodno ga možete mijenjati i redistribuirati.\n"
 "Ne postoji nikakvo JAMSTVO, propisano zakonom.\n"
 
-#: src/main.c:73 src/server/server.c:98
+#: src/main.c:73 src/server/server.c:99
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Upotreba: %s [MOGUĆNOST]...\n"
@@ -667,12 +667,12 @@ msgstr ""
 "  -d, --debug=LEVEL   postavi razinu otklanjanja greške, cijeli broj između "
 "0 i 3"
 
-#: src/main.c:97 src/server/server.c:121
+#: src/main.c:97 src/server/server.c:122
 #, c-format
 msgid "Report bugs to: %s\n"
 msgstr "Prijavi grešku na: %s\n"
 
-#: src/main.c:99 src/server/server.c:123
+#: src/main.c:99 src/server/server.c:124
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s početna stranica: <%s>\n"
@@ -685,7 +685,7 @@ msgstr "Psensor nije kompajliran s udaljenom podrškom senzora."
 msgid "Enables debug mode."
 msgstr "Omogućava način otklanjanja greške."
 
-#: src/main.c:484 src/server/server.c:422
+#: src/main.c:484 src/server/server.c:423
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Pokušajte `%s --help` za više informacija.\n"
@@ -713,25 +713,25 @@ msgstr "Nevaljan sadržaj: %s"
 msgid "%s: Invalid JSON: %s"
 msgstr "Nevaljan JSON: %s"
 
-#: src/server/server.c:58
+#: src/server/server.c:59
 msgid "<html><body><p>Server stop requested</p></body></html>"
 msgstr "<html><body><p>Poslužitelj je prestao reagirat</p></body></html>"
 
-#: src/server/server.c:64
+#: src/server/server.c:65
 msgid ""
 "<html><body><p>Page not found - Go to <a href='/'>Main page</a></p></body>"
 msgstr ""
 "<html><body><p>Stranica nije pronađena - Idite na <a href='/'>Glavna "
 "stranica</a></p></body>"
 
-#: src/server/server.c:100
+#: src/server/server.c:101
 msgid ""
 "psensor-server is an HTTP server for monitoring hardware sensors remotely."
 msgstr ""
 "psensor-poslužitelj je HTTP poslužitelj za udaljeno nadziranje senzora "
 "hardvera."
 
-#: src/server/server.c:105
+#: src/server/server.c:106
 msgid ""
 "  -h, --help\t\tdisplay this help and exit\n"
 "  -v, --version\t\tdisplay version information and exit"
@@ -739,7 +739,7 @@ msgstr ""
 "  -h, --help\t\tprikazuje pomoć\n"
 "  -v, --version\t\tprikazuje informacije o inačici"
 
-#: src/server/server.c:109
+#: src/server/server.c:110
 msgid ""
 "  -p,--port=PORT\twebserver port\n"
 "  -w,--wdir=DIR\t\tdirectory containing webserver pages"
@@ -747,74 +747,74 @@ msgstr ""
 "  -p,--port=PORT\tulaz web poslužitelja\n"
 "  -w,--wdir=DIR\t\tdirektorij sadrži stranice web poslužitelja"
 
-#: src/server/server.c:113
+#: src/server/server.c:114
 msgid "  -d, --debug=LEVEL     set the debug level, integer between 0 and 3"
 msgstr ""
 "  -d, --debug=LEVEL     postavi razinu otklanjanja greške, cijeli broj "
 "između 0 i 3"
 
-#: src/server/server.c:115
+#: src/server/server.c:116
 msgid "  -l, --log-file=PATH   set the log file to PATH"
 msgstr "  -l, --log-file=PUTANJA   postavite PUTANJU datoteke zapisa"
 
-#: src/server/server.c:116
+#: src/server/server.c:117
 msgid "  --sensor-log-file=PATH set the sensor log file to PATH"
 msgstr "  --sensor-log-file=PUTANJA postavite PUTANJU datoteke zapisa senzora"
 
-#: src/server/server.c:117
+#: src/server/server.c:118
 msgid "  --sensor-log-interval=S set the sensor log interval to S (seconds)"
 msgstr ""
 "  --sensor-log-interval=S postavite trajanje zapisa senzora u S (sekunde)"
 
-#: src/server/server.c:262
+#: src/server/server.c:263
 #, c-format
 msgid "Resource access refused %s real path is %s"
 msgstr ""
 
-#: src/server/server.c:269
+#: src/server/server.c:270
 #, fuzzy, c-format
 msgid "Cannot get real path of %s"
 msgstr "Nemoguće otvaranje datoteke: %s"
 
-#: src/server/server.c:339
+#: src/server/server.c:340
 #, c-format
 msgid "HTTP Request: %s"
 msgstr "HTTP Zahtjev: %s"
 
-#: src/server/server.c:402
+#: src/server/server.c:403
 #, c-format
 msgid "Enables debug mode: %d"
 msgstr "Omogućuje način otklanjanja greške: %d"
 
-#: src/server/server.c:431
+#: src/server/server.c:432
 #, c-format
 msgid "Webserver directory does not exist.\n"
 msgstr ""
 
-#: src/server/server.c:452
+#: src/server/server.c:455
 msgid "No sensors detected."
 msgstr "Nema otkrivenih senzora."
 
-#: src/server/server.c:459
+#: src/server/server.c:462
 msgid "Failed to create Web server."
 msgstr "Neuspjelo stvaranje Web poslužitelja."
 
-#: src/server/server.c:463
+#: src/server/server.c:466
 #, c-format
 msgid "Web server started on port: %d"
 msgstr "Web poslužitelj pokrenut na ulazu: %d"
 
-#: src/server/server.c:464
+#: src/server/server.c:467
 #, c-format
 msgid "WWW directory: %s"
 msgstr "WWW direktorij: %s"
 
-#: src/server/server.c:465
+#: src/server/server.c:468
 #, c-format
 msgid "URL: http://localhost:%d"
 msgstr "URL: http://localhost:%d"
 
-#: src/server/server.c:475
+#: src/server/server.c:478
 msgid "Failed to activate logging of sensors."
 msgstr "Neuspjelo aktiviranje zapisivanja senzora."
 
@@ -824,7 +824,7 @@ msgstr "Psensor je GTK+ aplikacija za nadziranje senzora hardvera."
 
 #: src/ui.c:216
 #, fuzzy
-msgid "Copyright(c) 2010-2016 jeanfi@gmail.com"
+msgid "Copyright(c) 2010-2018 jeanfi@gmail.com"
 msgstr "Autorsko pravo(c) 2010-2014 jeanfi@gmail.com"
 
 #: src/ui.c:222

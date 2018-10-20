@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor 1.0.0.0\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2018-10-19 16:33+0200\n"
+"POT-Creation-Date: 2018-10-20 17:33+0200\n"
 "PO-Revision-Date: 2014-09-20 11:26+0000\n"
 "Last-Translator: Jean-Philippe Orsini <Unknown>\n"
 "Language-Team: Swedish\n"
@@ -455,11 +455,11 @@ msgstr "Antal AMD/ATI-adaptrar: %d"
 msgid "Number of active AMD/ATI adapters: %d"
 msgstr "Antal aktiva AMD/ATI-adaptrar: %d"
 
-#: src/lib/bcm2835.c:90
+#: src/lib/bcm2835.c:91
 msgid "The BCM2835 (probably a Raspberry PI3) has been detected"
 msgstr ""
 
-#: src/lib/bcm2835.c:131
+#: src/lib/bcm2835.c:132
 #, fuzzy, c-format
 msgid "Failed to get content of file %s."
 msgstr "Misslyckades med att spara konfigurationsfilen %s."
@@ -605,15 +605,15 @@ msgstr "Sensorloggfil redan öppen."
 msgid "Cannot open sensor log file: %s."
 msgstr "Kan inte öppna sensorloggfil: %s"
 
-#: src/lib/slog.c:137
+#: src/lib/slog.c:140
 msgid "Sensor log file not open."
 msgstr "Sensorloggfil ej öppen."
 
-#: src/lib/slog.c:193
+#: src/lib/slog.c:196
 msgid "Sensor log not open, cannot close."
 msgstr "Sensorloggfil ej öppen, kan inte stänga."
 
-#: src/main.c:62 src/server/server.c:88
+#: src/main.c:62 src/server/server.c:89
 #, c-format
 msgid ""
 "Copyright (C) %s jeanfi@gmail.com\n"
@@ -628,7 +628,7 @@ msgstr ""
 "Det här är fri programvara: Du kan fritt modifiera den och distribuera den\n"
 "Det finns INGEN GARANTI i den omfattning som medges av gällande lag.\n"
 
-#: src/main.c:73 src/server/server.c:98
+#: src/main.c:73 src/server/server.c:99
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Användning: %s [FLAGGA]...\n"
@@ -670,12 +670,12 @@ msgid "  -d, --debug=LEVEL   set the debug level, integer between 0 and 3"
 msgstr ""
 "  -d, --debug=LEVEL   ställ in felsökningsnivå, heltal mellan nivå 0 och 3"
 
-#: src/main.c:97 src/server/server.c:121
+#: src/main.c:97 src/server/server.c:122
 #, c-format
 msgid "Report bugs to: %s\n"
 msgstr "Rapportera fel till: %s\n"
 
-#: src/main.c:99 src/server/server.c:123
+#: src/main.c:99 src/server/server.c:124
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s webbplats <%s>\n"
@@ -688,7 +688,7 @@ msgstr "Psensor har inte kompilerats med fjärrsensorstöd."
 msgid "Enables debug mode."
 msgstr "Aktivera felsökningsläge."
 
-#: src/main.c:484 src/server/server.c:422
+#: src/main.c:484 src/server/server.c:423
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Prova`%s --help' för mer information.\n"
@@ -717,24 +717,24 @@ msgstr "Ogiltigt innehåll: %s"
 msgid "%s: Invalid JSON: %s"
 msgstr "Ogiltig JSON: %s"
 
-#: src/server/server.c:58
+#: src/server/server.c:59
 msgid "<html><body><p>Server stop requested</p></body></html>"
 msgstr "<html><body><p>Begärde serverstopp</p></body></html>"
 
-#: src/server/server.c:64
+#: src/server/server.c:65
 msgid ""
 "<html><body><p>Page not found - Go to <a href='/'>Main page</a></p></body>"
 msgstr ""
 "<html><body><p>Hittade inte sida - Gå till <a href='/'>Huvudsida</a></p></"
 "body>"
 
-#: src/server/server.c:100
+#: src/server/server.c:101
 msgid ""
 "psensor-server is an HTTP server for monitoring hardware sensors remotely."
 msgstr ""
 "psensor-server är en HTTP-server för att fjärrövervaka hårdvarusensorer."
 
-#: src/server/server.c:105
+#: src/server/server.c:106
 msgid ""
 "  -h, --help\t\tdisplay this help and exit\n"
 "  -v, --version\t\tdisplay version information and exit"
@@ -742,7 +742,7 @@ msgstr ""
 "  -h, --help\t\tvisa denna hjälp och avsluta\n"
 "  -v, --version\t\tvisa versionsinformation och avsluta"
 
-#: src/server/server.c:109
+#: src/server/server.c:110
 msgid ""
 "  -p,--port=PORT\twebserver port\n"
 "  -w,--wdir=DIR\t\tdirectory containing webserver pages"
@@ -750,72 +750,72 @@ msgstr ""
 "  -p,--port=PORT\twebbserverport\n"
 "  -w,--wdir=DIR\t\tkatalog som innehåller webbserversidor"
 
-#: src/server/server.c:113
+#: src/server/server.c:114
 msgid "  -d, --debug=LEVEL     set the debug level, integer between 0 and 3"
 msgstr "  -d, --debug=LEVEL     ställ in felsökningnivån mellan 0 and 3"
 
-#: src/server/server.c:115
+#: src/server/server.c:116
 msgid "  -l, --log-file=PATH   set the log file to PATH"
 msgstr "  -l, --log-file=PATH   ställ in loggfilen till PATH"
 
-#: src/server/server.c:116
+#: src/server/server.c:117
 msgid "  --sensor-log-file=PATH set the sensor log file to PATH"
 msgstr "  --sensor-log-file=PATH ställ in loggfil för sensor till PATH"
 
-#: src/server/server.c:117
+#: src/server/server.c:118
 msgid "  --sensor-log-interval=S set the sensor log interval to S (seconds)"
 msgstr ""
 "  --sensor-log-interval=S ställ in loggintervall för sensor till S (sekunder)"
 
-#: src/server/server.c:262
+#: src/server/server.c:263
 #, c-format
 msgid "Resource access refused %s real path is %s"
 msgstr ""
 
-#: src/server/server.c:269
+#: src/server/server.c:270
 #, fuzzy, c-format
 msgid "Cannot get real path of %s"
 msgstr "Kan inte öppna loggfil: %s"
 
-#: src/server/server.c:339
+#: src/server/server.c:340
 #, c-format
 msgid "HTTP Request: %s"
 msgstr "HTTP-begäran: %s"
 
-#: src/server/server.c:402
+#: src/server/server.c:403
 #, c-format
 msgid "Enables debug mode: %d"
 msgstr "Aktiverar felsökningsläge: %d"
 
-#: src/server/server.c:431
+#: src/server/server.c:432
 #, c-format
 msgid "Webserver directory does not exist.\n"
 msgstr ""
 
-#: src/server/server.c:452
+#: src/server/server.c:455
 msgid "No sensors detected."
 msgstr "Inga sensorer hittades."
 
-#: src/server/server.c:459
+#: src/server/server.c:462
 msgid "Failed to create Web server."
 msgstr "Misslyckades med att skapa webbserver."
 
-#: src/server/server.c:463
+#: src/server/server.c:466
 #, c-format
 msgid "Web server started on port: %d"
 msgstr "Webbserver startade på port: %d"
 
-#: src/server/server.c:464
+#: src/server/server.c:467
 #, c-format
 msgid "WWW directory: %s"
 msgstr "WWW-katalog: %s"
 
-#: src/server/server.c:465
+#: src/server/server.c:468
 #, c-format
 msgid "URL: http://localhost:%d"
 msgstr "URL: http://localhost:%d"
 
-#: src/server/server.c:475
+#: src/server/server.c:478
 msgid "Failed to activate logging of sensors."
 msgstr "Misslyckades med att aktivera sensorloggning."
 
@@ -825,7 +825,7 @@ msgstr "Psensor är ett GTK+-program för att övervaka hårdvarusensorer"
 
 #: src/ui.c:216
 #, fuzzy
-msgid "Copyright(c) 2010-2016 jeanfi@gmail.com"
+msgid "Copyright(c) 2010-2018 jeanfi@gmail.com"
 msgstr ""
 "Copyright(c) 2010-2014\n"
 "jeanfi@gmail.com"

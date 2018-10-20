@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2018-10-19 16:33+0200\n"
+"POT-Creation-Date: 2018-10-20 17:33+0200\n"
 "PO-Revision-Date: 2014-09-20 11:26+0000\n"
 "Last-Translator: Jean-Philippe Orsini <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -453,11 +453,11 @@ msgstr "Numero de adaptadores AMD/ATI: %d"
 msgid "Number of active AMD/ATI adapters: %d"
 msgstr "Numero de adaptadores AMD/ATI: %d"
 
-#: src/lib/bcm2835.c:90
+#: src/lib/bcm2835.c:91
 msgid "The BCM2835 (probably a Raspberry PI3) has been detected"
 msgstr ""
 
-#: src/lib/bcm2835.c:131
+#: src/lib/bcm2835.c:132
 #, fuzzy, c-format
 msgid "Failed to get content of file %s."
 msgstr "Error al activar el registro de sensores"
@@ -603,15 +603,15 @@ msgstr "Ya existe un registro de sensores abierto"
 msgid "Cannot open sensor log file: %s."
 msgstr "No se puede abrir el archivo de registro: %s."
 
-#: src/lib/slog.c:137
+#: src/lib/slog.c:140
 msgid "Sensor log file not open."
 msgstr "No se abrió el archivo de registro."
 
-#: src/lib/slog.c:193
+#: src/lib/slog.c:196
 msgid "Sensor log not open, cannot close."
 msgstr "¡No existe archivo que cerrar!"
 
-#: src/main.c:62 src/server/server.c:88
+#: src/main.c:62 src/server/server.c:89
 #, c-format
 msgid ""
 "Copyright (C) %s jeanfi@gmail.com\n"
@@ -627,7 +627,7 @@ msgstr ""
 "apoyada por el autor. \n"
 "No existe NINGUNA GARANTÍA hasta donde la ley lo permita.\n"
 
-#: src/main.c:73 src/server/server.c:98
+#: src/main.c:73 src/server/server.c:99
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Uso: %s [OPTION]...\n"
@@ -670,12 +670,12 @@ msgstr ""
 "  -d, --debug=NIVEL   Establece el nivel de depuración con un valor entre 0 "
 "y 3"
 
-#: src/main.c:97 src/server/server.c:121
+#: src/main.c:97 src/server/server.c:122
 #, c-format
 msgid "Report bugs to: %s\n"
 msgstr "Comunicar fallos: %s\n"
 
-#: src/main.c:99 src/server/server.c:123
+#: src/main.c:99 src/server/server.c:124
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s Página Oficial: <%s>\n"
@@ -688,7 +688,7 @@ msgstr "Psensor no ha sido compilado con soporte para sensores remotos."
 msgid "Enables debug mode."
 msgstr "Activa el modo de depuración"
 
-#: src/main.c:484 src/server/server.c:422
+#: src/main.c:484 src/server/server.c:423
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Introducir `%s --ayuda' para obtener más información\n"
@@ -717,25 +717,25 @@ msgstr "Contenido no válido:%s"
 msgid "%s: Invalid JSON: %s"
 msgstr "JSON no válido:%s"
 
-#: src/server/server.c:58
+#: src/server/server.c:59
 msgid "<html><body><p>Server stop requested</p></body></html>"
 msgstr "<html><body><p>El servidor solicitó detenerse</p></body></html>"
 
-#: src/server/server.c:64
+#: src/server/server.c:65
 msgid ""
 "<html><body><p>Page not found - Go to <a href='/'>Main page</a></p></body>"
 msgstr ""
 "<html><body><p>Página no encontrada- Ir a <a href='/'>Página Principal</a></"
 "p></body>"
 
-#: src/server/server.c:100
+#: src/server/server.c:101
 msgid ""
 "psensor-server is an HTTP server for monitoring hardware sensors remotely."
 msgstr ""
 "psensor-server es un servidor HTTP para obtener información de los sensores "
 "de forma remota."
 
-#: src/server/server.c:105
+#: src/server/server.c:106
 msgid ""
 "  -h, --help\t\tdisplay this help and exit\n"
 "  -v, --version\t\tdisplay version information and exit"
@@ -743,7 +743,7 @@ msgstr ""
 "  -h, --help\t\tMuestra esta ayuda.\n"
 "  -v, --version\t\tMuestra la versión."
 
-#: src/server/server.c:109
+#: src/server/server.c:110
 msgid ""
 "  -p,--port=PORT\twebserver port\n"
 "  -w,--wdir=DIR\t\tdirectory containing webserver pages"
@@ -751,73 +751,73 @@ msgstr ""
 "  -p,--port=PORT\tPuerto del servidor web. \n"
 "  -w,--wdir=DIR\t\tDirectorio de servidores web."
 
-#: src/server/server.c:113
+#: src/server/server.c:114
 msgid "  -d, --debug=LEVEL     set the debug level, integer between 0 and 3"
 msgstr ""
 "  -d, --debug=NIVEL     Establece el nivel de depuración con un número de 0 "
 "a 3"
 
-#: src/server/server.c:115
+#: src/server/server.c:116
 msgid "  -l, --log-file=PATH   set the log file to PATH"
 msgstr "  -l, --log-file=PATH   establece el archivo de registro en PATH"
 
-#: src/server/server.c:116
+#: src/server/server.c:117
 msgid "  --sensor-log-file=PATH set the sensor log file to PATH"
 msgstr "  --sensor-log-file=PATH establecer el archivo de registro en PATH"
 
-#: src/server/server.c:117
+#: src/server/server.c:118
 msgid "  --sensor-log-interval=S set the sensor log interval to S (seconds)"
 msgstr "  --sensor-log-interval=S registrar sensores cada S (seconds)"
 
-#: src/server/server.c:262
+#: src/server/server.c:263
 #, c-format
 msgid "Resource access refused %s real path is %s"
 msgstr ""
 
-#: src/server/server.c:269
+#: src/server/server.c:270
 #, fuzzy, c-format
 msgid "Cannot get real path of %s"
 msgstr "Imposible abrir el archivo de registro: %s"
 
-#: src/server/server.c:339
+#: src/server/server.c:340
 #, c-format
 msgid "HTTP Request: %s"
 msgstr "Petición HTTP:%s"
 
-#: src/server/server.c:402
+#: src/server/server.c:403
 #, c-format
 msgid "Enables debug mode: %d"
 msgstr "Activa el modo de depuración:%d"
 
-#: src/server/server.c:431
+#: src/server/server.c:432
 #, c-format
 msgid "Webserver directory does not exist.\n"
 msgstr ""
 
-#: src/server/server.c:452
+#: src/server/server.c:455
 msgid "No sensors detected."
 msgstr "No se han detectado sensores."
 
-#: src/server/server.c:459
+#: src/server/server.c:462
 msgid "Failed to create Web server."
 msgstr "Fallo al crear el servidor Web"
 
-#: src/server/server.c:463
+#: src/server/server.c:466
 #, c-format
 msgid "Web server started on port: %d"
 msgstr "Servidor web iniciado en el puerto:%d"
 
-#: src/server/server.c:464
+#: src/server/server.c:467
 #, c-format
 msgid "WWW directory: %s"
 msgstr "directorio WWW:%s"
 
-#: src/server/server.c:465
+#: src/server/server.c:468
 #, c-format
 msgid "URL: http://localhost:%d"
 msgstr "URL: http://localhost:%d"
 
-#: src/server/server.c:475
+#: src/server/server.c:478
 msgid "Failed to activate logging of sensors."
 msgstr "Error al activar el registro de sensores"
 
@@ -829,7 +829,7 @@ msgstr ""
 
 #: src/ui.c:216
 #, fuzzy
-msgid "Copyright(c) 2010-2016 jeanfi@gmail.com"
+msgid "Copyright(c) 2010-2018 jeanfi@gmail.com"
 msgstr "Copyright(c) 2010-2014 jeanfi@gmail.com"
 
 #: src/ui.c:222

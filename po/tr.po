@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psensor\n"
 "Report-Msgid-Bugs-To: jeanfi@gmail.com\n"
-"POT-Creation-Date: 2018-10-19 16:33+0200\n"
+"POT-Creation-Date: 2018-10-20 17:33+0200\n"
 "PO-Revision-Date: 2014-09-20 11:27+0000\n"
 "Last-Translator: Jean-Philippe Orsini <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -453,11 +453,11 @@ msgstr "AMD/ATI bağdaştırıcı sayısı: %d"
 msgid "Number of active AMD/ATI adapters: %d"
 msgstr "Etkin AMD/ATI bağdaştırıcı sayısı: %d"
 
-#: src/lib/bcm2835.c:90
+#: src/lib/bcm2835.c:91
 msgid "The BCM2835 (probably a Raspberry PI3) has been detected"
 msgstr ""
 
-#: src/lib/bcm2835.c:131
+#: src/lib/bcm2835.c:132
 #, fuzzy, c-format
 msgid "Failed to get content of file %s."
 msgstr "Algılayıcıların günlük kaydı etkinleştirilemedi."
@@ -603,15 +603,15 @@ msgstr "Algılayıcı günlük kaydı dosyası zaten açık."
 msgid "Cannot open sensor log file: %s."
 msgstr "Algılayıcı günlük kaydı dosyası açılamıyor: %s."
 
-#: src/lib/slog.c:137
+#: src/lib/slog.c:140
 msgid "Sensor log file not open."
 msgstr "Algılayıcı günlük kaydı dosyası açık değil."
 
-#: src/lib/slog.c:193
+#: src/lib/slog.c:196
 msgid "Sensor log not open, cannot close."
 msgstr "Algılayıcı günlük kaydı açık değil, kapatılamıyor."
 
-#: src/main.c:62 src/server/server.c:88
+#: src/main.c:62 src/server/server.c:89
 #, c-format
 msgid ""
 "Copyright (C) %s jeanfi@gmail.com\n"
@@ -626,7 +626,7 @@ msgstr ""
 "Bu bir özgür yazılımdır: değiştirmekte ve yeniden dağıtmakta özgürsünüz.\n"
 "Yasaların izin verdiği çerçevede hiçbir garantisi YOKTUR.\n"
 
-#: src/main.c:73 src/server/server.c:98
+#: src/main.c:73 src/server/server.c:99
 #, c-format
 msgid "Usage: %s [OPTION]...\n"
 msgstr "Kullanım: %s [SEÇENEK]...\n"
@@ -669,12 +669,12 @@ msgid "  -d, --debug=LEVEL   set the debug level, integer between 0 and 3"
 msgstr ""
 "  -d, --debug=LEVEL   hata ayıklama seviyesin ayarla, 0 ve 3 arasında tamsayı"
 
-#: src/main.c:97 src/server/server.c:121
+#: src/main.c:97 src/server/server.c:122
 #, c-format
 msgid "Report bugs to: %s\n"
 msgstr "Hataları rapor et:%s\n"
 
-#: src/main.c:99 src/server/server.c:123
+#: src/main.c:99 src/server/server.c:124
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s ana sayfa: <%s>\n"
@@ -687,7 +687,7 @@ msgstr "Psensor, uzaktan algılayıcı desteği ile derlenmemiştir."
 msgid "Enables debug mode."
 msgstr "Hata ayıklama modunu etkinleştirir."
 
-#: src/main.c:484 src/server/server.c:422
+#: src/main.c:484 src/server/server.c:423
 #, c-format
 msgid "Try `%s --help' for more information.\n"
 msgstr "Daha fazla bilgi için `%s --help' yazın.\n"
@@ -716,25 +716,25 @@ msgstr "Geçersiz içerik: %s"
 msgid "%s: Invalid JSON: %s"
 msgstr "Geçersiz JSON: %s"
 
-#: src/server/server.c:58
+#: src/server/server.c:59
 msgid "<html><body><p>Server stop requested</p></body></html>"
 msgstr "<html><body><p>Sunucu durdurma istendi</p></body></html>"
 
-#: src/server/server.c:64
+#: src/server/server.c:65
 msgid ""
 "<html><body><p>Page not found - Go to <a href='/'>Main page</a></p></body>"
 msgstr ""
 "<html><body><p>Sayfa bulunamadı - Şuraya gidin <a href='/'>Main page</a></"
 "p></body>"
 
-#: src/server/server.c:100
+#: src/server/server.c:101
 msgid ""
 "psensor-server is an HTTP server for monitoring hardware sensors remotely."
 msgstr ""
 "psensor-sunucusu, donanım algılayıcılarını uzaktan gözlemleme amaçlı bir "
 "HTTP sunucusudur."
 
-#: src/server/server.c:105
+#: src/server/server.c:106
 msgid ""
 "  -h, --help\t\tdisplay this help and exit\n"
 "  -v, --version\t\tdisplay version information and exit"
@@ -742,7 +742,7 @@ msgstr ""
 "  -h, --help\t\tyardımı göster ve çık\n"
 "  -v, --version\t\tsürüm bilgisini göster ve çık"
 
-#: src/server/server.c:109
+#: src/server/server.c:110
 msgid ""
 "  -p,--port=PORT\twebserver port\n"
 "  -w,--wdir=DIR\t\tdirectory containing webserver pages"
@@ -750,76 +750,76 @@ msgstr ""
 "  -p,--port=PORT\twebsunucu bağlantı noktası\n"
 "  -w,--wdir=DIR\t\tdizin websunucusu sayfaları içerir"
 
-#: src/server/server.c:113
+#: src/server/server.c:114
 msgid "  -d, --debug=LEVEL     set the debug level, integer between 0 and 3"
 msgstr ""
 "  -d, --debug=LEVEL     hata ayıklama seviyesini ayarla, 0 ve 3 arasında bir "
 "tamsayı"
 
-#: src/server/server.c:115
+#: src/server/server.c:116
 msgid "  -l, --log-file=PATH   set the log file to PATH"
 msgstr "  -l, --log-file=PATH   günlük kaydı dosyasını PATH olarak ayarla"
 
-#: src/server/server.c:116
+#: src/server/server.c:117
 msgid "  --sensor-log-file=PATH set the sensor log file to PATH"
 msgstr ""
 "  --sensor-log-file=PATH algılayıcı günlük kaydı dosyasını PATH olarak ayarla"
 
-#: src/server/server.c:117
+#: src/server/server.c:118
 msgid "  --sensor-log-interval=S set the sensor log interval to S (seconds)"
 msgstr ""
 "  --sensor-log-interval=S algılayıcı günlük kaydı aralığını S (saniye) "
 "olarak ayarla"
 
-#: src/server/server.c:262
+#: src/server/server.c:263
 #, c-format
 msgid "Resource access refused %s real path is %s"
 msgstr ""
 
-#: src/server/server.c:269
+#: src/server/server.c:270
 #, fuzzy, c-format
 msgid "Cannot get real path of %s"
 msgstr "Günlükleme dosyası açılamadı: %s"
 
-#: src/server/server.c:339
+#: src/server/server.c:340
 #, c-format
 msgid "HTTP Request: %s"
 msgstr "HTTP İsteği: %s"
 
-#: src/server/server.c:402
+#: src/server/server.c:403
 #, c-format
 msgid "Enables debug mode: %d"
 msgstr "Hata ayıklama modunu etkinleştirir: %d"
 
-#: src/server/server.c:431
+#: src/server/server.c:432
 #, c-format
 msgid "Webserver directory does not exist.\n"
 msgstr ""
 
-#: src/server/server.c:452
+#: src/server/server.c:455
 msgid "No sensors detected."
 msgstr "Hiçbir algılayıcı bulunamadı."
 
-#: src/server/server.c:459
+#: src/server/server.c:462
 msgid "Failed to create Web server."
 msgstr "Web sunucusu oluşturulamadı."
 
-#: src/server/server.c:463
+#: src/server/server.c:466
 #, c-format
 msgid "Web server started on port: %d"
 msgstr "Web sunucusu şu noktadan başlatıldı: %d"
 
-#: src/server/server.c:464
+#: src/server/server.c:467
 #, c-format
 msgid "WWW directory: %s"
 msgstr "WWW dizini: %s"
 
-#: src/server/server.c:465
+#: src/server/server.c:468
 #, c-format
 msgid "URL: http://localhost:%d"
 msgstr "URL: http://localhost:%d"
 
-#: src/server/server.c:475
+#: src/server/server.c:478
 msgid "Failed to activate logging of sensors."
 msgstr "Algılayıcıların günlük kaydı etkinleştirilemedi."
 
@@ -830,7 +830,7 @@ msgstr ""
 
 #: src/ui.c:216
 #, fuzzy
-msgid "Copyright(c) 2010-2016 jeanfi@gmail.com"
+msgid "Copyright(c) 2010-2018 jeanfi@gmail.com"
 msgstr "Telif Hakkı(c) 2010-2014 jeanfi@gmail.com"
 
 #: src/ui.c:222
