@@ -35,7 +35,7 @@ to the HTTP server, worst, no effort has been made against malicious
 HTTP attacks.  You should make the +psensor-server+ port available
 only to a network or computer you trust by using the usual network
 security tools of the system (for example:
-http://www.netfilter.org/projects/iptables/index.html[iptables]).
+http://www.netfilter.org/projects/iptables/index.html).
 
 ## Installation Using Distribution Packages
 
