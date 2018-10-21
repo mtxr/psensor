@@ -11,11 +11,12 @@ v1.2.1
   keys. (LP: #1650378)
 * Fixed hide on startup preference (Francis Chin). (LP: #1642029).
 * Fixed restoration of the panel divider position (Francis Chin).
-* Update graph immediately when a sensor is enabled or disabled.
+* Update graph immediately when a sensor is enabled or disabled (Mark S.).
 * Moved the source code to GitLab: https://gitlab.com/jeanfi/psensor.git
 * Fixed 'psensor-server crash when no sensor is detected' (Stéphane Gourichon).
 * Fixed 'Compilation requires dependencies of all component even if only server is desired'.
 * Fixed 'Any percent sensor breaks psensor-server page' (Stéphane Gourichon).
+* Fixed potential race condition during graph drawing (Mark S.).
 
 v1.2.0
 ------

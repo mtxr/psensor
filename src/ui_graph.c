@@ -17,6 +17,7 @@
  * 02110-1301 USA
  */
 #include "graph.h"
+#include "pmutex.h"
 #include "ui_graph.h"
 
 static int
@@ -37,10 +38,12 @@ on_expose_event(GtkWidget *widget, GdkEventExpose *event, gpointer data)
 {
 	struct ui_psensor *ui_psensor = (struct ui_psensor *)data;
 
+	pmutex_lock(&ui_psensor->sensors_mutex);
 	graph_update(ui_psensor->sensors,
 		     ui_get_graph(),
 		     ui_psensor->config,
 		     ui_psensor->main_window);
+	pmutex_unlock(&ui_psensor->sensors_mutex);
 
 	return FALSE;
 }
