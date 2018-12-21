@@ -133,7 +133,7 @@ struct psensor **get_remote_sensors(const char *server_url,
 
 	obj = get_json_object(url);
 
-	if (obj && !is_error(obj)) {
+	if (obj && (obj != NULL)) {
 		n = json_object_array_length(obj);
 		sensors = malloc((n + 1) * sizeof(struct psensor *));
 
@@ -168,12 +168,12 @@ static void remote_psensor_update(struct psensor *s)
 
 	obj = get_json_object(get_url(s));
 
-	if (obj && !is_error(obj)) {
+	if (obj && (obj != NULL)) {
 		json_object *om;
 
 		json_object_object_get_ex(obj, "last_measure", &om);
 
-		if (!is_error(obj)) {
+		if ((obj != NULL)) {
 			json_object *ov, *ot;
 			struct timeval tv;
 
